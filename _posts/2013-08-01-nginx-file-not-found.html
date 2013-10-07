@@ -1,0 +1,22 @@
+---
+title: "nginx file not found 해결방법"
+layout: "post"
+permalink: "/2013/08/nginx-file-not-found.html"
+uuid: "1167910194658595134"
+guid: "tag:blogger.com,1999:blog-98320892776810016.post-1167910194658595134"
+date: "2013-08-01 16:09:00"
+updated: "2013-08-01 16:50:59"
+description: 
+blogger:
+    siteid: "98320892776810016"
+    postid: "1167910194658595134"
+categories: [nginx]
+author: 
+    name: "Hiun Kim"
+    url: "http://www.blogger.com/profile/03959746300918215329?rel=author"
+    image: "http://img2.blogblog.com/img/b16-rounded.gif"
+---
+
+<div class="css-full-post-content js-full-post-content">
+nginx.conf / default.conf / virtual.conf 에 있는<br /><br /><b>location ~ \.php$ {</b><br /><b><br /></b><b>}</b><br /><br />이 안에있는 코드중 가장 위에<br /><br /><b>root /var/www/html;</b><br /><br />과 같은 자신의 서버 파일 디렉토리를 넣어준다. 기능은 php를 적용할 루트 디렉토리인듯.<br /><br />ex.<br /><br /><b>location ~ \.php$ {</b><br /><b>&nbsp; &nbsp; root /var/www/html;</b><br /><b>...</b><br /><b>...</b><br /><b>...</b><br /><b>}</b><br /><br />
+</div>

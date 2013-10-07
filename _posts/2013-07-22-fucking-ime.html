@@ -1,0 +1,22 @@
+---
+title: "우분투 13.04 한글 설정 / ubuntu 13.04 korean input setting"
+layout: "post"
+permalink: "/2013/07/fucking-ime.html"
+uuid: "6662349174569905282"
+guid: "tag:blogger.com,1999:blog-98320892776810016.post-6662349174569905282"
+date: "2013-07-22 23:14:00"
+updated: "2013-08-25 07:23:14"
+description: 
+blogger:
+    siteid: "98320892776810016"
+    postid: "6662349174569905282"
+categories: [ubuntu]
+author: 
+    name: "Hiun Kim"
+    url: "http://www.blogger.com/profile/03959746300918215329?rel=author"
+    image: "http://img2.blogblog.com/img/b16-rounded.gif"
+---
+
+<div class="css-full-post-content js-full-post-content">
+망할 한글 설정때문에 2일을 컴퓨터를 못썼다.<br />13.04부터는 nabi입력기를 설치해도 시스템에서 Hangul로 인식하기때문애 오해가 더 커졌다.<br /><a href="http://www.ubuntu.or.kr/viewtopic.php?p=111475">http://www.ubuntu.or.kr/viewtopic.php?p=111475</a><br /><br />1. 나비를 설치한다.<br /><b>$ sudo apt-get install nabi</b><br /><br />2.system setting에 가서 language support로 들어가서 add or install language 같은 버튼이 있다. 거기 처음에는 English만 체크되어있는데 korean도 체크한뒤 확인을 한다. 처음들어간다면 언어를 설치해야된다고 나올것인데 그냥 설치해주자.<br /><br />3.im-switch를 설치한다. im-switch는 language support를 대용해서 사용할수 있는데, 이것을 설치하면 language support가 사라진다. 뭐 별로 상관은 없다.<br /><b>$ sudo apt-get install im-switch</b><br /><br />4.로그아웃을 한번 해준다.<br /><br />5.ctrl + alt + T 혹은 터미널을 켜서 im-switch -c를 입력하면 입력기 선택이 나오는데 거기서 나비로 바꾼다.<br /><br />6.근데 여전히 나비의 한영전환 트레이가 데스크탑에 떠있을 것이다. 그것을 시스템 트레이로 집어넣으려면 com.canonical ~~ 이런 명령어를 입력해야하는데, 13.04부터는 그게 바뀌어서 (unity panel 설정일듯..) &nbsp;수동 수정을 해야한다.<br /><br /><a href="http://www.webupd8.org/2013/05/how-to-get-systray-whitelist-back-in.html">http://www.webupd8.org/2013/05/how-to-get-systray-whitelist-back-in.html</a><br /><br />여기를 참고해보면,<br /><br /><b>sudo add-apt-repository ppa:timekiller/unity-systrayfix</b><br /><b>sudo apt-get update</b><br /><b>sudo apt-get upgrade</b><br /><br />이 명령어를 입력해서 우분투의 관련 저장소를 추가한다.<br />윈도우키 혹은 알트키로 우분투 허드(검색창)를 켜서 unity를 검색한뒤 재시작 한번 해준다.<br /><br />그뒤, 다시 허드를 열어서, dconf라는 애플리케이션을 실행한뒤, com -&gt; canonical -&gt; unity -&gt; panel에 간다.<br /><br />7.systray-whitelist라는 항목이 있는데<br /><br /><b>['JavaEmbeddedFrame', 'Wine', 'Update-notifier']&nbsp;</b><br /><br />라고 기본설정되어있을 것이다.여기에 <b>, 'nabi' </b>를 추가하여<br /><br /><b>['JavaEmbeddedFrame', 'Wine', 'Update-notifier', 'nabi']</b><br /><b><br /></b>이 꼴로 만들어준후 저장한뒤, 로그아웃을 하면 나비가 시스템 트레이에 들어가 있을것이다.<br />드디어 모든것이 끝났다..<br /><br />//한영키로 한영전환하기(기본은 Ctrl + Space이다.)<br /><br />8.system setting에서 키보드를 들어가면 단축기, shortcut이라는 탭이 있다. 들어가서 런처~~ 탭에 들어가서 '허드를 표시할 키(Key to show the HUD)'라는 망할 옵션을 체크해제해준다. 그러면 키보드의 한영키 또는 한영-알트키로도 한영전환을 할수있다.<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-2-jHK1n95Is/Ue28IRNFYNI/AAAAAAAACAM/vPOjotZ0mqI/s1600/snapshot.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="362" src="http://2.bp.blogspot.com/-2-jHK1n95Is/Ue28IRNFYNI/AAAAAAAACAM/vPOjotZ0mqI/s640/snapshot.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Key to show the HUD 저것을 체크해제하는게 한영키 사용의 핵심이다.</td></tr></tbody></table><br />나는 우분투 13.04 사용자다. 이 방법은 13.x버전 이상부터는 아마 사용가능할것이다.<br /><br />
+</div>

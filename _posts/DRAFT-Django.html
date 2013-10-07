@@ -1,0 +1,23 @@
+---
+title: "Django 설치및 초기세팅"
+layout: "post"
+permalink: "/Django.html"
+uuid: "5126953889909456233"
+guid: "tag:blogger.com,1999:blog-98320892776810016.post-5126953889909456233"
+date: "2013-08-14 09:36:00"
+updated: "2013-08-14 09:36:44"
+description: 
+blogger:
+    siteid: "98320892776810016"
+    postid: "5126953889909456233"
+categories: 
+author: 
+    name: "Hiun Kim"
+    url: "http://www.blogger.com/profile/03959746300918215329?rel=author"
+    image: "http://img2.blogblog.com/img/b16-rounded.gif"
+published: "false"
+---
+
+<div class="css-full-post-content js-full-post-content">
+최근 미친듯이 장고를 배우고 있는데, 국내자료가 너무없어서 메모용으로 적어놓으려 한다..ㅜㅜ<br /><br />개발환경은 우분투 12.04LTS이다.<br /><br /><b>-파이썬 설치</b><br />장고는 Python을 기반으로 만들어졌다. 장고는 Python Web Framework이다. 나도 처음에 프레임워크가 무엇인지에 대해서 잘 몰랐다.<br /><br />모든 서비스의 기초는 DB에다가 데이터를 입출력하는것이다. 카톡도 그렇고 페북도 그렇다. 그러한 것을은 상당부분 겹치는 영역이기때문에 이러한 공통적인 부분을 쉽게 쓸수있도록 만들어놓은것이 프레임워크인것 같다. 웹 프레임워크라고 해서 앱개발자들에개 해당안되는 이야기가 아니다. SNS와 같은 앱은 서버 단이 있어야 되니까 말이다..<br /><br /><b>$ sudo apt-get update</b><br />//업데이트를 한번 해준다.<br /><br /><b>$ sudo apt-get install python</b><br />//파이썬을 설치해준다.<br /><br /><b>$ sudo apt-get install python-django</b><br />//장고를 설치해준다.<br /><br /><b>$ find / -name django-admin.py</b><br />//장고 어드민 파일을 찾아준다. 개인적으로 이 파일은 많이 쓰이기때문에 자신의 계정에 환경변수로 등록해 주면 좋다.<br /><br />//환경변수 파일의 위치는 루트는 /root/.bashrc 일반은 /home/user_name/.bashrc 파일이다. 가장 아랫줄에 export djangoadmin="/django_admin.py_location" 으로 넣어주면 환경변수가 추가된다. 편집뒤 <b>$ sudo source /root/.bashrc</b> 라고 명령어를 날려주면 바로 적용된다.<br /><br />//dajngo-admin.py가 하는일은 다음과 같다.<br /><br />-새로운 프로젝트 생성<br />-프로젝트 데이터베이스 생성및 관리<br />-프로젝트 상태 테스트<br />-개발용 웹서버 실행<br /><br /><b>$ django-admin.py --version</b><br />//장고의 버전을 확인해준다. 이 명령어는 django-admin.py 파일이 있는 디렉토리에서 실행하여야 한다. 만약 환경변수를 설정했다면 아무데서나 $djangoadmin --version 이라고 입력하면 된다.<br /><br /><b>$ django-admin startproject django_bookmarks</b><br />//장고 북마크라는 프로젝트를 시작한다.<br /><br />이 명령은 현제 디렉터리에 django_bookmarks 디렉터리를 만들고<br /><br />
+</div>

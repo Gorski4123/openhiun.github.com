@@ -1,0 +1,22 @@
+---
+title: "구글 블로거에 나눔고딕 적용방법"
+layout: "post"
+permalink: "/2013/02/nanum-gothic-on-google-blogger.html"
+uuid: "2377971687381890176"
+guid: "tag:blogger.com,1999:blog-98320892776810016.post-2377971687381890176"
+date: "2013-02-14 11:10:00"
+updated: "2013-02-14 11:54:28"
+description: 
+blogger:
+    siteid: "98320892776810016"
+    postid: "2377971687381890176"
+categories: [블로거팁]
+author: 
+    name: "Hiun Kim"
+    url: "http://www.blogger.com/profile/03959746300918215329?rel=author"
+    image: "http://img2.blogblog.com/img/b16-rounded.gif"
+---
+
+<div class="css-full-post-content js-full-post-content">
+<br />구글 웹폰트를 사용하여 블로그에 나눔고딕을 적용해볼께요..<br /><br />1.먼저 HTML/CSS를 수정해야됩니다. 설정 - 템플릿 - HTML 편집으로 갑니다!<br /><br />2.HTML 편집을 누른후 &lt;head&gt; 을 찾아 &lt;head&gt; 바로밑에 아래 코드를 붙혀넣습니다.<br /><br /><br />&nbsp;&lt;style type='text/css'&gt;<br />&nbsp; &nbsp; @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);<br />&nbsp; &nbsp;&lt;/style&gt;<br /><br />3.컨트롤+F로 Page Text를 검색합니다. Page Text있는데 보면<br /><br /><br />&lt;Group description="<b>Page Text</b>" selector="body"&gt;<br />&nbsp; &nbsp; &nbsp;&lt;Variable name="body.font" description="Font" type="font"<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<b>&nbsp;default="normal normal 12px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 12px 'Trebuchet MS', Trebuchet, Verdana, sans-serif"/&gt;</b><br />&nbsp; &nbsp; &nbsp;&lt;Variable name="body.text.color" description="Text Color" type="color" default="#222222" value="#666666"/&gt;<br />&nbsp; &nbsp;&lt;/Group&gt;<br /><br />이런 부분을 찾을수 있습니다.<br /><br /><b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</b><b>default="normal normal 12px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 12px 'Trebuchet MS', Trebuchet, Verdana, sans-serif"/&gt;</b><br /><b><br /></b>이부분을<br /><br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<b>default="normal normal 12px Nanum Gothic, sans-serif" value="normal normal 12px 'Nanum Gothic', sans-serif"/&gt;</b><br /><br />로 바꿔줍니다. 테마에따라서 상이할수있으나 default와 value값을 일정하니 확인해보고 바꾸시면 좋습니다.<br /><br />적용후 내블로그로가서 확인해보면 나눔고딕으로 바꿔있을겁니다. ^.^<br /><br />PS. 위에서는 Page Text (본문)의 폰트를 변경해 봤습니다. Post Title, Gadgets, Tabs Text 폰트로 마찬가지로 변경 가능합니다.<br /><div><br /></div>
+</div>

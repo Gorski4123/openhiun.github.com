@@ -1,0 +1,23 @@
+---
+title: "php"
+layout: "post"
+permalink: "/php.html"
+uuid: "8940069363888435063"
+guid: "tag:blogger.com,1999:blog-98320892776810016.post-8940069363888435063"
+date: "2013-08-24 07:30:00"
+updated: "2013-08-24 17:56:53"
+description: 
+blogger:
+    siteid: "98320892776810016"
+    postid: "8940069363888435063"
+categories: 
+author: 
+    name: "Hiun Kim"
+    url: "http://www.blogger.com/profile/03959746300918215329?rel=author"
+    image: "http://img2.blogblog.com/img/b16-rounded.gif"
+published: "false"
+---
+
+<div class="css-full-post-content js-full-post-content">
+<pre class="brush: php; highlight: [5, 15]; html-script: true">&lt;?php<br />function extractContent($tag, $html) {<br />    $closeTag = substr($tag, 0, 1) . '/' . substr($tag, 1, 3);<br />    $startPos = strlen($tag);<br />    $endPos = strpos($html, $closeTag);<br />    $text = substr($html, $startPos, $endPos - $startPos);<br />    return array($closeTag, trim(preg_replace('/(\s){2,}/', ' ', $text)));<br />}<br /><br />$html = file_get_contents($htmlFile);<br />$limits = array('min' =&gt; 200, 'max' =&gt; 2000);<br />$tag = '&lt;p&gt;';<br />$paragraphs = array();<br /><br />$i = 0;<br />while (($pos = strpos($html, $tag, $i)) !== false) {<br />    list($closeTag, $text) = extractContent($tag, substr($html, $pos));<br />    // keep the content if it's a suitable size<br />    $len = strlen($text);<br />    if ($len &gt;= $limits['min'] &amp;&amp; $len &lt;= $limits['max']) {<br />        $paragraphs[] = $text;<br />    }<br />    $i = $pos + strlen($tag) + strlen($text) + strlen($closeTag);<br />}</pre>
+</div>

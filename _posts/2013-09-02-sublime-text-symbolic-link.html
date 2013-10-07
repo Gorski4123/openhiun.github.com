@@ -1,0 +1,22 @@
+---
+title: "서브라임 텍스트 설치후 우분투 심볼릭 링크 설정"
+layout: "post"
+permalink: "/2013/09/sublime-text-symbolic-link.html"
+uuid: "6904361049725678869"
+guid: "tag:blogger.com,1999:blog-98320892776810016.post-6904361049725678869"
+date: "2013-09-02 09:36:00"
+updated: "2013-09-02 09:39:23"
+description: 
+blogger:
+    siteid: "98320892776810016"
+    postid: "6904361049725678869"
+categories: 
+author: 
+    name: "Hiun Kim"
+    url: "http://www.blogger.com/profile/03959746300918215329?rel=author"
+    image: "http://img2.blogblog.com/img/b16-rounded.gif"
+---
+
+<div class="css-full-post-content js-full-post-content">
+가끔씩 웹서버에있는 문서를 수정하다 모면 빡찬다.. FTP로 받아서 다시 올리는것도 귀찮고 서브라임에 SFTP를 달아서 그짓 하는것도 썩.. 별로다.<br /><br />우분투라면, 터미널이 있다면 SSH접속한뒤 vim을 사용하는 것처럼 subl 이라는 커맨드를 사용해서 쉽게 파일을 수정할수 있다.<br /><br />서브라임 텍스트가 /opt/sublime text 2/sublime_text 에 위치하고 있을경우 아래와 같이 심볼릭 링크를 등록해주면 된다.<br /><br /><pre class="brush: java; toolbar: false;">sudo ln -s "/opt/Sublime Text 2/sublime_text" /usr/bin/subl</pre><br /><br />
+</div>

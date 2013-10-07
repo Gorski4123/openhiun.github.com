@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Defining Defination - 구글 블로거에 페이스북 좋아요! 버튼 달기</title>
+        <meta property="fb:admins" content="openhiun" />
+        <meta property="fb:app_id" content="533004283446886"/>
+        <meta property="og:title" content="구글 블로거에 페이스북 좋아요! 버튼 달기" />
+        <meta property="og:url" content="/2013/02/add-facebook-social-plugin-on-google-blogger.html" />
+
+
+        <!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.gravatar.com/avatar/88c94e86ee17d23e06907361e5533e99.jpg?s=144">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.gravatar.com/avatar/88c94e86ee17d23e06907361e5533e99.jpg?s=114">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.gravatar.com/avatar/88c94e86ee17d23e06907361e5533e99.jpg?s=72">
+                <link rel="apple-touch-icon-precomposed" href="http://www.gravatar.com/avatar/88c94e86ee17d23e06907361e5533e99.jpg?s=57">
+                               <link rel="shortcut icon" href="/images/favicon.ico">
+                                       <link href='http://www.openhiun.com/2013/02/add-facebook-social-plugin-on-google-blogger.html' rel='canonical'/>
+        <script src="/js/parallax.js"></script>
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" type="text/css" href="/css/default.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/custom.css">
+
+        <!-- Analytics -->
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38527094-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+    </head>
+    <body>
+      <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=533004283446886";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+      </script>
+
+       <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Defining Definition</a></h1>
+             <div class="subtitle">
+              Startup, Geek, Opensource..  
+             </div>
+            <div class="header-border">
+            <br />
+          </div>
+         <div id="main">
+
+          <h2>구글 블로거에 페이스북 좋아요! 버튼 달기</h2>
+<p class="meta">15 Feb 2013</p>
+
+<div class="post">
+<div class="css-full-post-content js-full-post-content">
+<div class="separator" style="clear: both; text-align: center;"><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-B_JyAFaj6iA/UR21R7QQ34I/AAAAAAAABXg/o-Hpn8VdWBs/s1600/facebook+logo.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="400" src="http://1.bp.blogspot.com/-B_JyAFaj6iA/UR21R7QQ34I/AAAAAAAABXg/o-Hpn8VdWBs/s400/facebook+logo.jpg" width="330" /></a></div><div><b><br /></b></div><div><b><br /></b></div><div><b>1. 코드 만들기</b></div><div><br /></div>아래 코드는 가장 기본적인 좋아요!+보내기가 있는 페북 공유 플러그인의 코드입니다.<br /><div><br /></div><div><div>&lt;div&gt;</div><div>&lt;b:if cond='data:post.isFirstPost'&gt;&nbsp;</div><div>&lt;script&gt;(function(d){</div><div>&nbsp; var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}</div><div>&nbsp; js = d.createElement('script'); js.id = id; js.async = true;</div><div>&nbsp; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";</div><div>&nbsp; d.getElementsByTagName('head')[0].appendChild(js);</div><div>}(document));&lt;/script&gt;</div><div>&lt;/b:if&gt;&nbsp;</div><div>&lt;fb:like expr:href="data:post.canonicalUrl" <b>layout='standard'</b> <b>send='true'</b> <b>show_faces='false'</b> font="arial" action="like" colorscheme="light"&gt;&lt;/fb:like&gt;</div><div>&lt;/div&gt;</div></div><div><br /></div><div>여기에서 여러가지 옵션을 더하고 뺄수 있습니다. ( 꼭 수정할 필요는 없어요. )</div><div><br /></div><div><b>layout='standard' </b>이것은&nbsp;좋아요! 숫자를 나타내고,&nbsp;<b>layout='button_count'</b>로 설정할경우 박스형태로 나타냅니다.</div><div><br /></div><div><b>send='true' </b>이것은 보내기 버튼의 유무를 결정, 'false'로 하면 보내가가 없어집니다.</div><div><br /></div><div><b>show_faces='false' </b>이것은 같이 좋아요!를 한 친구들의 얼굴이 나오는 것인데, 'true'일경우 얼굴들이 나옵니다.</div><div><br /></div><div><b>2.적용</b></div><div><b><br /></b></div><div>설정 - 템플릿 - HTML편집에 들어간후 상단에 '가젯코드 펼쳐서 보여주기'를 체크합니다.</div><div>그리고&nbsp;&lt;data:post.body/&gt;를 찾아서, 가장 처음 나온 &lt;data:post.body/&gt;아래에 위의 코드를 붙입니다.</div><div><br /></div><div>이제 HTML 네임스페이스라는 형식을 추가할 차례입니다.</div><div><br /></div><div>HTML가장 윗부분에 &lt;html 이라는 것이 있을겁니다.</div><div>이것을&lt;html xmlns:fb="https://www.facebook.com/2008/fbml" 로 변경하시면 됩니다. 간단히 &lt;html 포함해서 덮어씌우면 됩니다.</div><div><br /></div><div>그리고 지금까지 수정한것을 저장하면 끝입니다!</div><div><br /></div><div>블로그로 돌아가 확인해보면 좋아요! 버튼이 붙어있을겁니다.</div><div><br /></div><div>참고링크</div><div><a href="http://www.bloggerplugins.org/2010/04/facebook-like-button-for-blogger.html" target="_blank">http://www.bloggerplugins.org/2010/04/facebook-like-button-for-blogger.html</a></div><div><br /></div>
+</div>
+
+</div>
+<br />
+<div class="sharer-border">
+          </div> 
+<!--facebook like button-->
+<div class="fb-like" data-width="100" data-layout="button_count" data-show-faces="true" data-send="false"></div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--twitter tweet button-->
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<!--google plus +1 button-->
+<!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<!--linkedin share button-->
+<script src="//platform.linkedin.com/in.js" type="text/javascript">
+ lang: en_US
+</script>
+<script type="IN/Share" data-counter="right"></script>
+<br />
+<br />
+<!--disqus comments-->
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'openhiunblog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+         <div class="footer">
+            <div class="footer-text">
+          Generated by <a href="http://jekyllrb.com">Jekyll</a> and Powered by <a href="http://pages.github.com">Github</a>
+           </div><!--footer text-->
+         </div><!--footer-->
+         <br />
+         <br />
+
+
+             </div><!--main-->
+         
+           <div id="gap">
+           </div>
+           <div id="sidebar">
+            <br />
+              <img src="/images/openhiun.jpg" width="180px">
+              <br /><br />
+Contact Info
+<div class="header-border">
+          </div>
+          <b>Hiun Kim</b><br />
+          openhiun@gmail.com<br />
+Technical Entrepreneur and<br />CEO at Springvil
+          <br /><br />
+          Twitter
+          <div class="header-border">
+          </div>
+          <a href="https://twitter.com/openhiun" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @openhiun</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<br /><br />
+Syndication
+<div class="header-border">
+          </div>
+   <img src="/images/feed.gif"> Subscribe this blog's<br />
+   <a href="/atom.xml">atom feed</a> or <a href="/feed.xml">rss feed</a>
+   <br /><br />
+Archives
+<div class="header-border">
+          </div>
+   <a href="/archives.html">All postings</a>
+<br /><br />
+Policy
+<div class="header-border">
+          </div>
+
+  <center>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Every content of this blog</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+</center>
+<br />
+<br />
+<img id='chrome' src='/images/chrome.png' style='position:absolute' width="200px" />
+          
+
+              
+
+
+          </div><!--sidebar-->
+
+
+
+         </div><!--header-->
+      </div><!--site-->
+    </body>
+</html>

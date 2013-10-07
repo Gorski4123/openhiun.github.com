@@ -1,0 +1,22 @@
+---
+title: "구글 블로거에 페이스북 좋아요! 버튼 달기"
+layout: "post"
+permalink: "/2013/02/add-facebook-social-plugin-on-google-blogger.html"
+uuid: "3159573639994452613"
+guid: "tag:blogger.com,1999:blog-98320892776810016.post-3159573639994452613"
+date: "2013-02-15 04:12:00"
+updated: "2013-02-18 18:18:37"
+description: 
+blogger:
+    siteid: "98320892776810016"
+    postid: "3159573639994452613"
+categories: [페이스북, 블로거팁]
+author: 
+    name: "Hiun Kim"
+    url: "http://www.blogger.com/profile/03959746300918215329?rel=author"
+    image: "http://img2.blogblog.com/img/b16-rounded.gif"
+---
+
+<div class="css-full-post-content js-full-post-content">
+<div class="separator" style="clear: both; text-align: center;"><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-B_JyAFaj6iA/UR21R7QQ34I/AAAAAAAABXg/o-Hpn8VdWBs/s1600/facebook+logo.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="400" src="http://1.bp.blogspot.com/-B_JyAFaj6iA/UR21R7QQ34I/AAAAAAAABXg/o-Hpn8VdWBs/s400/facebook+logo.jpg" width="330" /></a></div><div><b><br /></b></div><div><b><br /></b></div><div><b>1. 코드 만들기</b></div><div><br /></div>아래 코드는 가장 기본적인 좋아요!+보내기가 있는 페북 공유 플러그인의 코드입니다.<br /><div><br /></div><div><div>&lt;div&gt;</div><div>&lt;b:if cond='data:post.isFirstPost'&gt;&nbsp;</div><div>&lt;script&gt;(function(d){</div><div>&nbsp; var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}</div><div>&nbsp; js = d.createElement('script'); js.id = id; js.async = true;</div><div>&nbsp; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";</div><div>&nbsp; d.getElementsByTagName('head')[0].appendChild(js);</div><div>}(document));&lt;/script&gt;</div><div>&lt;/b:if&gt;&nbsp;</div><div>&lt;fb:like expr:href="data:post.canonicalUrl" <b>layout='standard'</b> <b>send='true'</b> <b>show_faces='false'</b> font="arial" action="like" colorscheme="light"&gt;&lt;/fb:like&gt;</div><div>&lt;/div&gt;</div></div><div><br /></div><div>여기에서 여러가지 옵션을 더하고 뺄수 있습니다. ( 꼭 수정할 필요는 없어요. )</div><div><br /></div><div><b>layout='standard' </b>이것은&nbsp;좋아요! 숫자를 나타내고,&nbsp;<b>layout='button_count'</b>로 설정할경우 박스형태로 나타냅니다.</div><div><br /></div><div><b>send='true' </b>이것은 보내기 버튼의 유무를 결정, 'false'로 하면 보내가가 없어집니다.</div><div><br /></div><div><b>show_faces='false' </b>이것은 같이 좋아요!를 한 친구들의 얼굴이 나오는 것인데, 'true'일경우 얼굴들이 나옵니다.</div><div><br /></div><div><b>2.적용</b></div><div><b><br /></b></div><div>설정 - 템플릿 - HTML편집에 들어간후 상단에 '가젯코드 펼쳐서 보여주기'를 체크합니다.</div><div>그리고&nbsp;&lt;data:post.body/&gt;를 찾아서, 가장 처음 나온 &lt;data:post.body/&gt;아래에 위의 코드를 붙입니다.</div><div><br /></div><div>이제 HTML 네임스페이스라는 형식을 추가할 차례입니다.</div><div><br /></div><div>HTML가장 윗부분에 &lt;html 이라는 것이 있을겁니다.</div><div>이것을&lt;html xmlns:fb="https://www.facebook.com/2008/fbml" 로 변경하시면 됩니다. 간단히 &lt;html 포함해서 덮어씌우면 됩니다.</div><div><br /></div><div>그리고 지금까지 수정한것을 저장하면 끝입니다!</div><div><br /></div><div>블로그로 돌아가 확인해보면 좋아요! 버튼이 붙어있을겁니다.</div><div><br /></div><div>참고링크</div><div><a href="http://www.bloggerplugins.org/2010/04/facebook-like-button-for-blogger.html" target="_blank">http://www.bloggerplugins.org/2010/04/facebook-like-button-for-blogger.html</a></div><div><br /></div>
+</div>

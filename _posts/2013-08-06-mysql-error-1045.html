@@ -1,0 +1,22 @@
+---
+title: "MySQL Error 1045 해결법"
+layout: "post"
+permalink: "/2013/08/mysql-error-1045.html"
+uuid: "7566565992832539063"
+guid: "tag:blogger.com,1999:blog-98320892776810016.post-7566565992832539063"
+date: "2013-08-06 06:34:00"
+updated: "2013-08-06 06:36:37"
+description: 
+blogger:
+    siteid: "98320892776810016"
+    postid: "7566565992832539063"
+categories: [mysql]
+author: 
+    name: "Hiun Kim"
+    url: "http://www.blogger.com/profile/03959746300918215329?rel=author"
+    image: "http://img2.blogblog.com/img/b16-rounded.gif"
+---
+
+<div class="css-full-post-content js-full-post-content">
+1045에러는 권한문제이다. 잘은 모르겠지만 kldp에 따르면 root계정에 비밀번호를 부여했지만 권한을 부여하지 않은경우에 발생한다고 한다. kldp링크는 까먹었다..<br /><br />어쨋은 해결법은 다음과 같다.<br /><br /><b>$ mysql -u root -p&nbsp;</b><br />//mysql에 root계정으로 접속 한다.<br /><br /><b>mysql&gt; use mysql;&nbsp;</b><br />//사용자 계정 설정이 있는 'mysql' db에 접속한다.<br /><b><br /></b><b>mysql&gt; update user set password=PASSWORD('input_yout_password') where user='root';</b><br />//root의 비밀번호를 초기화 하고 다시 설정해준다.<br /><br /><b>mysql&gt; flush privileges;</b><br />//권한 적용한다.<br /><br /><b>mysql&gt; grant all on *.* to 'root'@'%' identified by 'input_your_password' with grant option;</b><br />//어떤 IP에서도(%), 패스워드를 이용해서(identiified by '~'), 루트계정으로 접속할수 있도록(root) 해준다.<br /><br /><b>mysql&gt; flush privileges;</b><br />//한번더 권한 재적용.<br /><br /><b>mysql&gt; exit;</b><br />//나간다.<br /><br />
+</div>
