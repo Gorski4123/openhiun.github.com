@@ -428,10 +428,6 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
 &lt;p&gt;bcrypt에 대한 개념적인 참고 자료는 &lt;a href=&quot;http://codahale.com/how-to-safely-store-a-password/&quot; target=&quot;_blank&quot;&gt;http://codahale.com/how-to-safely-store-a-password/&lt;/a&gt;에서 많이 얻었고 예제에 대한 참고는 &lt;a href=&quot;http://www.gregboggs.com/php-blowfish-random-salted-passwords/&quot; target=&quot;_blank&quot;&gt;http://www.gregboggs.com/php-blowfish-random-salted-passwords/&lt;/a&gt;에서 많이 받았다.&lt;/p&gt;
 
 &lt;p&gt;전체 PHP코드는 r.php라는 이름으로 &lt;a href=&quot;https://github.com/openhiun/php/blob/master/r.php&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;에 공개하였다.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;ajd1&lt;/code&gt;
-&lt;code&gt;kkk&lt;/code&gt;
-&lt;pre&gt;skf&lt;/pre&gt;&lt;/p&gt;
 </description>
 				<pubDate>Sun, 25 Aug 2013 07:14:00 +0900</pubDate>
 				<link>/2013/08/bcrypt.html</link>
