@@ -4,7 +4,7 @@
   <title>Your Website</title>
   <link href="http://example.com/"/>
   <link type="application/atom+xml" rel="self" href="http://example.com/atom.xml"/>
-  <updated>2013-10-07T22:47:54+09:00</updated>
+  <updated>2013-10-08T19:11:38+09:00</updated>
   <id>http://example.com/</id>
   <author>
     <name>Your Name</name>
@@ -169,10 +169,6 @@ Quit the server with CONTROL-C.
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;&lt;span class=&quot;x&quot;&gt;deactivate&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2.setting.py와 데이터베이스 모델&lt;/strong&gt;&lt;/p&gt;
 </content>
   </entry>
   
@@ -296,9 +292,201 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
       <name>Your Name</name>
       <uri>http://example.com/</uri>
     </author>
-    <content type="html">&lt;div class=&quot;css-full-post-content js-full-post-content&quot;&gt;
-얼마전부터 &lt;a href=&quot;https://www.springvil.com/&quot; target=&quot;_blank&quot;&gt;Springvil&lt;/a&gt;이라는 서비스를 PHP로 개발하고있다. 처음에는 Python-Django로 하려했는데, 기술적인 장벽이 너무커서 익숙한 PHP로 만들기로 했다.&lt;br /&gt;&lt;br /&gt;모든 서비스는 기본적으로 데이터베이스에서 데이터를 넣고 읽는것을 기본으로하고, 그 시작에는 회원가입이 있다고 생각해서 회원가입 기능부터 구현해보았다..&lt;br /&gt;&lt;br /&gt;흔히 쓰는 md5는 제쳐두고.. SHA512를 통해서 128바이트 길이의 암호를 8자리의 salt와 함께 만드려했다. 구글링을 하다 bcrypt라는것을 발견했고 SHA가 원래 암호화 목적이 아닌 파일 색인을 목적으로 한다는것에 반해 bcrypt는 처음부터 암호화를 목적으로 설개되었다는 말을 듣고 쓸만하다고 생각했다. 국내에서는 거의 자료가 없는것 같고 &lt;a href=&quot;http://helloworld.naver.com/helloworld/318732&quot; target=&quot;_blank&quot;&gt;네이버 개발자 블로그&lt;/a&gt;에서 안전한 암호화를 다루면서 마지막에 한번 언급한것 같다.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;bcrypt의 장점&lt;/b&gt;은 크게 2가지 인데,&lt;br /&gt;&lt;br /&gt;첫번째는 보안의 강도를 강화하기 위해 &lt;b&gt;일반 문자와 더불어 점과 기호를 사용해 암호화&lt;/b&gt;를 한다는것이다.&lt;br /&gt;&lt;br /&gt;두번째는 bcrypt의 기반이 되는 &lt;a href=&quot;http://en.wikipedia.org/wiki/Blowfish_(cipher)&quot; target=&quot;_blank&quot;&gt;blowfish&lt;/a&gt;라는 기법을 통해 아무리 &lt;b&gt;강한 컴퓨팅 파워를 가진 컴퓨터라도 실제 패스워드를 암호화하는데 소요되는 시간을 동일&lt;/b&gt;하게 가지게 한다는 것이다.&lt;br /&gt;&lt;br /&gt;md5와 bcrypt를 비교해봤을때 12자리의 패스워드를 해싱할때 걸리는 시간은 bcrypt는 0.3반면 md5는 &amp;nbsp;1마이크로초조차 안걸린다. (1 마이크로초는 백만분의 1초이며 1의 -6제곱이다.) &lt;a href=&quot;http://codahale.com/how-to-safely-store-a-password/&quot; target=&quot;_blank&quot;&gt;예를들어 5자리 이상의 비밀번호를 크래커가 무작위 대입을 할경우 md5는 원래 비밀번호를 찾아내는데 40초가 걸리지만 bcrypt는 12년이 걸린다는것을 알수있다.&lt;/a&gt; 물론 이것조차 데이터베이스가 통째로 털렸을때 상황이긴 하지만..&lt;br /&gt;&lt;br /&gt;그럼 실제 코드를 살펴보자. 아래코드는 php의 post를 이용한 회원가입을 기준으로 하고 작성하였다. 먼저 blowfish의 지원 여부 확인( PHP 5.3이상부터는 내장되어 있다고 한다. )과 mysql연결 그리고 회원가입 관련 데이터들을 POST방식으로 받아온다.&lt;br /&gt;&lt;br /&gt;&lt;pre class=&quot;brush: php; toolbar: false;&quot;&gt;CRYPT_BLOWFISH or die ('No Blowfish found.');&lt;br /&gt;&lt;br /&gt;//connect to the mysql.&lt;br /&gt;$conn = mysql_connect(&quot;localhost&quot;, &quot;root&quot;, &quot;password&quot;)&lt;br /&gt;  or die('Not connected : ' . mysql_error());&lt;br /&gt;&lt;br /&gt;mysql_select_db('springvil', $conn)&lt;br /&gt;    or die ('Not selected : ' . mysql_error());&lt;br /&gt;&lt;br /&gt;//receive registration information.&lt;br /&gt;$email = mysql_real_escape_string($_POST[&quot;email&quot;]);&lt;br /&gt;$firstname = mysql_real_escape_string($_POST[&quot;firstname&quot;]);&lt;br /&gt;$lastname = mysql_real_escape_string($_POST[&quot;lastname&quot;]);&lt;br /&gt;$birthday_month = mysql_real_escape_string($_POST[&quot;birthday_month&quot;]);&lt;br /&gt;$birthday_day = mysql_real_escape_string($_POST[&quot;birthday_day&quot;]);&lt;br /&gt;$birthday_year = mysql_real_escape_string($_POST[&quot;birthday_year&quot;]);&lt;br /&gt;$gender = mysql_real_escape_string($_POST[&quot;gender&quot;]);&lt;br /&gt;$passwd = mysql_real_escape_string($_POST[&quot;password&quot;]);&lt;br /&gt;&lt;/pre&gt;&lt;br /&gt;그뒤 blowfish를 이용한 암호화를 몇번 할껀지 설정해준다. 5번이면 안전상 충분하다고 한다.  &lt;br /&gt;&lt;pre class=&quot;brush: php; toolbar: false;&quot;&gt;//This string tells crypt to use blowfish for 5 rounds.&lt;br /&gt;$blowfish_pre = '$2a$05$';&lt;br /&gt;$blowfish_end = '$';&lt;br /&gt;&lt;/pre&gt;&lt;br /&gt;다음으로는 bcrypt에서 사용할 문자의 종류를 정해준다. &lt;br /&gt;&lt;pre class=&quot;brush: php; toolbar: false;&quot;&gt;// Blowfish accepts these characters for salts.&lt;br /&gt;$allowed_chars =&lt;br /&gt;'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789./';&lt;br /&gt;$chars_len = 63;&lt;br /&gt;&lt;/pre&gt;&lt;br /&gt;랜덤 salt를 설정해준다. 18자 이상이면 안전하다고한다. &lt;br /&gt;&lt;pre class=&quot;brush: php; toolbar: false;&quot;&gt;// 18 would be secure as well.&lt;br /&gt;$salt_length = 21;&lt;br /&gt;&lt;/pre&gt;&lt;br /&gt;가입일과 빈값의 salt변수를 설정해준다. &lt;br /&gt;&lt;pre class=&quot;brush: php; toolbar: false;&quot;&gt;//set date and empty variable salt.&lt;br /&gt;$mysql_date = date( 'Y-m-d' );&lt;br /&gt;$salt = &quot;&quot;;&lt;br /&gt;&lt;/pre&gt;&lt;br /&gt;랜덤한 솔트를 PHP의 자체 기능을 통해서 만들어준다. 그리고 blowfish를 통해 암호를 5번더 암호화 시킨다. 마지막으로 받아온 암호화 랜덤 salt를 이용해 패스워드를 만든다. &lt;br /&gt;&lt;pre class=&quot;brush: php; toolbar: false;&quot;&gt;//create ramdon salt and round blowfish.&lt;br /&gt;for($i=0; $i&amp;lt;$salt_length; $i++)&lt;br /&gt;{&lt;br /&gt;    $salt .= $allowed_chars[mt_rand(0,$chars_len)];&lt;br /&gt;}&lt;br /&gt;$bcrypt_salt = $blowfish_pre . $salt . $blowfish_end;&lt;br /&gt;&lt;br /&gt;//encrypt password.&lt;br /&gt;$password = crypt($passwd, $bcrypt_salt);&lt;br /&gt;&lt;/pre&gt;&lt;br /&gt;mysql에 다른 회원가입정보와 함께 입력하는 SQL문을 쿼리를 돌려서 적용시킨다. 그리고 커넥션을 끝낸다. &lt;br /&gt;&lt;pre class=&quot;brush: php; toolbar: false;&quot;&gt;//insert data.&lt;br /&gt;$query = 'INSERT INTO users (email, firstname, lastname, signup_date, birthday_month, birthday_day, birthday_year, gender, salt, password)'.&lt;br /&gt; &quot;VALUES ('$email', '$firstname', '$lastname', '$mysql_date', '$birthday_month', '$birthday_day', '$birthday_year', '$gender', '$salt', '$password')&quot;;&lt;br /&gt;&lt;br /&gt;//close mysql connection.      &lt;br /&gt;mysql_query($query) or die( mysql_error() );&lt;br /&gt;&lt;br /&gt;mysql_close($conn);&lt;br /&gt;&lt;/pre&gt;&lt;br /&gt;bcrypt에 대한 개념적인 참고 자료는&amp;nbsp;&lt;a href=&quot;http://codahale.com/how-to-safely-store-a-password/&quot;&gt;http://codahale.com/how-to-safely-store-a-password/&lt;/a&gt;&amp;nbsp;에서 많이 얻었고 예제에 대한 참고는&amp;nbsp;&lt;a href=&quot;http://www.gregboggs.com/php-blowfish-random-salted-passwords/&quot;&gt;http://www.gregboggs.com/php-blowfish-random-salted-passwords/&lt;/a&gt;&amp;nbsp;에서 많이 받았다.&lt;br /&gt;&lt;br /&gt;전체 PHP코드는 r.php라는 이름으로 Github에 공개하였다.&lt;br /&gt;&lt;a href=&quot;https://github.com/openhiun/php/blob/master/r.php&quot;&gt;https://github.com/openhiun/php/blob/master/r.php&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
-&lt;/div&gt;</content>
+    <content type="html">&lt;p&gt;얼마전부터 &lt;a href=&quot;https://www.springvil.com/&quot; target=&quot;_blank&quot;&gt;Springvil&lt;/a&gt;이라는 서비스를 PHP로 개발하고있다. 처음에는 Python-Django로 하려했는데, 기술적인 장벽이 너무커서 익숙한 PHP로 만들기로 했다.&lt;/p&gt;
+
+&lt;p&gt;모든 서비스는 기본적으로 데이터베이스에서 데이터를 넣고 읽는것을 기본으로하고, 그 시작에는 회원가입이 있다고 생각해서 회원가입 기능부터 구현해보았다..&lt;/p&gt;
+
+&lt;p&gt;흔히 쓰는 md5는 제쳐두고.. SHA512를 통해서 128바이트 길이의 암호를 8자리의 salt와 함께 만드려했다. 구글링을 하다 bcrypt라는것을 발견했고 SHA가 원래 암호화 목적이 아닌 파일 색인을 목적으로 한다는것에 반해 bcrypt는 처음부터 암호화를 목적으로 설개되었다는 말을 듣고 쓸만하다고 생각했다. 국내에서는 거의 자료가 없는것 같고 &lt;a href=&quot;http://helloworld.naver.com/helloworld/318732&quot; target=&quot;_blank&quot;&gt;네이버 개발자 블로그&lt;/a&gt;에서 안전한 암호화를 다루면서 마지막에 한번 언급한것 같다.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;bcrypt의 장점&lt;/b&gt;은 크게 2가지 인데,&lt;/p&gt;
+
+&lt;p&gt;첫번째는 보안의 강도를 강화하기 위해 &lt;b&gt;일반 문자와 더불어 점과 기호를 사용해 암호화&lt;/b&gt;를 한다는것이다.&lt;/p&gt;
+
+&lt;p&gt;두번째는 bcrypt의 기반이 되는 &lt;a href=&quot;http://en.wikipedia.org/wiki/Blowfish_(cipher)&quot; target=&quot;_blank&quot;&gt;blowfish&lt;/a&gt;라는 기법을 통해 아무리 &lt;b&gt;강한 컴퓨팅 파워를 가진 컴퓨터라도 실제 패스워드를 암호화하는데 소요되는 시간을 동일&lt;/b&gt;하게 가지게 한다는 것이다.&lt;/p&gt;
+
+&lt;p&gt;md5와 bcrypt를 비교해봤을때 12자리의 패스워드를 해싱할때 걸리는 시간은 bcrypt는 0.3반면 md5는 &amp;nbsp;1마이크로초조차 안걸린다. (1 마이크로초는 백만분의 1초이며 1의 -6제곱이다.) &lt;a href=&quot;http://codahale.com/how-to-safely-store-a-password/&quot; target=&quot;_blank&quot;&gt;예를들어 5자리 이상의 비밀번호를 크래커가 무작위 대입을 할경우 md5는 원래 비밀번호를 찾아내는데 40초가 걸리지만 bcrypt는 12년이 걸린다는것을 알수있다.&lt;/a&gt; 물론 이것조차 데이터베이스가 통째로 털렸을때 상황이긴 하지만..&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;그럼 실제 코드를 살펴보자. 아래코드는 php의 post를 이용한 회원가입을 기준으로 하고 작성하였다. 먼저 blowfish의 지원 여부 확인( PHP 5.3이상부터는 내장되어 있다고 한다. )과 mysql연결 그리고 회원가입 관련 데이터들을 POST방식으로 받아온다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//...&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;CRYPT_BLOWFISH&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;die&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;No Blowfish found.&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//connect to the mysql.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$conn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;localhost&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;root&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;die&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Not connected : &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;mysql_select_db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;springvil&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;die&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Not selected : &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//receive registration information.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$email&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_real_escape_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_POST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;email&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$firstname&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_real_escape_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_POST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;firstname&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$lastname&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_real_escape_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_POST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;lastname&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$birthday_month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_real_escape_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_POST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;birthday_month&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$birthday_day&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_real_escape_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_POST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;birthday_day&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$birthday_year&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_real_escape_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_POST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;birthday_year&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$gender&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_real_escape_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_POST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;gender&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$passwd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_real_escape_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_POST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//...?&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;그뒤 blowfish를 이용한 암호화를 몇번 할껀지 설정해준다. 5번이면 안전상 충분하다고 한다.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//...&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//This string tells crypt to use blowfish for 5 rounds.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$blowfish_pre&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;$2a$05$&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$blowfish_end&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;$&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//...?&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;다음으로는 bcrypt에서 사용할 문자의 종류를 정해준다. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//...&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Blowfish accepts these characters for salts.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$allowed_chars&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;&amp;#39;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789./&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$chars_len&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;63&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//...?&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;랜덤 salt를 설정해준다. 18자 이상이면 안전하다고한다. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//...&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 18 would be secure as well.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$salt_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//...?&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;가입일과 빈값의 salt변수를 설정해준다. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//...&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//set date and empty variable salt.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$mysql_date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Y-m-d&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$salt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//...?&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;랜덤한 솔트를 PHP의 자체 기능을 통해서 만들어준다. 그리고 blowfish를 통해 암호를 5번더 암호화 시킨다. 마지막으로 받아온 암호화 랜덤 salt를 이용해 패스워드를 만든다.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//...&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//create ramdon salt and round blowfish.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$salt_length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;$salt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$allowed_chars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mt_rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$chars_len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$bcrypt_salt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$blowfish_pre&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$salt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$blowfish_end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//encrypt password.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$password&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;crypt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$passwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$bcrypt_salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//...?&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;mysql에 다른 회원가입정보와 함께 입력하는 SQL문을 쿼리를 돌려서 적용시킨다. 그리고 커넥션을 끝낸다.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//...&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//insert data.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$query&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;INSERT INTO users (email, firstname, lastname, signup_date, birthday_month,&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt; birthday_day, birthday_year, gender, salt, password)&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+ &lt;span class=&quot;s2&quot;&gt;&amp;quot;VALUES (&amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$email&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;, &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$firstname&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;, &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$lastname&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;, &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$mysql_date&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;, &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$birthday_month&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;,&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;  &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$birthday_day&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;, &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$birthday_year&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;, &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$gender&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;, &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$salt&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;, &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$password&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//close mysql connection.      &lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;mysql_query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;die&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;mysql_close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//...?&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;결과적으로 전체 코드는 다음과 같이 된다.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//r.php register.php&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//bcrypt module check.&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;CRYPT_BLOWFISH&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;die&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;No Blowfish found.&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//connect to the mysql.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$conn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;localhost&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;root&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;die&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Not connected : &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;mysql_select_db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;dbname&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;die&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Not selected : &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//receive registration information.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$email&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_real_escape_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_POST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;email&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$firstname&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_real_escape_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_POST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;firstname&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$lastname&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_real_escape_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_POST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;lastname&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$birthday_month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_real_escape_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_POST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;birthday_month&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$birthday_day&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_real_escape_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_POST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;birthday_day&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$birthday_year&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_real_escape_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_POST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;birthday_year&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$gender&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_real_escape_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_POST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;gender&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$passwd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_real_escape_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_POST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//This string tells crypt to use blowfish for 5 rounds.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$blowfish_pre&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;$2a$05$&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$blowfish_end&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;$&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Blowfish accepts these characters for salts.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$allowed_chars&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;&amp;#39;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789./&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$chars_len&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;63&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 18 would be secure as well.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$salt_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//set date and empty variable salt.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$mysql_date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Y-m-d&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$salt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//create ramdon salt and round blowfish.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$salt_length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;$salt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$allowed_chars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mt_rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$chars_len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$bcrypt_salt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$blowfish_pre&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$salt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$blowfish_end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//encrypt password.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$password&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;crypt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$passwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$bcrypt_salt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//insert data.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$query&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;INSERT INTO users (email, firstname, lastname, signup_date, birthday_month,&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt; birthday_day, birthday_year, gender, salt, password)&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+ &lt;span class=&quot;s2&quot;&gt;&amp;quot;VALUES (&amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$email&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;, &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$firstname&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;, &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$lastname&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;, &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$mysql_date&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;, &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$birthday_month&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;,&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;  &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$birthday_day&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;, &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$birthday_year&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;, &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$gender&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;, &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$salt&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;, &amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$password&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;#39;)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//close mysql connection.      &lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;mysql_query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;die&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;mysql_close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;bcrypt에 대한 개념적인 참고 자료는 &lt;a href=&quot;http://codahale.com/how-to-safely-store-a-password/&quot; target=&quot;_blank&quot;&gt;http://codahale.com/how-to-safely-store-a-password/&lt;/a&gt;에서 많이 얻었고 예제에 대한 참고는 &lt;a href=&quot;http://www.gregboggs.com/php-blowfish-random-salted-passwords/&quot; target=&quot;_blank&quot;&gt;http://www.gregboggs.com/php-blowfish-random-salted-passwords/&lt;/a&gt;에서 많이 받았다.&lt;/p&gt;
+
+&lt;p&gt;전체 PHP코드는 r.php라는 이름으로 &lt;a href=&quot;https://github.com/openhiun/php/blob/master/r.php&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;에 공개하였다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ajd1&lt;/code&gt;
+&lt;code&gt;kkk&lt;/code&gt;
+&lt;pre&gt;skf&lt;/pre&gt;&lt;/p&gt;
+</content>
   </entry>
   
   <entry>

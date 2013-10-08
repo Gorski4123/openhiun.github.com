@@ -208,3 +208,13 @@ ul.posts span {
 #post-date {
   font-family: 'Open Sans', 'Nanum Gothic', sans-serif;
 }
+
+pre { 
+  background-color: #272822 !important;
+  color:#ffffff;
+}
+
+code { 
+  background-color: #272822 !important;
+  color:#ffffff;
+}

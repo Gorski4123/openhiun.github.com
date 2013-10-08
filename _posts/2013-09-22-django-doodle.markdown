@@ -106,12 +106,7 @@ Quit the server with CONTROL-C.
  `http://localhost:8000`으로 접속하면 결과를 확인할수 있을것이다. 이제 모든걸 다 마쳤다. `ctrl-c`를 통해 서버를 죽이고 아래 명령어를 통해 `virtualenv`에서 나가자.<br />
 {% highlight php %}
 deactivate
-{% endhighlight %}<br />
-
-**2.setting.py와 데이터베이스 모델**
-
-
-
+{% endhighlight %}
 
 [sel]: http://www.socialexperiencelab.com
 [codingeverybody]: https://www.facebook.com/groups/codingeverybody/permalink/576755052365035/
