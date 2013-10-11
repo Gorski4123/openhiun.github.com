@@ -8,6 +8,12 @@
         <meta property="fb:app_id" content="533004283446886"/>
         <meta property="og:title" content="{{ page.title }}" />
         <meta property="og:url" content="{{ site.url}}{{ page.url }}" />
+        {% if page.description %}
+        <meta name="description" content="{{page.description}}" />
+        {% else %}
+        <meta name="description" content="{{site.description}}" />
+        {% endif %}
+        <meta name="robots" content="{{page.index}}INDEX,{{page.follow}}FOLLOW" />
 
 
         <!-- Favicons -->
