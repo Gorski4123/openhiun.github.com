@@ -14,7 +14,6 @@ permalink: /canonical-url
 {% highlight php %}
 microsoft.com
 www.microsoft.com
-microsoft.com
 www.microsoft.com/en-us/default.aspx
 www.microsoft.com/en-us/DeFaUlT.AsPx
 {% endhighlight %}
