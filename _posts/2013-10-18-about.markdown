@@ -36,7 +36,7 @@ Planning and Managing Department member of [Youth Startup Association][ysa-site]
 {% highlight python %}
 #loved quotes.
 Think Different #Apple
-Code \is Poerty #Wordpress
+Code is Poetry #Wordpress
 Inspire a Generation #london2012
 Idea into Action #TEDxSamsung
 {% endhighlight %}
