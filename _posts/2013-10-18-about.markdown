@@ -23,7 +23,7 @@ In the club, we founded 9to5share.com to create accurate Localized torrent searc
 I am attend [Yuhan Technical High School][yuhan] and [Gwangmoon High School][gm] in South Korea.
 
 Outside of work, I am enjoying to hack and digg something. Loves to learn python, django and nosql. Also 
-Planning and Managing Department member of [Youth Startup Association] used to planning [hackathon].
+Planning and Managing Department member of [Youth Startup Association][ysa-site] used to planning [hackathon][b2ghackathon].
 
 
 **Media Spots**
@@ -34,7 +34,7 @@ Planning and Managing Department member of [Youth Startup Association] used to p
 {% highlight python %}
 #loved quotes.
 Think Different #Apple
-Code is Poerty #Wordpress
+Code \is Poerty #Wordpress
 Inspire a Generation #london2012
 Idea into Action #TEDxSamsung
 {% endhighlight %}
@@ -46,6 +46,8 @@ Idea into Action #TEDxSamsung
 [visang]: http://www.visang.org/
 [yuhan]: http://www.yuhan.hs.kr/
 [gm]: http://www.kmoon.hs.kr/
+[ysa-site]: http://www.ysa.or.kr/
+[b2ghackathon]: http://www.facebook.com/b2ghackathon
 [ysa]: http://www.etnews.com/news/economy/economy/2805299_1493.html
 
 
