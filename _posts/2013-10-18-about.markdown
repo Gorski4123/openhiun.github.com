@@ -7,11 +7,13 @@ permalink: /about
 ---
 
 **Basis**
+
 Twitter : [@openhiun][twitter]
 Linkedin : [Linkedin Profile][linkedin]
 Facebook : [Faceboook][facebook]
 
 **Bio**
+
 Hi my name is Hiun Kim. hiun is pronounce just like 'hyun'. I am founder and hacker at [Springvil][springvil].
 Our mission, Springvil's mission is helps to bring people together and make their idea into action.
 
@@ -25,6 +27,7 @@ Planning and Managing Department member of [Youth Startup Association] used to p
 
 
 **Media Spots**
+
 [Common of rolling high school entrepreneur? 'We are belong YSA!'][ysa]
 
 
