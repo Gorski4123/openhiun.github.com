@@ -30,7 +30,8 @@ Planning and Managing Department member of [Youth Startup Association][ysa-site]
 
 **Media Spots**
 
-[Common of rolling high school entrepreneur? 'We are belong YSA!'][ysa] by Jungyoon Huh at etnews.com
+[Common of rolling high school entrepreneur? 'We are belong YSA!'][ysa]
+by Jungyoon Huh at etnews.com
 
 
 {% highlight python %}
