@@ -1,0 +1,48 @@
+---
+layout: post
+title:  "Hiun Kim"
+date:   2013-10-18 12:00:00
+categories:
+permalink: /about
+---
+
+**Basis**
+Twitter : [@openhiun][twitter]
+Linkedin : [Linkedin Profile][linkedin]
+Facebook : [Faceboook][facebook]
+
+**Bio**
+Hi my name is Hiun Kim. hiun is pronounce just like 'hyun'. I am founder and hacker at [Springvil][springvil].
+Our mission, Springvil's mission is helps to bring people together and make their idea into action.
+
+In high school I co-founded [Vsang Computer Club][visang] for researching and doing some fun with my geek friends.
+In the club, we founded 9to5share.com to create accurate Localized torrent search service to people.
+
+I am attend [Yuhan Technical High School][yuhan] and [Gwangmoon High School][gm] in South Korea.
+
+Outside of work, I am enjoying to hack and digg something. Loves to learn python, django and nosql. Also 
+Planning and Managing Department member of [Youth Startup Association] used to planning [hackathon].
+
+
+**Media Spots**
+[Common of rolling high school entrepreneur? 'We are belong YSA!'][ysa]
+
+
+{% highlight python %}
+#loved quotes.
+Think Different #Apple
+Code is Poerty #Wordpress
+Inspire a Generation #london2012
+Idea into Action #TEDxSamsung
+{% endhighlight %}
+
+[twitter]: https://twitter.com/openhiun
+[linkedin]: http://linkedin.com/in/openhiun
+[facebook]: https://www.facebook.com/openhiun
+[springvil]: https://www.springvil.com/
+[visang]: http://www.visang.org/
+[yuhan]: http://www.yuhan.hs.kr/
+[gm]: http://www.kmoon.hs.kr/
+[ysa]: http://www.etnews.com/news/economy/economy/2805299_1493.html
+
+
