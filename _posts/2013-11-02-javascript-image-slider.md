@@ -51,7 +51,7 @@ body {font-family:Arial, Helvetica, sans-serif; font-size:12px;}
 </html>
 {% endhighlight %}
 
-are you getting it?? see the javadcript code. it's really simple even begineer like me. 
+are you getting it?? see the javascript code. it's really simple even begineer like me. 
 I always sneak peek javascript code but this time i actually write and customizing this little code. ;)
 
 {% highlight javascript %}
@@ -63,7 +63,6 @@ $(function () {
 });
 {% endhighlight %}
 
-Are you getting it??
 ``fadeIn``and``fadeOut`` means how much time to run fading animation. and lastly ``5000`` means show each image while 5000 micro seconds 
 aka 5 seconds. Every animation effect is powered by jQuery javascript library. ``fadeIn()``and ``fadeOut()`` called api.
 if you want learn more check out [this][jquery-fade-api].
