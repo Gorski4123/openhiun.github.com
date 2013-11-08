@@ -49,7 +49,7 @@ $(function () {
 </html>
 {% endhighlight %}
 
-are you getting it?? see the javascript code. it's really simple even begineer like me. 
+Are you getting it?? see the javascript code. it's really simple even begineer like me. 
 I always sneak peek javascript code but this time i actually write and customizing this little code. ;)
 
 {% highlight javascript %}
