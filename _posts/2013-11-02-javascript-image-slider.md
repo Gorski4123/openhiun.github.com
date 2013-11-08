@@ -21,7 +21,7 @@ It is quiet simple. just check the code below.
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/css"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(function () {
     $('.fadein img:gt(0)').hide();
@@ -31,9 +31,7 @@ $(function () {
 });
 </script>
 
-<style>
-body {font-family:Arial, Helvetica, sans-serif; font-size:12px;}
-
+<style type="text/css">
 .fadein { position:relative; height:250px; width:500px; }
 .fadein img { position:absolute; left:0; top:0; }
 </style>
