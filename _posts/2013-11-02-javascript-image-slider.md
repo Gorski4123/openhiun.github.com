@@ -15,7 +15,7 @@ It works like this.
 
 <iframe width="100%" height="300" src="http://jsfiddle.net/6enP8/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-It is quiet simple. just check the code below.
+It is quite simple. just check the code below.
 
 {% highlight html %}
 <!DOCTYPE html>
