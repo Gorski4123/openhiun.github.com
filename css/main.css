@@ -218,3 +218,7 @@ code {
   background-color: #272822 !important;
   color:#ffffff;
 }
+
+code span {
+  font-family: 'Lucida Console', 'Source Code Pro', sans-serif;
+}
