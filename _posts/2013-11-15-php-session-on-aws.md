@@ -19,7 +19,7 @@ $ find / -name php.ini
 $vim /etc/php.ini
 {% endhighlight %}
 
-you will find this line on ``session`` section.(approx 1277 line.)
+you will find this line on session section.(approx 1277 line.)
 
 {% highlight php %}
 session.save_path = "/sessions"
