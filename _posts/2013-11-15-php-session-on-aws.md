@@ -34,8 +34,8 @@ $ sudo chmod 777 -R /sessions
 {% endhighlight %}
 
 Finally restart PHP-FPM for apply setting with following commends.
-{% highlight python %}
+{% highlight php %}
 service php-fpm restart
-#or php5-fpm restart
-#if you are using ubuntu or centos.
+/*or php5-fpm restart
+if you are using ubuntu or centos.*/
 {% endhighlight %}
