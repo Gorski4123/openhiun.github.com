@@ -16,7 +16,7 @@ Ths problem is permission. When you see php.ini file which contain whole configu
 {% highlight php %}
 $ find / -name php.ini
 /etc/php.ini
-$vim /etc/php.ini
+$ vim /etc/php.ini
 {% endhighlight %}
 
 you will find this line on session section.(approx 1277 line.)
@@ -25,8 +25,10 @@ you will find this line on session section.(approx 1277 line.)
 session.save_path = "/sessions"
 {% endhighlight %}
 
-This is the problem. You can permission them to 777 for just test. OR maybe folder is dosen't exist.
-To successfully save session data, Create folder and make 777 permission by following commends.
+This is the problem. You may see different directory at ``session.save_path`` 
+You can permission them to 777 for php can write session on this directory. or create folder when destination folder is not exist.
+
+The result is to successfully save session data, Create folder and make 777 permission by following commends.
 
 {% highlight php %}
 $ mkdir /sessions
@@ -35,7 +37,11 @@ $ sudo chmod 777 -R /sessions
 
 Finally restart PHP-FPM for apply setting with following commends.
 {% highlight php %}
-service php-fpm restart
-//or run php5-fpm restart
-//if you are using ubuntu or centos.
+$ service php-fpm restart
+
+//for php-fpm on ubuntu or centos
+$ service php5-fpm restart
+
+//for php on apache
+$ apachectl restart
 {% endhighlight %}
