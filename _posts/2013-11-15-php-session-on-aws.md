@@ -38,10 +38,8 @@ $ sudo chmod 777 -R /sessions
 Finally restart PHP-FPM for apply setting with following commends.
 {% highlight php %}
 $ service php-fpm restart
-
-//for php-fpm on ubuntu or centos
+//for php-fpm on ubuntu or centos with nginx
 $ service php5-fpm restart
-
 //for php on apache
 $ apachectl restart
 {% endhighlight %}
