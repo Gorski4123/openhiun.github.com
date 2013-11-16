@@ -8,8 +8,8 @@ permalink: /php-session-on-aws
 I was digging over a month to getting php session work on Amazon Web Services Elastic Compute Cloud aka AWS EC2. 
 It was make me crazy at that time but looking back (Like all digging thus) it's great jearney with quite simple solution.
 
-I was developing PHP social networking application on top of AWS EC2 with nginx, PHP-FPM and Elastic Beanstalk with typical
-LAMP stack. After I make some signup and signin feature, I try to both but failure. I really don't know why.
+I was developing PHP social networking application on top of AWS EC2 with nginx, PHP-FPM and also Elastic Beanstalk with typical
+LAMP stack for testing. After I make some signup and signin feature, I try to both but failed. I really don't know why.
 
 Ths problem is permission. When you see php.ini file which contain whole configuration of your PHP with following commends,
 
@@ -22,18 +22,24 @@ $ vim /etc/php.ini
 you will find this line on session section.(approx 1277 line.)
 
 {% highlight php %}
+session.save_path = "/your/session/path"
+{% endhighlight %}
+
+If i want to store session data in ``/sessions`` directory, change directory you want to store session.
+
+{% highlight php %}
 session.save_path = "/sessions"
 {% endhighlight %}
 
-This is the problem. You may see different directory at ``session.save_path`` 
-You can permission them to 777 for php can write session on this directory. or create folder when destination folder is not exist.
-
-The result is to successfully save session data, Create folder and make 777 permission by following commends.
+Finally create folder and change permission to 777 by following commends.
 
 {% highlight php %}
 $ mkdir /sessions
 $ sudo chmod 777 -R /sessions
 {% endhighlight %}
+
+If permission is 777 then PHP-FPM process can write data into folder. and immediately session will work.
+so **it's all about permission is matter!**
 
 Finally restart PHP-FPM for apply setting with following commends.
 {% highlight php %}
@@ -43,3 +49,6 @@ $ service php5-fpm restart
 //for php on apache
 $ apachectl restart
 {% endhighlight %}
+
+After restart I guess session will working correctly. It not only solution for PHP on AWS but solution for PHP on whole linux based system.
+I hope this will helpful to you!
