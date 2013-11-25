@@ -43,8 +43,8 @@ Load autoloader and use some of AWS SDK. and now define secret and access key an
 {% highlight php %}
 <?php//..
 //define keys and bucket
-$accesskey = 'AKIAJP5H5WM5ZEKHWTVQ';
-$secretkey = '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';
+$accesskey = 'access_key';
+$secretkey = 'secret_key';
 $bucket = 'springvil';
 //..?>
 {% endhighlight %}
