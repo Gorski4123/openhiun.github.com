@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Upload file to s3"
+title:  "Upload file to S3"
 date:   2013-11-25 15:46:10
 categories:
 permalink: /upload-file-to-s3
