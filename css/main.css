@@ -220,6 +220,11 @@ code {
 }
 
 code span {
-  font-family: 'Lucida Console', 'Source Code Pro', sans-serif;
+  font-family: 'Monaco', 'Lucida Console', 'Source Code Pro', sans-serif;
+  font-size: 12px;
+}
+
+p code {
+  font-family: 'Monaco', 'Lucida Console', 'Source Code Pro', sans-serif;
   font-size: 12px;
 }
