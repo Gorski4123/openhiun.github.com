@@ -2,7 +2,7 @@
 layout: post
 title:  "Getting php session to work on AWS"
 date:   2013-11-15 23:59:59
-categories:
+categories: e
 permalink: /php-session-on-aws
 ---
 I was digging over a month to getting php session work on Amazon Web Services Elastic Compute Cloud aka AWS EC2. 
