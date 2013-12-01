@@ -2,7 +2,7 @@
 layout: post
 title:  "Instagram, Y Combinator like javascript image slider"
 date:   2013-11-02 15:48:50
-categories:
+categories: e
 permalink: /javascript-image-slider
 ---
 
