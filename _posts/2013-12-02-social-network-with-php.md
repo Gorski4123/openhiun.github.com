@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "PHP로 SNS만들기"
+title:  "PHP로 SNS만들기에 대한 현실적인 팁과 고찰"
 date:   2013-12-02 02:01:30
 categories: k
 permalink: /social-network-with-php
