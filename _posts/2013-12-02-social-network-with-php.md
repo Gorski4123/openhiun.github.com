@@ -6,6 +6,8 @@ categories: k
 permalink: /social-network-with-php
 ---
 
+<a href="http://www.flickr.com/photos/openhiun/11155396466" title="the-social-network-logo by openhiun, on Flickr"><img src="http://farm4.staticflickr.com/3800/11155396466_b2fbdd6ed6_o.png" width="800" height="310" alt="the-social-network-logo"></a>
+
 한때 SNS가 많은 각광을 받았었다. 11년은 그 정점일것이다. 영화 소셜네트워크가 나오면서 페이스북과 트위터가 많은 인기를 얻었으니..
 요즘에는 그때만 못하지만 난 여전히 SNS에 많은 가치를 두고 있다. 그 이유는 사람과 사람을 연결하는것 그것이 가장 가치있고 또한 재미있고 흥분되는 일인것 같다.
 그런점에서 형태는 개방적, 폐쇠적으로 공간은 온라인, 오프라인, 온오프라인으로 많이 바뀌겠지만, 앞으로도 우리의 원초적 본능인 다른사람과 만나고 싶고
