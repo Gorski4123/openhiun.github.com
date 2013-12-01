@@ -2,7 +2,7 @@
 layout: post
 title:  "애플 아이콘"
 date:   2013-10-11 20:29:56
-categories:
+categories: k
 permalink: /apple-icon
 ---
 
