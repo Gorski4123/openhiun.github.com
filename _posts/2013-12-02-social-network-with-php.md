@@ -18,7 +18,7 @@ permalink: /social-network-with-php
 
 **1.인프라**
 
-<center><img src="http://farm4.staticflickr.com/3719/11155998445_9fbd296dd9.jpg" width="361" height="500" alt="eb"></center>
+<center><img src="http://farm4.staticflickr.com/3719/11155998445_9fbd296dd9_n.jpg" width="231" height="320" alt="eb"></center>
 
 상용 서비스든 베타 서비스든 '서비스'라는걸 가동시키기 위해서 장비와 전력등이 필요하다. 가장 쉬운 방법은 호스팅을 이용하는 것인데
 나는 막 개발해보고픈 PHP입문자라면 아마존 웹 서비스에 가입해서 Elastic Beanstalk(이하 eb)을 사용해 볼것을 권한다.
@@ -55,7 +55,7 @@ eb를 선택한다음 당신이 할것은 PHP를 이용한 애플리케이션 �
 
 **4.피드 만들기**
 
-<center><img src="http://farm4.staticflickr.com/3667/11156310723_3700bb25c9.jpg" width="500" height="255" alt="nf"></center>
+<center><img src="http://farm4.staticflickr.com/3667/11156310723_3700bb25c9.jpg" width="800" height="408" alt="nf"></center>
 
 항상 궁금했다. 어떻게 페이스북은 같은 피드를 아니, 거의 모든 서비스가 어떻게 UI와 피드를 만드는지. 답은 간단했다. 
 우리가 프로그래밍 시간에 배운 `while`문을 PHP에서 MySQL에서 데이터를 가져올때 사용하는 `mysqli_fetch_array`와 함께 사용해서 **일치하는 열의 데터를 모두 가져온뒤, 한열씩 조건에 맞게 반복``while``하면 된다.** 이런식으로 블로그 글,
