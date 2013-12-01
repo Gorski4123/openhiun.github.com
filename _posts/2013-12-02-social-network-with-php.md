@@ -42,6 +42,8 @@ eb를 선택한다음 당신이 할것은 PHP를 이용한 애플리케이션 �
 
 **3회원가입**
 
+<center><img src="http://farm8.staticflickr.com/7291/11156407464_c30c0460fc_c.jpg" width="640" height="400" alt="fb"></center>
+
 간단한 과정을 설명하자면 
 1. 사용자가 폼에서 입력한 이름, 성, 이메일, 비밀번호를 post방식으로 전송한다.
 2. 처리하는 PHP스크립트에서 PHP의`isset`과 `!empty`함수를 사용해 post방식으로 전송된 값이 설정되 있는지, 비어있지 않은지 
