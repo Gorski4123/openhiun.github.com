@@ -16,32 +16,36 @@ permalink: /social-network-with-php
 현실적으로 우리가 흔히 접할수 있는 언어인 'PHP로 SNS만들기'로 구글링을 하면 워드프레스를 이용한 방법말고는 나오지 않는다.
 이 글에서는 1년전의 나처럼 막연하게 SNS를 만들고 싶은 마음을 가지고 있는 뉴비들을 대상으로 기본적인 기능 구현에대해 적어보려 한다.
 
+<br />
 **1.인프라**
 
 <center><img src="http://farm4.staticflickr.com/3719/11155998445_9fbd296dd9_n.jpg" width="120" alt="eb"></center>
 
 상용 서비스든 베타 서비스든 '서비스'라는걸 가동시키기 위해서 장비와 전력등이 필요하다. 가장 쉬운 방법은 호스팅을 이용하는 것인데
-나는 막 개발해보고픈 PHP입문자라면 아마존 웹 서비스에 가입해서 Elastic Beanstalk(이하 eb)을 사용해 볼것을 권한다.
+나는 막 개발해보고픈 PHP입문자라면 [아마존 웹 서비스][aws]에 가입해서 [Elastic Beanstalk][eb](이하 eb)을 사용해 볼것을 권한다.
 PHP로 개발을 처음 하는 사람은 윈도우에서는 WAMP나 APM_SETUP등을 사용해서 쉽게 애플리케이션 구동환경을 만들겠지만
 상용서비스시에는 비용문제등으로 리눅스 서버를 사용해야 하는데 이 경우 PHP와 MySQL그리고 그것을 뒷받침해주는 기타 패키지등을
 설치해야한다. 지금 미친듯이 실현하고 싶은 아이디어가 있다면 나중으로 미루어도 된다. eb는 PHP와 MySQL같은 공통 요소를 최적화시켜 설치해놓은 서버이다.
 eb를 선택한다음 당신이 할것은 PHP를 이용한 애플리케이션 개발 뿐이다.
 
+<br />
 **2.데이터베이스**
 
 <center><img src="http://farm6.staticflickr.com/5535/11156096956_b352427c02_o.png" width="170" height="115" alt="mysql"></center>
 
 프로그래밍 언어로는 PHP를 사용할 것인데, PHP는 eb에 기본 설치되어 있다. 상용서비스 뿐만 아니라 초기서비스에서도 중요한것은
 바로 **분이 시스템**이다. 대부분의 스타트업 서비스는 웹서버 + 애플리케이션 서버 - DB서버로 구성되어 있다. 웹서버와 애플리케이션 서버는 분리 통합이
-비교적 문제가 아니나, 우리가 셀프 호스팅 할때처럼 데이터베이스를 같은 서버에 둘필요는 없다. 리소스 낭비이기 때문에, 그래서 아마존 웹 서비스의 RDS를 사용하면 된다. 간단하게.
+비교적 문제가 아니나, 우리가 셀프 호스팅 할때처럼 데이터베이스를 같은 서버에 둘필요는 없다. 리소스 낭비이기 때문에, 그래서 아마존 웹 서비스의 [RDS][rds]를 사용하면 된다. 간단하게.
 
+<br />
 **2-1.MySQL vs NoSQL(mongodb, HBase, Cassandra and Hadoop + etc)**
 
-<img src="http://farm6.staticflickr.com/5548/11156503776_61e1470667_n.jpg" width="320" height="94" alt="mongodb">
+<center><img src="http://farm6.staticflickr.com/5548/11156503776_61e1470667_n.jpg" width="320" height="94" alt="mongodb"></center>
 
 제발 MySQL로 가주기 바란다. 이제 시작한 서비스는 99%의 불확실성에 쌓여있다. 메시징은 HBase, 데이터분석은 Hadoop이 특화된 데이터베이스라고 하나
 일반적으로 빠르게 시작해서 니즈를 검증하려면 시작하려면 그냥 MySQL로 가는것이 좋다. 빠른 시도가 실패의 비용을 줄이고, 개발의 복잡성도 줄이기 때문에 나는 처음에는 닥치고 MySQL을 사용하라고 권하고 싶다.
 
+<br />
 **3회원가입**
 
 <center><img src="http://farm8.staticflickr.com/7291/11156407464_c30c0460fc.jpg" width="400" alt="fb"></center>
@@ -57,6 +61,7 @@ eb를 선택한다음 당신이 할것은 PHP를 이용한 애플리케이션 �
 
 (BTW나는 여기까지 파는대 2달 걸렸다.)
 
+<br />
 **4.피드 만들기**
 
 <center><img src="http://farm4.staticflickr.com/3667/11156310723_d21ce3b5e8_o.jpg" width="400" alt="nf"></center>
@@ -95,7 +100,10 @@ POST;
 출력한다. ``echo``는 PHP에서 HTML을 출력할수 있게 만들어 주는 내장함수이다.
 
 
-항상 기억하는 문구가 있다.그루폰이 허름한 워드프레스 웹사이트와 수제 pdf쿠폰, 핀터레스트가 블로그용으로 쓰이는 PHP기반으로 시작됬다는 이야기를 들으며, 시작은 허름할지라도 빨리 아이디어를 구현하고 실현해나가는것이 중요하다고 생각한다.
+항상 기억하는 문구가 있다.
 
-[gravatar]: https://gravatar.com
-[asaph]: http://asaph.org/gravatar/
+그루폰이 허름한 워드프레스 웹사이트와 수제 pdf쿠폰으로, 핀터레스트가 블로그용으로 쓰이는 PHP기반으로 시작됬다는 이야기를 들으며, 시작은 허름할지라도 빨리 아이디어를 구현하고 실현해나가는것이 중요하다고 생각한다.
+
+[aws]: http://aws.amazon.com/ko/
+[eb]: http://aws.amazon.com/ko/elasticbeanstalk/
+[rds]: http://aws.amazon.com/ko/rds/
