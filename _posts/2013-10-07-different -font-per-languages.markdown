@@ -2,7 +2,7 @@
 layout: post
 title:  "CSS 한영폰트 다르게 설정"
 date:   2013-10-07 20:45:36
-categories:
+categories: k
 pygments: true
 permalink: /css-different-font-per-languages
 ---
