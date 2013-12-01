@@ -6,7 +6,9 @@ categories: k
 permalink: /social-network-with-php
 ---
 
-<a href="http://www.flickr.com/photos/openhiun/11155396466" title="the-social-network-logo by openhiun, on Flickr"><img src="http://farm4.staticflickr.com/3800/11155396466_b2fbdd6ed6_o.png" width="800" height="310" alt="the-social-network-logo"></a>
+<center>
+<a href="http://www.flickr.com/photos/openhiun/11155396466" title="the-social-network-logo by openhiun, on Flickr"><img src="http://farm4.staticflickr.com/3800/11155396466_fde1efe54a.jpg" width="500" height="194" alt="the-social-network-logo"></a>
+</center>
 
 한때 SNS가 많은 각광을 받았었다. 11년은 그 정점일것이다. 영화 소셜네트워크가 나오면서 페이스북과 트위터가 많은 인기를 얻었으니..
 요즘에는 그때만 못하지만 난 여전히 SNS에 많은 가치를 두고 있다. 그 이유는 사람과 사람을 연결하는것 그것이 가장 가치있고 또한 재미있고 흥분되는 일인것 같다.
@@ -46,25 +48,36 @@ eb를 선택한다음 당신이 할것은 PHP를 이용한 애플리케이션 �
 (BTW나는 여기까지 파는대 2달 걸렸다.)
 
 **4.피드 만들기**
-항상 궁금했다.
+항상 궁금했다. 어떻게 페이스북은 같은 피드를 아니, 거의 모든 서비스가 어떻게 UI와 피드를 만드는지. 답은 간단했다. 
+우리가 프로그래밍 시간에 배운 `while`문을 PHP에서 MySQL에서 데이터를 가져올때 사용하는 `mysqli_fetch_array`와 함께 사용해서 **일치하는 열의 데터를 모두 가져온뒤, 한열씩 조건에 맞게 반복``while``하면 된다.** 이런식으로 블로그 글,
+트위터와 페이스북 피드도 작동한다. 물론 추가되는 조건이나 알고리즘은 다르지만, 근본은 같다.
+
+예를 들어보자. 나는 이름과 시간 그리고 텍스트가 있는 피드를 가져올것이다. 아래와 같은 PHP코드로 말이다.
+
+{% highlight html %}
+$feed_query = mysqli_query($conn, "SELECT * FROM blog ORDER BY time DESC");
+  while($feed_array = mysqli_fetch_array($feed_query)) {
+    $firstname = $feed_array['firstname'];
+    $lastname = $feed_array['lastname'];
+    $time = $feed_array['time'];
+    $text = $feed_array['text'];
+    echo <<<POST
+    "<h3>" . $firstname . "&nbsp;" . $lastname . "</h3><br />"
+    "<h5>" . $time . "</h5><br />"
+    "<h4>" . $text . "</h4><br />"
+    <hr>
+POST;
+  }
+{% endhighlight %}
+
+매우 간단하다. ``feed_query``변수로 쿼리문을 통해 데이터를 불러오고, ``mysqli_fetch_array``함수를 ``while``함수 안에 
+넣어서 쿼리를 통해 가져온 모든 결과값을 반복해서 출력한다. ``mysqli_fetch_array``는 가져온 값을 배열에 넣는 함수인데 
+아래처럼 각각 피드 내용의 변수를 만들어서 배열에 있는 데이터를 입력하고 ``echo <<<POST``와 ``POST;``사이에 넣어서 
+출력한다. ``echo``는 PHP에서 HTML을 출력할수 있게 만들어 주는 내장함수이다.
+
 
 그루폰과 핀터레스트가 워드프레스와 수제 pdf쿠폰, 핀터레스트가 PHP기반으로 시작됬다는
 
-
-
-아이폰의 사파리에서 링크를 북마크하거나 홈화면 추가할경우 아이콘이 필요한데 최근 안드로이드까지 이러한 코드를 해석해서 북마크로 사용함으로써
-웹 페이지의 아이콘 삽입은 모던웹사이트에는 필수적인 일이 되었다. 아이콘을 삽입하려면 아래의 코드처럼 애플에서 권장하는 다양한 해상도의 아이콘을 링크로 걸어주면 된다.
-
-참고로 가장 마지막 아이콘의 크기는 57x57이다.
-
-{% highlight html %}
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="#">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="#">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="#">
-<link rel="apple-touch-icon-precomposed" href="#">
-{% endhighlight %}
-
-또한 ``rel="apple-touch-icon-precomposed"``을 ``rel="apple-touch-icon"``으로 변경하면 애플 디바이스에서 아이콘의 기본 그라디언트가 적용된다.
 
 참고로 나는 [Gravatar.com][gravatar]에서 이 블로그의 애플 아이콘을 호스팅하고 있는데, [URL을 통해서 사이즈별로 추출][asaph]할수도 있어서 참 편리하다.
 
