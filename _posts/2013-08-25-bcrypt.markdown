@@ -10,7 +10,7 @@ description:
 blogger:
     siteid: "98320892776810016"
     postid: "7902369574151652075"
-categories: [security]
+categories: [k, security]
 author: 
     name: "Hiun Kim"
     url: "http://www.blogger.com/profile/03959746300918215329?rel=author"
