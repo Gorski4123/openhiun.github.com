@@ -48,7 +48,7 @@ eb를 선택한다음 당신이 할것은 PHP를 이용한 애플리케이션 �
 <br />
 **3.회원가입**
 
-<center><img src="http://farm8.staticflickr.com/7291/11156407464_c30c0460fc.jpg" width="400" alt="fb"></center>
+<center><img src="http://farm8.staticflickr.com/7291/11156407464_c30c0460fc.jpg" width="550" alt="fb"></center>
 
 간단한 과정을 설명하자면 
 1. 사용자가 폼에서 입력한 이름, 성, 이메일, 비밀번호를 post방식으로 전송한다.
@@ -64,7 +64,7 @@ eb를 선택한다음 당신이 할것은 PHP를 이용한 애플리케이션 �
 <br />
 **4.피드 만들기**
 
-<center><img src="http://farm4.staticflickr.com/3667/11156310723_d21ce3b5e8_o.jpg" width="400" alt="nf"></center>
+<center><img src="http://farm4.staticflickr.com/3667/11156310723_d21ce3b5e8_o.jpg" width="550" alt="nf"></center>
 
 항상 궁금했다. 어떻게 페이스북은 같은 피드를 아니, 거의 모든 서비스가 어떻게 UI와 피드를 만드는지. 답은 간단했다. 
 우리가 프로그래밍 시간에 배운 `while`문을 PHP에서 MySQL에서 데이터를 가져올때 사용하는 `mysqli_fetch_array`와 함께 사용해서 **일치하는 열의 데터를 모두 가져온뒤, 한열씩 조건에 맞게 반복``while``하면 된다.** 이런식으로 블로그 글,
