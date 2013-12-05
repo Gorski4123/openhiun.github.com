@@ -6,7 +6,7 @@ categories: e
 permalink: /about
 ---
 
-<img src="http://farm4.staticflickr.com/3753/11205346695_3e778acfda_c.jpg" width="672">
+<img src="/images/people.jpg" width="672">
 
 **Basis**
 
