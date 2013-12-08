@@ -7,7 +7,7 @@ permalink: /loved-fonts
 ---
 <center>
 
-##**Helvetica**
+<div style="font-size: 24px;">**Helvetica**</div>
 
 <img src="http://farm8.staticflickr.com/7308/11274951914_2f20cbb16d_o.jpg" width="640">
 
@@ -23,7 +23,7 @@ Helvetica는 대중적으로 거의 모든 분야에 쓰이는 폰트이다. Hel
 극도의 순수함이다. **정말 지구를 대표하는 폰트**라 해도 손색없을 정도로, 대학생이 입은 청바지의 펑키함과 유럽 고건축물 
 의 디테일이 살아있다.
 
-##**Helvetica Neue**
+<div style="font-size: 24px;">**Helvetica Neue**</div>
 
 <img src="http://farm8.staticflickr.com/7452/11274685415_ec4317d496_o.jpg" width="640">
 
@@ -32,7 +32,7 @@ Helvetica는 대중적으로 거의 모든 분야에 쓰이는 폰트이다. Hel
 
 
 
-##**Source**
+<div style="font-size: 24px;">**Source**</div>
 
 첫번째 Granville 사진 <a href="http://en.wikipedia.org/wiki/File:Granville_CTA_sign.jpg">Wikipedia</a><br />
 두번째 American Appreal 사진 <a href-"http://en.wikipedia.org/wiki/File:American_Apparel,_Briggate_(20th_February_2013).JPG">Wikipedia</a><br />
