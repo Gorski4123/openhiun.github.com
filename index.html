@@ -8,7 +8,7 @@ title: Defining Definition
   <ul class="posts">
     {% for post in site.posts %}
      {% if post.categories contains 'e' %}
-      <li>- <a href="{{ post.url }}">{{ post.title }}</a><span id="post-date"> &#64; {{ post.date | date_to_string }}</span></li>
+      <li>- <a href="{{ post.url }}">{{ post.title }}</a> &#64; {{ post.date | date_to_string }}</li>
      {% endif %}
     {% endfor %}
   </ul>
