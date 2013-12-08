@@ -12,10 +12,12 @@ permalink: /loved-fonts
 
 Helvetica는 대중적으로 거의 모든 분야에 쓰이는 폰트이다. Helvetica란 이름은 스위스의 한 도시이름에서 따왔다고 한다.
 
+<img src="http://farm4.staticflickr.com/3749/11275096634_179e647516_z.jpg" width="640" style="margin: 0 auto;">
+
 사실 주변에 너무 널려있어서, 너무 중독 되어서 아름다움을 알아치리기 힘든 폰트이기도 한데, 극도의 단순함이 정말 이쁘다. 
 그리고 순수하다.
 
-<img src="http://farm4.staticflickr.com/3749/11275096634_179e647516_z.jpg" width="640" style="margin: 0 auto;">
+<img src="http://farm8.staticflickr.com/7291/11275441893_849c742eac_z.jpg" width="640" style="margin: 0 auto;">
 
 극도의 순수함이다. **정말 지구를 대표하는 폰트**라 해도 손색없을 정도로, 대학생이 입은 청바지의 펑키함과 유럽 고건축물 
 의 디테일이 살아있다.
