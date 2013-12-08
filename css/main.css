@@ -46,7 +46,7 @@ ul.posts li {
 
 ul.posts span {
   color: #aaa;
-  font-family: 'Lucida Console', 'Monaco', 'Courier New', monospace;
+  font-family: 'Open Sans', 'Nanum Gothic', sans-serif;
   font-size: 80%;
 }
 
@@ -203,10 +203,6 @@ ul.posts span {
 #sidebar {
   float: right;
   width: 24%;
-}
-
-#post-date {
-  font-family: 'Open Sans', 'Nanum Gothic', sans-serif;
 }
 
 pre { 
