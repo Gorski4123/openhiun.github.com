@@ -9,7 +9,7 @@ permalink: /blog-traveling
 10살 초반 네이버 블로그를 썼다.
 16 티스토리를 썼다.
 17살 워드프레스를 썼다.
-18살 구글 블로거, 텀블러, <a href="http://postach.io/">Postach.io (에버노트 기반 블로깅 플랫폼), 지킬을 
+18살 구글 블로거, 텀블러, <a href="http://postach.io/">Postach.io</a> (에버노트 기반 블로깅 플랫폼), 지킬을 
 쓰고 나중에는 블로그는 직접 만들어 썼다(PHP-MySQL 기반.).
 
 내가 원하는 블로그의 기능은 크게 아래와 같았다.
@@ -19,7 +19,7 @@ permalink: /blog-traveling
 텀블러 : 큰 아키텍처를 지탱하기위해 stackoverflow처럼 중간에 랜덤 숫자 넣는건 증오한다.. )
 
 **-무료일것. 그리고 무료로 도메인 연결 가능할것.**
-(wordpress.com은 여기서 막힌다. wordpress가 궁극의 블로깅 툴이긴 한데, 블로그하여고 LAMP호스팅하는건 별로다.)
+(wordpress.com 도메인 연결 유료이다. wordpress가 궁극의 블로깅 툴이긴 한데, 블로그하려고 LAMP호스팅하는건 별로다.)
 
 **-www가 없이 사이트를 요청할경우 www있는 도메인으로 rewriting가능할것**
 (물론 반대도 가능해야된다. 
@@ -35,12 +35,12 @@ permalink: /blog-traveling
 
 Concept                     Naver Blog / Tistory / Wordpress / Blogger / Tumblr / Cusotm / Jekyll<br />
 --------------------------------------------------------------------------------------------------<br />
-커스터마이징 가능한 링크       xxx          o          o          o         x        o       o    <br />
-      깨끗한 링크             xxxxxx        x          o          x         x        o       o    <br />
-         무료                   o           o          o          o         o        x       o    <br />
-  도메인 연결도 무료            o           o          x          o         o        o       o    <br />
-도메인 www 리다이렉팅 여부      x           x          x          o         x        o       o    <br />
- UI의 완벽한 커스터마이징       x           x          x          x         x        o       o    <br />
+커스터마이징 가능한 링크       xxx&nbsp;&nbsp;&nbsp;&nbsp; o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o    <br />
+      깨끗한 링크             xxxxxx&nbsp;&nbsp;&nbsp; x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o    <br />
+         무료                   o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o    <br />
+  도메인 연결도 무료            o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o    <br />
+도메인 www 리다이렉팅 여부      x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o    <br />
+ UI의 완벽한 커스터마이징       x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o    <br />
  <br />
 참고사항
       - wordpress 는 rewrite 가 되나 도메인이 유료이므로 포기
