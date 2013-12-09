@@ -31,6 +31,23 @@ permalink: /blog-traveling
 (티스토리: 모바일은 제어 불가, 자체 문법 배우는데 비용이 소요되어서 탈락.
 워드프레스 : 너무 어렵기때문에 기회비용이 크다.)
 
+정리해보자. 마이너인 Postach.io와 CustomLAMP는 여백상 제외한다.(inspired by Permat)
+
+Concept                     Naver Blog / Tistory / Wordpress / Blogger / Tumblr / Cusotm / Jekyll
+--------------------------------------------------------------------------------------------------
+커스터마이징 가능한 링크       xxx          o          o          o         x        o       o
+      깨끗한 링크             xxxxxx        x          o          x         x        o       o
+         무료                   o           o          o          o         o        x       o
+  도메인 연결도 무료            o           o          x          o         o        o       o
+도메인 www 리다이렉팅 여부      x           x          x          o         x        o       o
+ UI의 완벽한 커스터마이징       x           x          x          x         x        o       o
+ 
+참고사항
+      - wordpress 는 rewrite 가 되나 도메인이 유료이므로 포기
+      - 구글 블로거, 티스토리, 워드프레스의 UI는 커스터마이징 가능하나 시간 비용이 너무 크므로 포기
+      
+한때 SNS가 많은 각광을 받았었다. 11년은 그 정점일것이다. 영화 소셜네트워크가 나오면서 페이스북과 트
+
 
 
 궁극적으로 느낀 결론은 개발자라면 Github에서 호스팅되는 지킬을 쓰면 좋고 일반인은 티스토리를 쓰면 좋겠다는 지극히 
