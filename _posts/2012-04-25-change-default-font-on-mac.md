@@ -18,12 +18,11 @@ permalink: /change-default-font-on-mac
 
 터미널을 켜시고
 
-{% highlight bash %} 
+{% highlight bash %}
 sudo vi -e -c ":%s/<string>AppleGothic/<string>맑은 고딕 Bold/g" -c ":wq" 
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/
 CoreText.framework/Versions/A/Resources/DefaultFontFallbacks.plist
 {% endhighlight %}
-
 
 
 요 명령어를 고대로 붙어 넣으시면 됩니다. 
