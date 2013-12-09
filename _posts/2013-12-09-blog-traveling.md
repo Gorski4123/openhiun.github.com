@@ -33,19 +33,41 @@ permalink: /blog-traveling
 
 정리해보자. 마이너인 Postach.io와 CustomLAMP는 여백상 제외한다.(inspired by Permat)
 
-Concept                     Naver Blog / Tistory / Wordpress / Blogger / Tumblr / Cusotm / Jekyll<br />
---------------------------------------------------------------------------------------------------<br />
-커스터마이징 가능한 링크       xxx&nbsp;&nbsp;&nbsp;&nbsp; o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o    <br />
-      깨끗한 링크             xxxxxx&nbsp;&nbsp;&nbsp; x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o    <br />
-         무료                   o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o    <br />
-  도메인 연결도 무료            o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o    <br />
-도메인 www 리다이렉팅 여부      x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o    <br />
- UI의 완벽한 커스터마이징       x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o    <br />
- <br />
+<style type="text/css">
+.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+.tftable tr {background-color:#ffffff;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
+.tftable tr:hover {background-color:#ffff99;}
+</style>
+
+<table class="tftable" border="1">
+<tr><th>Concept</th><th>Naver Blog</th><th>Tistory</th><th>Wordpress</th><th>Blogger</th><th>Tumblr</th><th>Custom</th><th>Jekyll</th></tr>
+<tr><td>커스텀 링크</td><td>x</td><td>o</td><td>o</td><td>o</td><td>x</td><td>o</td><td>o</td></tr>
+<tr><td>고유 주소</td><td>x</td><td>x</td><td>o</td><td>x</td><td>x</td><td>o</td><td>o</td></tr>
+<tr><td>무료</td><td>o</td><td>o</td><td>o</td><td>o</td><td>o</td><td>x</td><td>o</td></tr>
+<tr><td>도메인 연결 무료</td><td>o</td><td>o</td><td>x</td><td>o</td><td>o</td><td>o</td><td>o</td></tr>
+<tr><td>WWW Rewrite 여부</td><td>x</td><td>x</td><td>x</td><td>o</td><td>x</td><td>o</td><td>o</td></tr>
+<tr><th>커스텀 HTML</th><th>x</th><th>x</th><th>x</th><th>x</th><th>x</th><th>o</th><th>o</th></tr>
+</table>
+
 참고사항
       - wordpress 는 rewrite 가 되나 도메인이 유료이므로 포기
       - 구글 블로거, 티스토리, 워드프레스의 UI는 커스터마이징 가능하나 시간 비용이 너무 크므로 포기
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 한때 SNS가 많은 각광을 받았었다. 11년은 그 정점일것이다. 영화 소셜네트워크가 나오면서 페이스북과 트
 
 
