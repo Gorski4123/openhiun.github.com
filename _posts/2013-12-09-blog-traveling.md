@@ -34,14 +34,12 @@ permalink: /blog-traveling
 정리해보자. 마이너인 Postach.io와 CustomLAMP는 여백상 제외한다.(inspired by Permat)
 
 <style type="text/css">
-.tftable {font-size:12px;color:#333333;widtd:100%;border-widtd: 1px;border-color: #729ea5;border-collapse: collapse;}
-.tftable td {font-size:12px;background-color:#acc8cc;border-widtd: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
-.tftable tr {background-color:#ffffff;}
-.tftable td {font-size:12px;border-widtd: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
-.tftable tr:hover {background-color:#ffff99;}
+.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+.tftable tr {background-color:#ffffff; text-align: center;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
 </style>
 
-<center>
 <table class="tftable" border="1">
 <tr><th>Concept</th><th>Naver Blog</th><th>Tistory</th><th>Wordpress</th><th>Blogger</th><th>Tumblr</th><th>Custom</th><th>Jekyll</th></tr>
 <tr><td>커스텀 링크</td><td>x</td><td>o</td><td>o</td><td>o</td><td>x</td><td>o</td><td>o</td></tr>
@@ -51,7 +49,6 @@ permalink: /blog-traveling
 <tr><td>WWW Rewrite 여부</td><td>x</td><td>x</td><td>x</td><td>o</td><td>x</td><td>o</td><td>o</td></tr>
 <tr><td>UI 커스터마이징</td><td>x</td><td>x</td><td>x</td><td>x</td><td>o</td><td>o</td><td>o</td></tr>
 </table>
-</center>
 
 참고사항
       - wordpress 는 rewrite 가 되나 도메인이 유료이므로 포기
