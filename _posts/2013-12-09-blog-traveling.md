@@ -33,15 +33,15 @@ permalink: /blog-traveling
 
 정리해보자. 마이너인 Postach.io와 CustomLAMP는 여백상 제외한다.(inspired by Permat)
 
-Concept                     Naver Blog / Tistory / Wordpress / Blogger / Tumblr / Cusotm / Jekyll
---------------------------------------------------------------------------------------------------
-커스터마이징 가능한 링크       xxx          o          o          o         x        o       o
-      깨끗한 링크             xxxxxx        x          o          x         x        o       o
-         무료                   o           o          o          o         o        x       o
-  도메인 연결도 무료            o           o          x          o         o        o       o
-도메인 www 리다이렉팅 여부      x           x          x          o         x        o       o
- UI의 완벽한 커스터마이징       x           x          x          x         x        o       o
- 
+Concept                     Naver Blog / Tistory / Wordpress / Blogger / Tumblr / Cusotm / Jekyll<br />
+--------------------------------------------------------------------------------------------------<br />
+커스터마이징 가능한 링크       xxx          o          o          o         x        o       o    <br />
+      깨끗한 링크             xxxxxx        x          o          x         x        o       o    <br />
+         무료                   o           o          o          o         o        x       o    <br />
+  도메인 연결도 무료            o           o          x          o         o        o       o    <br />
+도메인 www 리다이렉팅 여부      x           x          x          o         x        o       o    <br />
+ UI의 완벽한 커스터마이징       x           x          x          x         x        o       o    <br />
+ <br />
 참고사항
       - wordpress 는 rewrite 가 되나 도메인이 유료이므로 포기
       - 구글 블로거, 티스토리, 워드프레스의 UI는 커스터마이징 가능하나 시간 비용이 너무 크므로 포기
