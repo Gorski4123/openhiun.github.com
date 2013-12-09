@@ -23,7 +23,7 @@ permalink: /export-tistory-skin-with-web-browser
 4.스킨 파일중 하나인 ``style.css`` ( 스타일시트 ) 를 볼수있다.
    컨트롤 + S 로 저장한다.
 
-5. ``style.css`` 주소를 보면 이 경우는 
+5.``style.css`` 주소를 보면 이 경우는 
 
 {% highlight php %}
 http://ts.daumcdn.net/custom/blog/92/920609/skin/style.css?_T_=1360689470
@@ -48,7 +48,7 @@ http://ts.daumcdn.net/custom/blog/92/920609/skin/skin.html
 이런식으로 나오는데 이것은 ``style.css`` 처럼 그냥 저장하지말고 전체선택후 메모장등 텍스트에디터로 저장하는것이 좋다. (그냥하면 깨진다.)
 만약 스킨중 그림이 혹은 아이콘등이 있다면 이 화면에서 ``.png`` ``.jpg`` 로 검색하여 같이 추출할수 있다. 자바스크립트파일역시 추출가능하다.
 
-6.마지막으로 ``index.xml``.
+6.마지막으로 ``index.xml`` 역시 같은 방법으로 저장한다.
 
 <img src="http://cfile23.uf.tistory.com/image/181C7543511B8C8C31F1DA" width="672">
 
