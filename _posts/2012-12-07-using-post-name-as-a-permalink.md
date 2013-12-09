@@ -12,13 +12,13 @@ permalink: /using-post-name-as-a-permalink
 숫자로 주소를 생성하는것은 알아보기 힘들뿐아니라 Google같은 검색엔진에서 이 주소에 어떤내용이 있는지 색인(indexing)하기도 어렵다 그러므로 ``http://hiun.org/permalinks/``
 같이 포스트의 내용을 나타낼수 있는 주소로 변경하는것이 검색엔진최적화(SEO, Search Engine Optimization)와 컨텐츠관리측면에서 편리하다.
 이것은 약간의 수동 설정이 필요하다.
-**먼저 FTP로 ``.htaccess``파일이 있는곳을 살핀다. 대부분의 경우 ``index.php`` 파일과 같이있을것이다.**
+**먼저 FTP로** ``.htaccess``**파일이 있는곳을 살핀다. 대부분의 경우** ``index.php``**파일과 같이있을것이다.**
 
-##경우1. ``INDEX.PHP``가  ``WWW``,  ``PUBLIC_HTML``같은 최상위 디렉터리 바로 아래  있는경우
+##경우1. ``index.php``가  ``www``,  ``public_html``같은 최상위 디렉터리 바로 아래  있는경우
 
 .메모장하나 열고 아래와 같은 코드를 복사해붙인다.
 
-{% highlight apacheconf %} 
+{% highlight apache %}
 RewriteEngine On
 RewriteBase /
 RewriteRule ^index\.php$ – [L]
