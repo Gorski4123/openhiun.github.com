@@ -206,6 +206,8 @@ ul.posts span {
 }
 
 pre { 
+  font-family: 'Monaco', 'Lucida Console', 'Source Code Pro', sans-serif;
+  font-size: 12px;
   background-color: #272822 !important;
   color:#ffffff;
 }
@@ -213,14 +215,4 @@ pre {
 code { 
   background-color: #272822 !important;
   color:#ffffff;
-}
-
-code span {
-  font-family: 'Monaco', 'Lucida Console', 'Source Code Pro', sans-serif;
-  font-size: 12px;
-}
-
-p code {
-  font-family: 'Monaco', 'Lucida Console', 'Source Code Pro', sans-serif;
-  font-size: 12px;
 }
