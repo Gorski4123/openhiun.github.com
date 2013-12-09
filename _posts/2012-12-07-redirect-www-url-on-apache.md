@@ -15,7 +15,7 @@ permalink: /redirect-www-url-on-apache
 (= 접근 가능한 URL을 하나로 통일하면 된다.)
 자신의 웹서버 폴더에 있는 ``.htaccess`` 를 연뒤
 
-{% highlight apacheconf %} 
+{% highlight apacheconf %}
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^example.com
 RewriteRule (.*) http://www.example.com/$1 [R=301,L]
