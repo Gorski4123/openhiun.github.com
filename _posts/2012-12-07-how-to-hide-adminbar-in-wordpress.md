@@ -12,7 +12,7 @@ permalink: /how-to-hide-adminbar-in-wordpress
 워드프레스를 기업용, 단체용 홈피로 사용하실 분들에게는 어드민바의 존재는 걸리는 사항이다.
 다음의 코드를 테마함수파일 ``functions.php``에 붙이는것 하나로 깨끗하게 어드민바를 감출수있다.
 
-{% highlight php %} 
+{% highlight php %}
 <!--adminbar control-->
 <?php
 show_admin_bar( false ); ?>
