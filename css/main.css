@@ -206,7 +206,7 @@ ul.posts span {
 }
 
 pre { 
-  font-family: 'Monaco', 'Lucida Console', 'Source Code Pro', sans-serif;
+  font-family: 'Monaco', 'Lucida Console', 'Source Code Pro', sans-serif !important;
   background-color: #272822 !important;
   color:#ffffff;
 }
