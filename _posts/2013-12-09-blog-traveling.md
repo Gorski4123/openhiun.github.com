@@ -35,7 +35,7 @@ permalink: /blog-traveling
 
 <style type="text/css">
 .tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
-.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:center;}
 .tftable tr {background-color:#ffffff; text-align: center;}
 .tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
 </style>
@@ -53,23 +53,6 @@ permalink: /blog-traveling
 참고사항
       - wordpress 는 rewrite 가 되나 도메인이 유료이므로 포기
       - 구글 블로거, 티스토리, 워드프레스의 UI는 커스터마이징 가능하나 시간 비용이 너무 크므로 포기
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-한때 SNS가 많은 각광을 받았었다. 11년은 그 정점일것이다. 영화 소셜네트워크가 나오면서 페이스북과 트
-
-
 
 궁극적으로 느낀 결론은 개발자라면 Gitdub에서 호스팅되는 지킬을 쓰면 좋고 일반인은 티스토리를 쓰면 좋겠다는 지극히 
 주관적인 결론이 나왔다.
