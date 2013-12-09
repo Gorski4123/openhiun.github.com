@@ -6,7 +6,9 @@ categories: k
 permalink: /partition-wizard
 ---
 
+<center>
 <img src="http://1.bp.blogspot.com/-boWSJUUo6Sg/TbA71DWCQPI/AAAAAAAADAM/g_f5sVQ9bYA/s400/Partition+Wizard+Professional+Edition.jpg">
+</center>
 
 안녕하세요 첫글입니다. 블로그라는것에 처음으로 입문하였네요. ㅎㅎ
 
