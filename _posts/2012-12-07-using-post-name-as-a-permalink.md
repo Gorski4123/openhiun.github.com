@@ -18,7 +18,7 @@ permalink: /using-post-name-as-a-permalink
 
 .메모장하나 열고 아래와 같은 코드를 복사해붙인다.
 
-{% highlightapacheconf %} 
+{% highlight apacheconf %} 
 RewriteEngine On
 RewriteBase /
 RewriteRule ^index\.php$ – [L]
@@ -32,7 +32,7 @@ RewriteRule . /index.php [L]
 ##경우2. ``INDEX.PHP``가  ``/WP`` 혹은 ``/WORDPRESS`` 폴더 안에 있는경우
 
 설치폴더명이 ``/wp`` 일 경우 아래의 코드를 복사해서,
-{% highlightapacheconf %} 
+{% highlight apacheconf %} 
 RewriteEngine On
 RewriteBase /
 RewriteRule ^index\.php$ – [L]
