@@ -205,13 +205,12 @@ ul.posts span {
   width: 24%;
 }
 
-pre { 
-  font-family: 'Monaco', 'Lucida Console', 'Source Code Pro', sans-serif !important;
+pre {
   background-color: #272822 !important;
   color:#ffffff;
 }
 
-code { 
+code {
   background-color: #272822 !important;
   color:#ffffff;
 }
