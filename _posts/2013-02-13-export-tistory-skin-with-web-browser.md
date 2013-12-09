@@ -25,13 +25,13 @@ permalink: /export-tistory-skin-with-web-browser
 
 5. ``style.css`` 주소를 보면 이 경우는 
 
-{% highlight php %} 
+{% highlight php %}
 http://ts.daumcdn.net/custom/blog/92/920609/skin/style.css?_T_=1360689470
 {% endhighlight %}
 
 값이라는것을 알수있다. 그럼 skin.html 은 
 
-{% highlight php %} 
+{% highlight php %}
 http://ts.daumcdn.net/custom/blog/92/920609/skin/skin.html
 {% endhighlight %}
 
