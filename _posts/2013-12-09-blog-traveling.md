@@ -43,7 +43,7 @@ permalink: /blog-traveling
 
 <center>
 <table class="tftable" border="1">
-<tr><td>Concept</td><td>Naver Blog</td><td>Tistory</td><td>Wordpress</td><td>Blogger</td><td>Tumblr</td><td>Custom</td><td>Jekyll</td></tr>
+<tr><th>Concept</th><th>Naver Blog</th><th>Tistory</th><th>Wordpress</th><th>Blogger</th><th>Tumblr</th><th>Custom</th><th>Jekyll</th></tr>
 <tr><td>커스텀 링크</td><td>x</td><td>o</td><td>o</td><td>o</td><td>x</td><td>o</td><td>o</td></tr>
 <tr><td>고유 주소</td><td>x</td><td>x</td><td>o</td><td>x</td><td>x</td><td>o</td><td>o</td></tr>
 <tr><td>무료</td><td>o</td><td>o</td><td>o</td><td>o</td><td>o</td><td>x</td><td>o</td></tr>
