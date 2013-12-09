@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "궁극의 영문폰트"
+title:  "궁극의 영문폰트!!"
 date:   2013-12-09 03:42:45
 categories: k
 permalink: /loved-fonts
