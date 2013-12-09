@@ -17,6 +17,38 @@ author:
     image: "http://img2.blogblog.com/img/b16-rounded.gif"
 ---
 
-<div class="css-full-post-content js-full-post-content">
-<span style="font-family: inherit;">페이스북을 접속하려고 페북주소를 그냥 웹라우져에 치면,&nbsp;</span><br /><span style="font-family: inherit;">facebook.com -&gt; www.facebook.com -&gt; https://www.facebook.com 으로 변함을 알수있다. (물론 트위터의 경우 www를 붙히지 않는 케이스가 있기도 하다.)</span><br /><span style="font-family: inherit;"><br /></span><span style="font-family: inherit;">나는 그냥 안정감때문에 www를 붙힌다. 그리고 내가 개발하는 SNS인 Springvil은 메인 페이지인 index.html에 회원가입 폼이 있기 때문에 첫화면 부터 보안연결을 위한 https프로토콜이 필요하다.</span><br /><span style="font-family: inherit;"><br /></span><span style="font-family: inherit;">그럼 nginx에서 https 리다이렉팅과 www를 자동으로 붙히는 방법을 알아보자.</span><br /><span style="font-family: inherit;"><br /></span><span style="font-family: inherit;">도메인 설정이 있는 파일을 열어야 된다. 이것은 nginx.conf, virtual.conf, default.conf등과 같은 이름이로 되어있는데, 나는 nginx.conf - nginx기본 설정 파일에 도메인 설정까지 같이 넣어서 쓰고 있으므로, nginx.conf vim등으로 수정할것이다.</span><br /><span style="font-family: inherit;"><br /></span><span style="font-family: inherit;"><br /></span><b>&nbsp;server {</b><br /><b>&nbsp; &nbsp; &nbsp; &nbsp;listen &nbsp; &nbsp; &nbsp; &nbsp; 80;</b><br /><b>&nbsp; &nbsp; &nbsp; &nbsp;server_name &nbsp; &nbsp;springvil.com;</b><br /><b>&nbsp; &nbsp; &nbsp; &nbsp;return &nbsp; &nbsp; &nbsp; &nbsp; 301 https://www.$server_name$request_uri;</b><br /><b>&nbsp; &nbsp; }</b><br /><b><br /></b><b>&nbsp; &nbsp; server {</b><br /><b>&nbsp; &nbsp; listen &nbsp; &nbsp; &nbsp; 443;</b><br /><b>&nbsp; &nbsp; server_name &nbsp;springvil.com;</b><br /><b><br /></b><br /><b>&nbsp; &nbsp; &nbsp; &nbsp; ssl &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;on;</b><br /><b>&nbsp; &nbsp; &nbsp; &nbsp; ..</b><br /><b>&nbsp; &nbsp; &nbsp; &nbsp; ..</b><br /><b>&nbsp; &nbsp; &nbsp; &nbsp; ..</b><br /><b>&nbsp; &nbsp; &nbsp; &nbsp; ..</b><br /><b>&nbsp; &nbsp; }&nbsp;</b><br /><br /><br />만약 자신의 도메인이 springvil.com 이라면, 이러한 꼴로 변경하면 된다.<br />http연결인 80포트와 https연결인 443포트에 대한 서버 블록 - server { ... }을 둘다 만들어두고 사람들이 80포트로 진입할 경우 https 로 리다이렉팅함과 동시에 www를 붙혀서 같이 리다이렉팅 시키는 원리이다. 그런데 하나 문제가 있다.<br /><br />1만명 중에 한번 있는 경우이긴 하지만 만약 어떤사람이 https://springvil.com 으로 들어온다면 이경우에는 https://www.springvil.com이 아닌 https://springvil.com으로 아무 변화 없이 접속하게 된다. 이경우는 어떻게 처리하는지 연구를 좀 더해봐야겠다..<br /><br />//구글은 해결한것 같다.. ㅋㅋ https://google.com으로 들가니, https://www.google.com으로 리디이렉팅 된다.<br /><br />
-</div>
+페이스북을 접속하려고 페북주소를 그냥 웹라우져에 치면, 
+facebook.com -> www.facebook.com -> https://www.facebook.com 으로 변함을 알수있다. (물론 트위터의 경우 www를 붙히지 않는 케이스가 있기도 하다.)
+
+나는 그냥 안정감때문에 www를 붙힌다. 그리고 내가 개발하는 SNS인 Springvil은 메인 페이지인 index.html에 회원가입 폼이 있기 때문에 첫화면 부터 보안연결을 위한 https프로토콜이 필요하다.
+
+그럼 nginx에서 https 리다이렉팅과 www를 자동으로 붙히는 방법을 알아보자.
+
+도메인 설정이 있는 파일을 열어야 된다. 이것은 nginx.conf, virtual.conf, default.conf등과 같은 이름이로 되어있는데, 나는 nginx.conf - nginx기본 설정 파일에 도메인 설정까지 같이 넣어서 쓰고 있으므로, nginx.conf vim등으로 수정할것이다.
+
+{% highlight nginx %}
+ server {
+       listen         80;
+       server_name    springvil.com;
+       return         301 https://www.$server_name$request_uri;
+    }
+
+    server {
+    listen       443;
+    server_name  springvil.com;
+
+
+        ssl                  on;
+        ..
+        ..
+        ..
+        ..
+    }
+{% endhighlight %}
+
+만약 자신의 도메인이 springvil.com 이라면, 이러한 꼴로 변경하면 된다.
+http연결인 80포트와 https연결인 443포트에 대한 서버 블록 - server { ... }을 둘다 만들어두고 사람들이 80포트로 진입할 경우 https 로 리다이렉팅함과 동시에 www를 붙혀서 같이 리다이렉팅 시키는 원리이다. 그런데 하나 문제가 있다.
+
+1만명 중에 한번 있는 경우이긴 하지만 만약 어떤사람이 https://springvil.com 으로 들어온다면 이경우에는 https://www.springvil.com이 아닌 https://springvil.com으로 아무 변화 없이 접속하게 된다. 이경우는 어떻게 처리하는지 연구를 좀 더해봐야겠다..
+
+//구글은 해결한것 같다.. ㅋㅋ https://google.com으로 들가니, https://www.google.com으로 리디이렉팅 된다.
