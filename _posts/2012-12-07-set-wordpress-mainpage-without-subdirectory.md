@@ -14,7 +14,7 @@ FTP의 ``WWW``폴더나 ``public_html`` 폴더안에 워드프레스를 설치�
 2.FileZilla와 같은 FTP로 접속해서 ``/wp`` 혹은 ``/wordpress`` 폴더안에있는 ``index.php``를 다운받고 지웁니다.
 3.메모장으로 다운받은 ``index.php`` 를 열면
 
-{% highlight php %} 
+{% highlight php %}
 <?php
 /**
 * Front to the WordPress application. This file doesn’t do anything, but loads
@@ -30,6 +30,8 @@ FTP의 ``WWW``폴더나 ``public_html`` 폴더안에 워드프레스를 설치�
 define(‘WP_USE_THEMES’, true);
 /** Loads the WordPress Environment and Template */
 require(‘./wp-blog-header.php’);
+
+//..?>
 {% endhighlight %}
 
 이렇게 되어있을텐데요.
