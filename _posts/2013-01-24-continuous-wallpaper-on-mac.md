@@ -6,7 +6,7 @@ categories: k
 permalink: /continuous-wallpaper-on-mac
 ---
 
-<img src="http://cfile7.uf.tistory.com/image/19185D4F5105B2D82FB4F4">
+<center><img src="http://cfile7.uf.tistory.com/image/19185D4F5105B2D82FB4F4"></center>
 
 맥에서 듀얼모니터를 쓰다보면 윈도우에서 흔히 보면 와이드한 그림하나가 디스플레이 두개에 이어지는 그런..
 월페이퍼를 설정하고싶어진다.. 수시간의 구글링끝에 찾아낸 초야에 묻혀진 소프트웨어다..
