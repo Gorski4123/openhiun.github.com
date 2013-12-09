@@ -27,9 +27,9 @@ FTP의 ``WWW``폴더나 ``public_html`` 폴더안에 워드프레스를 설치�
 *
 * @var bool
 */
-define(‘WP_USE_THEMES’, true);
+define('WP_USE_THEMES', true);
 /** Loads the WordPress Environment and Template */
-require(‘./wp-blog-header.php’);
+require('./wp-blog-header.php');
 
 //..?>
 {% endhighlight %}
