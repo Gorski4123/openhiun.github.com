@@ -30,7 +30,7 @@ FTP의 ``WWW``폴더나 ``public_html`` 폴더안에 워드프레스를 설치�
 define(‘WP_USE_THEMES’, true);
 /** Loads the WordPress Environment and Template */
 require(‘./wp-blog-header.php’);
-{% highlight php %} 
+{% endhighlight %}
 
 이렇게 되어있을텐데요.
 맨 마지막줄
