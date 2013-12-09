@@ -10,15 +10,15 @@ permalink: /export-tistory-skin-with-web-browser
 
 1.나의 블로그에서 사용하고있는 화이트스킨을 추출해 보겠다.
 
-<img src="http://cfile24.uf.tistory.com/image/18153638511B89922E1D7C" width="640">
+<img src="http://cfile24.uf.tistory.com/image/18153638511B89922E1D7C" width="672">
 
 2.블로그에 접속후 소스보기를 누른다.
 
-<img src="http://cfile22.uf.tistory.com/image/235BA03A511B89CE05CCF5" width="640">
+<img src="http://cfile22.uf.tistory.com/image/235BA03A511B89CE05CCF5" width="672">
 
 3.컨트롤 + F로 ``style.css``를 찾고 연다. ( 대부분 상단에 존재한다. )
 
-<img src="http://cfile10.uf.tistory.com/image/01294437511B8A2623FDA0" width="640">
+<img src="http://cfile10.uf.tistory.com/image/01294437511B8A2623FDA0" width="672">
 
 4.스킨 파일중 하나인 ``style.css`` ( 스타일시트 ) 를 볼수있다.
    컨트롤 + S 로 저장한다.
@@ -39,18 +39,18 @@ http://ts.daumcdn.net/custom/blog/92/920609/skin/skin.html
 
 바로 들어가면 
 
-<img src="http://cfile28.uf.tistory.com/image/17282434511B8B9A103538" width="640">
+<img src="http://cfile28.uf.tistory.com/image/17282434511B8B9A103538" width="672">
 
 이런식으로 나온다. 역시 소스보기를 하면
 
-<img src="http://cfile10.uf.tistory.com/image/201BFD35511B8BF1017F14" width="640">
+<img src="http://cfile10.uf.tistory.com/image/201BFD35511B8BF1017F14" width="672">
 
 이런식으로 나오는데 이것은 ``style.css`` 처럼 그냥 저장하지말고 전체선택후 메모장등 텍스트에디터로 저장하는것이 좋다. (그냥하면 깨진다.)
 만약 스킨중 그림이 혹은 아이콘등이 있다면 이 화면에서 ``.png`` ``.jpg`` 로 검색하여 같이 추출할수 있다. 자바스크립트파일역시 추출가능하다.
 
 6.마지막으로 ``index.xml``.
 
-<img src="http://cfile23.uf.tistory.com/image/181C7543511B8C8C31F1DA">
+<img src="http://cfile23.uf.tistory.com/image/181C7543511B8C8C31F1DA" width="672">
 
 
 컨트롤 + S로 저장한다. 
