@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "워드프레스 홈페이지에서 어드민바 숨기기"
+title:  "파티션 크기변경 프로그램 - 파티션 위자드(Partition Wizard)"
 date:   2012-02-26 21:52:45
 categories: k
-permalink: /how-to-hide-adminbar-in-wordpress
+permalink: /partition-wizard
 ---
 
 <img src="http://1.bp.blogspot.com/-boWSJUUo6Sg/TbA71DWCQPI/AAAAAAAADAM/g_f5sVQ9bYA/s400/Partition+Wizard+Professional+Edition.jpg">
