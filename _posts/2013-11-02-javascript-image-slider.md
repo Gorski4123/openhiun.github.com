@@ -4,6 +4,7 @@ title:  "Instagram, Y Combinator like javascript image slider"
 date:   2013-11-02 15:48:50
 categories: e
 permalink: /javascript-image-slider
+image: http://farm4.staticflickr.com/3678/11308743103_325502f657_o.jpg
 ---
 
 I love startup and startup services. When I saw image slider in instagram in web interfaces, 
@@ -64,5 +65,7 @@ $(function () {
 ``fadeIn``and``fadeOut`` means how much time to run fading animation. and lastly ``5000`` means show each image while 5000 micro seconds 
 aka 5 seconds. Every animation effect is powered by jQuery javascript library. ``fadeIn()``and ``fadeOut()`` called api.
 if you want learn more check out [this][jquery-fade-api].
+
+*상단 표지 사진 by <a href="http://www.flickr.com/photos/myklroventine/2600926041">flickr</a> with <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY-NC-SA 2.0 License</a>*
 
 [jquery-fade-api]: http://api.jquery.com/category/effects/fading/
