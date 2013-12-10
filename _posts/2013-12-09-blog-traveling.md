@@ -84,3 +84,5 @@ HMTL 블로그를 따라올수 없다.
 최근 미국 정부사이트인 <a href-"http://www.healthcare.gov/">www.healthcare.gov</a>역시 Static 블로그 엔진으로 돌아가고 있다. 갠적으로 지구 환경과 불피요한 프로세싱의 낭비를 줄이기 위해서라도 이런 툴은 좋은것 같다. 이런 대규모 서비스의 시도 결과가 기대된다.
 
 기회가 된다면 <a href="http://developmentseed.org/blog/google-analytics-jekyll-plugin/">Jekyll과 Google Analytics를 결합하는 방법</a>에 대해서도 다뤄보고싶다. 아쉬운점은 Github의 Jekyll은 Safe모드로 동작해서 플러그인 사용이 안되는것 같다 ㅜㅜ
+
+상단 표지 사진 by <a href="http://www.flickr.com/photos/enderst07/8485466486/">flickr</a> with <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 License</a> 
