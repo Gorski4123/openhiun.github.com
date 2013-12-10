@@ -4,7 +4,7 @@ title:  "Getting php session to work on AWS"
 date:   2013-11-15 23:59:59
 categories: e
 permalink: /php-session-on-aws
-images: http://farm4.staticflickr.com/3693/11309946673_28eddf748c_o.jpg
+image: http://farm4.staticflickr.com/3693/11309946673_28eddf748c_o.jpg
 ---
 I was digging over a month to getting php session work on Amazon Web Services Elastic Compute Cloud aka AWS EC2. 
 It was make me crazy at that time but looking back (Like all digging thus) it's great jearney with quite simple solution.
