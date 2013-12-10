@@ -64,15 +64,21 @@
             <div class="header-border">
             <br />
           </div>
-         </div>
           
         {% if page.image %}
+        </div>
+        <div class="bg-relative">
         <img src="{{page.image}}" class="bg">
+        </div>
+        <div class="site">
         {% else %}
         {% endif %}
-        
-        <div class="site">  
+         
          <div id="main">
+        {% if page.image %}
+        <br />
+        {% else %}
+        {% endif %}
 
           {{ content }}
 

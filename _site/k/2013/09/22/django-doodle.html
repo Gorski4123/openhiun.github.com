@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Defining Defination - SNS 만들기 그리고 Django 낙서장</title>
+        <meta property="fb:admins" content="openhiun" />
+        <meta property="fb:app_id" content="533004283446886"/>
+        <meta property="og:title" content="SNS 만들기 그리고 Django 낙서장" />
+        <meta property="og:url" content="/k/2013/09/22/django-doodle.html" />
+        
+        <meta name="description" content="Startup, Geek, Opensource.." />
+        
+
+
+        <!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.gravatar.com/avatar/88c94e86ee17d23e06907361e5533e99.jpg?s=144">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.gravatar.com/avatar/88c94e86ee17d23e06907361e5533e99.jpg?s=114">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.gravatar.com/avatar/88c94e86ee17d23e06907361e5533e99.jpg?s=72">
+                <link rel="apple-touch-icon-precomposed" href="http://www.gravatar.com/avatar/88c94e86ee17d23e06907361e5533e99.jpg?s=57">
+                               <link rel="shortcut icon" href="/images/favicon.ico">
+                                       <link href='http://www.openhiun.com/k/2013/09/22/django-doodle.html' rel='canonical'/>
+        <script src="/js/parallax.js"></script>
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" type="text/css" href="/css/default.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/custom.css">
+
+        <!-- Analytics -->
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38527094-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+    </head>
+    <body>
+      <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=533004283446886";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+      </script>
+
+       <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Defining Definition</a></h1>
+             <div class="subtitle">
+              Startup, Geek, Opensource..  
+             </div>
+          </div><!--header--> 
+            <div class="header-border">
+            <br />
+          </div>
+          
+        
+        
+         
+         <div id="main">
+        
+        
+
+          <h2>SNS 만들기 그리고 Django 낙서장</h2>
+<p class="meta">22 Sep 2013</p>
+
+<div class="post">
+<p>1년전 고2여름에 나는 IT기술을 통해서 해결하고 싶은 문제를 발견하고 그 문제를 해결하기 위해서 소셜 네트워깅 서비스를 만들고 싶었다. 그때는 내가 만든 서비스가 런칭만하면 페이스북처럼 될것 같은, 그런 느낌으로 개발을 했다. 내가 제일 처음 택한 것은 워드프레스를 이용해서 SNS를 만드는 것이다. 쉬운데다가 <a href="http://www.socialexperiencelab.com">Social Experience Lab</a>같은 선례도 있었기 때문이다. 그러나 PHP라는 언어와 블로깅 엔진인 워드프레스의 기술적인 한계 때문에(아직 경험해 보지는 않았지만) 항상 유리천장이 있는것 같은 느낌이 들었다. </p>
+
+<p>앱스토어가 4주년을 맞이한 작년 가을 무렵 나의 아이폰 앱스토어의 소셜 네트워킹 카테고리에는 복사한듯한 깔끔하고 스타트업적인 디지인을 가진 다양한 버티컬 또는 가끔씩 호리즌탈한 소셜 네트워킹 서비스가 넘쳐나고 있었다. 대체 그것들은 어떻게 대량생산된것 처럼 모두 다 잘 동작할까? 라는 의문이 들었다. 대체 이러한 서비스들은 어떤 기술로 만들어질까? (그때 내가 스택오버플로우를 알았고 영어 구글링을 했다면 10초만에 나올 답이었다;;) 너무 궁금하였다. 누구도 알려주지 않았고 알 수 있는 곳도 없었다. 그러던 중 <a href="https://www.facebook.com/groups/codingeverybody/permalink/576755052365035/">생활코딩 페이스북 그룹에 막연하게 질문을 올렸다.</a> 그렇게 해서 알게된것이 WAS(Web Application Framework)였고 Django, Ruby on Rails, Flask가 그러한 것이었다.</p>
+
+<p>WAS를 구글링을 해보니 대표적인 WAS인 Django를 이용한 핀터레스트와 인스타그램의 신화적인 - <a href="http://charsyam.wordpress.com/2011/12/17/%EB%B0%9C-%EB%B2%88%EC%97%AD-%EC%88%98%EB%B0%B1%EB%8C%80%EC%9D%98-%EC%9E%A5%EB%B9%84%EC%99%80-%EC%88%98%EC%8B%AD%EA%B0%80%EC%A7%80%EC%9D%98-%EA%B8%B0%EC%88%A0-instagram%EC%9D%98-%ED%9E%98/">엔지니어 4명이서 4000만명이 사용하는 서비스를 만든 인스타그램의 이야기</a>와, 1900년대 이후 인구 증가속도만큼 2년동안 기하급수적인 사용자수 증가를 이겨낸 <a href="http://blog.naver.com/parkjy76/30167859682">핀터레스트의 이야기</a>를 접했다.<br /><br />
+<center>
+&lt;세계인구증가율과 핀터레스트 검색빈도 그래프&gt;
+<img src="/images/population.png" alt="세계인구 증가율" title="세계인구 증가율">
+<script type="text/javascript" src="//www.google.com/trends/embed.js?hl=en-US&q=pinterest&cmpt=q&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=500&h=330"></script>
+</center>
+<a href="http://instagram-engineering.tumblr.com/post/13649370142/what-powers-instagram-hundreds-of-instances-dozens-of">인스타그램의  기술 블로그</a>를 보면 그들이 오픈소스 소프트웨어를 어떻게 잘 활용해서 최소의 인력으로 서비스를 운영했는지 알수있다. 내가 하려는것과 그것에 기반이 되는기술이 개발되어있다는것이 신기했다. <strong>이렇게 모든것이 나를 위해 준비되어 있는데, 하라고 손짓을 하는데 안 할 이유가 무었인가?</strong> 그래서 Django를 사용해서 내가 구상하고 있었던 Springvil이란 서비스를 만들어 보기로 했다. 제목을 낙서장이라고 지은것은 아직 강좌할 실력이 안되어 그날 배운것을 정리하는 용도로 쓸 생각이기 때문이다.</p>
+
+<p>마지막으로 유튜브에 Mike Hibbert라는 사람이 <a href="http://www.youtube.com/channel/UCFW_fvwCoF44MGWk74U_rFg">Django강좌</a>를 하는데, 영어가 들린다면 들어볼만하다. 낙서장도 그의 강좌를 토대로 만들어질것임을 밝힌다.<br /><br /></p>
+
+<p><strong>0.시작</strong></p>
+
+<p>모든 서비스의 기본은 무엇을까? 극도로 추상화시켜보자면 그것은 <strong>데이터를 입출력하는 일</strong>이라고 생각한다. 사용자가 입력한데이터를 저장하고 변경하고 삭제하는것이 프로그래밍에서 궁극적으로 파이썬 -&gt; C -&gt; 어셈블리어 -&gt; 기계어 순으로 처리되는것처럼 기계어 수준의 매우 단순하지만 저그의 라바같은 무엇이든 할수있는 가장 작은 단위의 일 일것이다. </p>
+
+<p>Django(이하 장고)는 파이썬이라는 언어로 만들어진 Web Application Framework(WAS)이다. 빠르고 쉬운 웹개발이라는 표현으로 설명을 해서 웹개발용으로만 사용되는 줄 알았는데 카카오톡과 같은 대부분의 모바일앱도 JSON이라는 방식으로 웹을 통해 데이터를 주고 받으니 <strong>모바일앱이든 웹서비스든 궁극적으로는 WAS를 통해 데이터 입출력, 즉 서비스가 이루어진다.</strong><br /><br /></p>
+
+<p><strong>1.설치</strong></p>
+
+<p>개발 과정은 우분투 12.04 LTS에서 진행한다. 리눅스 서버개발에는 같은 리눅스를 쓰는게 편하다. ㅋㅋ</p>
+
+<p>우리는 파이썬 패키지와 모듈을 버전별로 독립적으로 실행하기 위해 <code>virtualenv</code>라는 관리툴을 사용할것이고 장고는 그 위해서 돌아갈 것이다.(이렇게 패키지와 모듈을 독립적으로 사용하는것을 샌드박스 모드라고 한다.) 그리고 파이썬 소프트웨어 재단에서 관리하는 공식 패키지 저장소인 PyPi(Python Package Index)에서 패키지 설치를 위해 <code>easy_install</code>을 사용할것이다. </p>
+
+<p><strong>1-1</strong><br />
+<code>easy_install</code>은 <code>python-setuptools</code>의 패키지이므로 <code>python-setuptools</code>를 설치한다.
+<pre>
+sudo apt-get install python-setuptools
+</pre><br /></p>
+
+<p><strong>1-2</strong><br />
+<code>python-setuptools</code>를 설치했다면 이제 <code>easy_install</code>를 사용해 <code>virtualenv</code>를 설치하자.</p>
+
+<p><pre>
+sudo easy_install virtualenv
+</pre><br /></p>
+
+<p><strong>1-3</strong><br />
+이제 <code>virtualenv</code>를 통해 샌드박스 폴더를 만들자.  <code>--no-site-package</code>옵션은 기존에 설치된 패키지가 샌드박스 폴더에 영향을 미치지 않게 만들기 위한 명령어이다. 한마디로 깨끗하게 시작한다는것이다.</p>
+
+<p><pre>
+virtualenv --no-site-package django
+</pre><br />
+<pre>
+The --no-site-packages flag is deprecated; it is now the default behavior.
+New python executable in django/bin/python
+Installing distribute...............done.
+Installing pip...............done.
+</pre><br /></p>
+
+<p><strong>1-4</strong><br />
+이제 <code>virtualenv</code>를 활성화시키자.</p>
+
+<p><pre>
+source django/bin/activate
+</pre><br /></p>
+
+<p><strong>1-5</strong><br />
+활성화 시킨다면 터미널이 <code>(django)user@computer</code>처럼 변하면서 당신이 <code>virtualenv</code>에 있다는것을 확신시켜준다. <code>virtualenv</code>에서 작업한다면 무조건 실행해야되는 커맨드이다.</p>
+
+<p><code>cd django</code>명령어를 통해 방금 만든 django폴더에 들어가면 <code>bin</code>, <code>include</code>, <code>lib</code>, <code>local</code>폴더가 있는데 여기다가 장고를 설치하자. 아래 명령어를 보면 <code>sudo</code>가 없다. 우리는 <code>virtualenv</code>안에서는 <code>root</code>이기때문에 <code>sudo</code>가 필요없는 것이다. 마지막으로 django를 설치할 차례이다.</p>
+
+<p><pre>
+easy_install django
+</pre><br />
+<pre>
+Downloading https://pypi.python.org/packages/source/D/Django/Django-1.5.4.tar.gz
+…
+…
+…
+Finished processing dependencies for django
+</pre><br /></p>
+
+<p><strong>1-6</strong><br />
+<code>bin</code>폴더안을 보면 <code>django-admin.py</code>라는 파이썬 파일이 있는데 이 파일이 장고 프로젝트를 생성할수 있게 해준다. 아래 명령어를 실행해서 <code>django_test</code>라는 프로젝트를 만들자</p>
+
+<p><pre>
+django-admin.py startproject django_test
+</pre><br /></p>
+
+<p><strong>1-7</strong><br />
+<code>cd django_test</code>를 통해 폴더로 들어가면 프로젝트 폴더인 <code>django_test</code>와 <code>manage.py</code>라는 파일이 있다. <code>manage.py</code>는 말그대로 웹서버와 시스템 컨트롤에 사용되는 파이썬 스크립트이다. 그럼 이 파일을 이용해서 첫번째 장고 서버를 켜보자!</p>
+
+<p><pre>
+python manage.py runserver
+</pre><br /> 
+<pre>
+(django)openhiun@openhiun:~/Desktop/django/django_test$ python manage.py runserver
+Validating models...</p>
+
+<p>0 errors found
+September 22, 2013 - 14:36:10
+Django version 1.5.4, using settings &#39;django_test.settings&#39;
+Development server is running at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+</pre><br />
+ <code>http://localhost:8000</code>으로 접속하면 결과를 확인할수 있을것이다. 이제 모든걸 다 마쳤다. <code>ctrl-c</code>를 통해 서버를 죽이고 아래 명령어를 통해 <code>virtualenv</code>에서 나가자.<br /></p>
+
+<div class="highlight"><pre><code class="php"><span class="x">deactivate</span>
+</code></pre></div>
+
+
+</div>
+<br />
+<div class="sharer-border">
+          </div> 
+<!--facebook like button-->
+<div class="fb-like" data-width="100" data-layout="button_count" data-show-faces="true" data-send="false"></div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--twitter tweet button-->
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<!--google plus +1 button-->
+<!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<!--linkedin share button-->
+<script src="//platform.linkedin.com/in.js" type="text/javascript">
+ lang: en_US
+</script>
+<script type="IN/Share" data-counter="right"></script>
+<br />
+<br />
+<!--disqus comments-->
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'openhiunblog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+         <div class="footer">
+            <div class="footer-text">
+             Generated by <a href="http://jekyllrb.com">Jekyll</a> and Proudly Powered by <a href="http://pages.github.com">Github</a>
+           </div><!--footer text-->
+         </div><!--footer-->
+         <br />
+         <br />
+
+
+             </div><!--main-->
+         
+           <div id="gap">
+           </div>
+           <div id="sidebar">
+            <br />
+              <img src="/images/openhiun.jpg" width="180px">
+              <br /><br />
+Contact Info
+<div class="header-border">
+          </div>
+          <b>Hiun Kim</b><br />
+          openhiun@gmail.com<br />
+          Hacker at <a href="https://www.springvil.com">Springvil</a><br />
+<a href="/about">About Me</a> / <a href="http://www.linkedin.com/in/openhiun">Linkedin</a>
+          <br /><br />
+          Twitter
+          <div class="header-border">
+          </div>
+          <a href="https://twitter.com/openhiun" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @openhiun</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<br /><br />
+Syndication
+<div class="header-border">
+          </div>
+   <img src="/images/feed.gif"> Subscribe this blog's<br />
+   <a href="/atom.xml">atom feed</a> or <a href="/feed.xml">rss feed</a>
+   <br /><br />
+Personal Projects
+<div class="header-border">
+          </div>
+   <a href="/glee/">Glee</a> - env variable editor.
+<br /><br />
+Policy
+<div class="header-border">
+          </div>
+
+  <center>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Every content of this blog</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+</center>
+<br />
+<br />
+<img id='chrome' src='/images/chrome.png' style='position:absolute' width="200px" />
+         
+          </div><!--sidebar-->
+      </div><!--site-->
+    </body>
+</html>

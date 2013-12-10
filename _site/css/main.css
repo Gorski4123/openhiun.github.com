@@ -14,7 +14,7 @@ html, body { height: 100%; }
 
 body {
   background-color: #FFF;
-  font-family: 'Open Sans', 'Nanum Gothic', sans-serif;
+  font-family: "Helvetica Neue", "Open Sans", "Malgun Gothic", "Nanum Gothic", sans-serif;
   font-size: small;
   text-align: center;
   margin-left:25px;
@@ -46,7 +46,7 @@ ul.posts li {
 
 ul.posts span {
   color: #aaa;
-  font-family: 'Lucida Console', 'Monaco', 'Courier New', monospace;
+  font-family: "Helvetica Neue", "Open Sans", "Malgun Gothic", "Nanum Gothic", sans-serif;
   font-size: 80%;
 }
 
@@ -64,7 +64,7 @@ ul.posts span {
   line-height: 1.5em;
 }
 
-.site .header a {
+.site a {
   font-weight: bold;
   text-decoration: none;
 }
@@ -205,16 +205,35 @@ ul.posts span {
   width: 24%;
 }
 
-#post-date {
-  font-family: 'Open Sans', 'Nanum Gothic', sans-serif;
-}
-
-pre { 
+pre {
   background-color: #272822 !important;
   color:#ffffff;
 }
 
-code { 
+code {
   background-color: #272822 !important;
   color:#ffffff;
+}
+
+
+code span {
+  font-family: 'Monaco', 'Lucida Console', 'Source Code Pro', sans-serif;
+  font-size: 12px;
+}
+
+p code {
+  font-family: 'Monaco', 'Lucida Console', 'Source Code Pro', sans-serif;
+  font-size: 12px;
+}
+
+.bg {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 180px;
+}
+
+.bg-relative {
+  margin-bottom: 220px;
 }

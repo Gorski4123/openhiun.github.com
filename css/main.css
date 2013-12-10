@@ -231,4 +231,9 @@ p code {
     left: 0px;
     right: 0px;
     width: 100%;
+    height: 180px;
+}
+
+.bg-relative {
+  margin-bottom: 220px;
 }

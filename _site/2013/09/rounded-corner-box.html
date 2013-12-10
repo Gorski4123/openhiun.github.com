@@ -11,7 +11,6 @@
         
         <meta name="description" content="Startup, Geek, Opensource.." />
         
-        <meta name="robots" content="INDEX,FOLLOW" />
 
 
         <!-- Favicons -->
@@ -59,10 +58,17 @@
              <div class="subtitle">
               Startup, Geek, Opensource..  
              </div>
+          </div><!--header--> 
             <div class="header-border">
             <br />
           </div>
+          
+        
+        
+         
          <div id="main">
+        
+        
 
           <h2>HTML 둥근 모서리 사각형 만들기</h2>
 <p class="meta">02 Sep 2013</p>
@@ -71,6 +77,7 @@
 <div class="css-full-post-content js-full-post-content">
 수십년전 초기 맥에서 소수(자기 자신과 1로밖에 나누어 지지 않는 수)의 원리를 이용하여 곡선을 그렸다는 말을 들은적이 있다.<br /><br />수십년 뒤인 지금도 앱 아이콘역시 모서리가 둥근것을 보면 모서리 둥근 사각형는 참 잘쓰이는 역사가 깊은 객체인것 같다. 심지어 Nginx의 숨겨진 기능에는 <a href="http://wiki.nginx.org/HttpCircleGifModule#Installation" target="_blank">강제로 모서리 둥근 사각형을 만들어 주는 기능</a>도 있을정도이니 ㅋㅋ<br /><br />외국에서도 퍼펙트한 모서리 둥근 사각형에 대한 논쟁은 오랫동안 일어났었고, ( 구현 자체는 어렵지 않으나, 브라우져 호환성과 동적 움직임때문인것 같다. ) 많은 사람들이 시도를 하였다. 방법은 크게 2가지가 있다.<br /><br /><b>-순수 CSS 기반으로 가는것.</b><br /><b>장점</b> - 깔끔하다. 순수하기 때문에 트래픽이 거의 발생하지 않는다.<br /><b>단점</b> - 어렵다. CSS3 기반일경우 IE8이하 버전의 지원이 어려울수도 있다.<br /><br /><b>-Javascript를 사용하는것.</b><br /><b>장점</b> - 쉽다. 남이 만들어둔 기능을 이름만 바꿔서 사용해도 된다. 호환성이 비교적 좋다.<br /><b>단점</b> - 트래픽이 많이 나간다. Paul Graham이 말한것처럼 자바스크립트이기때문에 하나라도 프로세싱 측면에서 복잡성이 커진다.<br /><br />결론은 닥치고 JS로 가자! 성능 보단 호환성, 그리고 안정성을 생각하는게 나의 도리인것 같다.<br /><br />어떤 착한 분이 만들어준, 거의 범용으로 사용되는 둥근 모서리 사각형 JS 플러그인이 있다. 구글링을 해도 1순위이니 믿을만 한것 같다. 호환성과 크기역시 유동적으로 조절 되는듯 하다.<br /><br />메인 사이트 -&nbsp;<a href="http://jquery.malsup.com/corner/">http://jquery.malsup.com/corner/</a><br />JS파일 - http://malsup.github.com/jquery.corner.js<br /><br />내가 모서리 둥근 사각형을 만드려는 이유는 지금 만들고 있는 SNS에서 피드UI가 필요하기 때문이다. 예제겸 피드틱한걸로 사각형을 그려보자.<br /><br /><b>1 -&nbsp;</b>아래는 Header의 일부분인데, 둥근 모서리를 그리는데 사용할 JS플러그인은 jquery.corner.js라는 것이다. jQuery를 기반으로 하기때문에 jQuery코어와 jquery.mobile.js를 링크로 넣어준다. <br /><br /><pre class="brush: xml; toolbar: false;"><script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script><br /><script src="http://malsup.github.com/jquery.corner.js" type="text/javascript"></script><br /></pre><br /><b>2 -&nbsp;</b>이제 JS를 사용하기 전에 초기화 시켜줄 차례이다. 아래 자바스크립트를 Header에 넣어주자. <br /><br /><pre class="brush: javascript; toolbar: false;">$(function(){<br />$('.round-js').corner("15px");<br />}); <br /></pre><br /><b>3 -&nbsp;</b>다름으로는 round-css라는 클래스 이름으로 테두리와 그림자효과를 지정해주자. 필수적인건 아니기때문에 원한다면 이 단계를 생략해도 된다. <br /><br /><pre class="brush: css; toolbar: false;">.round-css{<br />background-color:#ffffff;<br />border:0.5px solid #c0c0c0;<br />-moz-box-shadow:    2px 2px 1px 1px #ccc;<br />-webkit-box-shadow: 2px 2px 1px 1px #ccc;<br />box-shadow:         2px 2px 1px 1px #ccc;<br />float:middle;<br />margin:0px 10px 10px 5px;<br />padding:10px 10px 10px 10px;<br />}<br /></pre><br /><b>4 -&nbsp;</b>이제 Body에 다름과 같은 예시문을 넣어주어 피드의 컨텐츠를 만든다. round-css클래스는 스타일 시트에서 설정해둔 그림자와 테두리를 적용하라는것이고, round-js는 위에서 설정한 모서리 곡률을 설정하는 것이다. 이제 모든것이 끝났다. 완성된 코드는 대략 아래와 같을것이다. <br /><br /><pre class="brush: xml; toolbar: false;"><head><br /><title>Cool Rounded Feeds</title><br /><script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script><br /><script src="http://malsup.github.com/jquery.corner.js" type="text/javascript"></script><br /><!--custom js--><br /><script type="text/javascript"><br />// 15px round corner<br />$(function(){<br />$('.round-js').corner("15px");<br />}); <br />    </script><br /><!--custom css--><br /><style type="text/css"><br />.round-css{<br />background-color:#ffffff;<br />border:0.5px solid #c0c0c0;<br />-moz-box-shadow:    2px 2px 1px 1px #ccc;<br />-webkit-box-shadow: 2px 2px 1px 1px #ccc;<br />box-shadow:         2px 2px 1px 1px #ccc;<br />float:middle;<br />margin:0px 10px 10px 5px;<br />padding:10px 10px 10px 10px;<br />}<br /></style><br /></head><br /><body><br /><div class="round-css round-js"><br /> <b>Love</b> <br />  For nine years, we've been on a mission to connect the world. We now connect more than 1 billion people, but to connect the next 5 billion we must solve a much bigger problem: the vast majority of people don't have access to the internet. I'm focused on this because I think it's one of the greatest challenges of our generation. I've attached a rough plan I've written outlining the work Facebook is doing to solve this and how our industry can work together to connect the next 5 billion people.<br /></div><br /><div class="round-css round-js"><br /> <b>Post</b><br />  For nine years, we've been on a mission to connect the world. We now connect more than 1 billion people, but to connect the next 5 billion we must solve a much bigger problem: the vast majority of people don't have access to the internet. I'm focused on this because I think it's one of the greatest challenges of our generation. I've attached a rough plan I've written outlining the work Facebook is doing to solve this and how our industry can work together to connect the next 5 billion people.<br /></div><br /></body><br /></pre><br />다 하고나니.. 괭장히 쉽게 느껴진다.<br /><br />
 </div>
+
 
 </div>
 <br />
@@ -124,7 +131,7 @@
 
          <div class="footer">
             <div class="footer-text">
-          Generated by <a href="http://jekyllrb.com">Jekyll</a> and Powered by <a href="http://pages.github.com">Github</a>
+             Generated by <a href="http://jekyllrb.com">Jekyll</a> and Proudly Powered by <a href="http://pages.github.com">Github</a>
            </div><!--footer text-->
          </div><!--footer-->
          <br />
@@ -144,7 +151,8 @@ Contact Info
           </div>
           <b>Hiun Kim</b><br />
           openhiun@gmail.com<br />
-Technical Entrepreneur and<br />CEO at Springvil
+          Hacker at <a href="https://www.springvil.com">Springvil</a><br />
+<a href="/about">About Me</a> / <a href="http://www.linkedin.com/in/openhiun">Linkedin</a>
           <br /><br />
           Twitter
           <div class="header-border">
@@ -158,10 +166,10 @@ Syndication
    <img src="/images/feed.gif"> Subscribe this blog's<br />
    <a href="/atom.xml">atom feed</a> or <a href="/feed.xml">rss feed</a>
    <br /><br />
-Archives
+Personal Projects
 <div class="header-border">
           </div>
-   <a href="/archives.html">All postings</a>
+   <a href="/glee/">Glee</a> - env variable editor.
 <br /><br />
 Policy
 <div class="header-border">
@@ -173,16 +181,8 @@ Policy
 <br />
 <br />
 <img id='chrome' src='/images/chrome.png' style='position:absolute' width="200px" />
-          
-
-              
-
-
+         
           </div><!--sidebar-->
-
-
-
-         </div><!--header-->
       </div><!--site-->
     </body>
 </html>
