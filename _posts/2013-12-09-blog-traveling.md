@@ -4,7 +4,7 @@ title:  "블로그 유랑기 그리고 Static CMS의 미래 with Jekyll"
 date:   2013-12-09 15:25:45
 categories: k
 permalink: /blog-traveling
-image : http://e.fastcompany.net/multisite_files/fastcompany/imagecache/1280/poster/2013/12/3023173-poster-p-1-this-guy-made-his-own-ibeacon-for-70.jpg
+image : http://farm6.staticflickr.com/5478/11308098284_8691f98d67_o.jpg
 ---
 
 10살 초반 네이버 블로그를 썼다.
