@@ -4,6 +4,7 @@ title:  "Upload file to S3"
 date:   2013-11-25 15:46:10
 categories: e
 permalink: /upload-file-to-s3
+image: http://farm8.staticflickr.com/7427/11310438965_f80fedd890_o.jpg
 ---
 
 Amazon Web Services(aka AWS) Simple Storage Service(aka S3) is static file storage in the cloud.
@@ -77,4 +78,4 @@ try{
 }
 {% endhighlight %}
 
-
+*Header Picture by <a href="http://www.flickr.com/photos/lwr/2368783493">Flickr</a> with <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY-NC-SA 2.0 License</a>*
