@@ -230,8 +230,8 @@ p code {
     position: absolute;
     left: 0px;
     right: 0px;
-    width: 100%;
-    height: justify;
+    width: justify;
+    height: 180px;
 }
 
 .bg-relative {
