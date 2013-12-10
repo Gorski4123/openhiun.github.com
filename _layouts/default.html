@@ -64,6 +64,13 @@
             <div class="header-border">
             <br />
           </div>
+         </div>
+          
+        {% if page.image %}
+        <img src="{{page.image}}" class="bg">
+        {% endif %}
+        
+        <div class="site">  
          <div id="main">
 
           {{ content }}
