@@ -225,3 +225,10 @@ p code {
   font-family: 'Monaco', 'Lucida Console', 'Source Code Pro', sans-serif;
   font-size: 12px;
 }
+
+.bg {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+}
