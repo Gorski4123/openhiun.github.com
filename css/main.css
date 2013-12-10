@@ -14,7 +14,7 @@ html, body { height: 100%; }
 
 body {
   background-color: #FFF;
-  font-family: "Open Sans", "Malgun Gothic", "Nanum Gothic", sans-serif;
+  font-family: "Helvetica Neue", "Open Sans", "Malgun Gothic", "Nanum Gothic", sans-serif;
   font-size: small;
   text-align: center;
   margin-left:25px;
@@ -46,7 +46,7 @@ ul.posts li {
 
 ul.posts span {
   color: #aaa;
-  font-family: "Open Sans", "Malgun Gothic", "Nanum Gothic", sans-serif;
+  font-family: "Helvetica Neue", "Open Sans", "Malgun Gothic", "Nanum Gothic", sans-serif;
   font-size: 80%;
 }
 
