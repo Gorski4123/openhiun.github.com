@@ -66,6 +66,6 @@ $(function () {
 aka 5 seconds. Every animation effect is powered by jQuery javascript library. ``fadeIn()``and ``fadeOut()`` called api.
 if you want learn more check out [this][jquery-fade-api].
 
-*상단 표지 사진 by <a href="http://www.flickr.com/photos/myklroventine/2600926041">flickr</a> with <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY-NC-SA 2.0 License</a>*
+*Header Picture by <a href="http://www.flickr.com/photos/myklroventine/2600926041">Flickr</a> with <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY-NC-SA 2.0 License</a>*
 
 [jquery-fade-api]: http://api.jquery.com/category/effects/fading/
