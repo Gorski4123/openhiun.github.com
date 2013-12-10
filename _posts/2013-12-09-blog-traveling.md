@@ -85,4 +85,4 @@ HMTL 블로그를 따라올수 없다.
 
 기회가 된다면 <a href="http://developmentseed.org/blog/google-analytics-jekyll-plugin/">Jekyll과 Google Analytics를 결합하는 방법</a>에 대해서도 다뤄보고싶다. 아쉬운점은 Github의 Jekyll은 Safe모드로 동작해서 플러그인 사용이 안되는것 같다 ㅜㅜ
 
-상단 표지 사진 by <a href="http://www.flickr.com/photos/enderst07/8485466486/">flickr</a> with <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 License</a> 
+*상단 표지 사진 by <a href="http://www.flickr.com/photos/enderst07/8485466486/">Flickr</a> with <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 License</a>*
