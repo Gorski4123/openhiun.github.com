@@ -40,4 +40,4 @@ www.microsoft.com/en-us/DeFaUlT.AsPx
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/Cm9onOGTgeM" frameborder="0" allowfullscreen></iframe>
 
-*Header Picture by <a href="http://www.flickr.com/photos/atonal/367707862">Flickr</a> with <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 License</a>*
+*Header Picture by <a href="http://www.flickr.com/photos/atonal/367707862">Flickr</a> with <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY-NC-SA 2.0 License</a>*
