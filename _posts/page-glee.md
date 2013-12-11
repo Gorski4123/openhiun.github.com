@@ -2,7 +2,7 @@
 layout: post
 title:  "Glee - A simple, environmental variable editor"
 date:   2013-10-21 15:48:50
-categories: e
+categories: page
 permalink: /glee
 ---
 
