@@ -7,7 +7,7 @@ permalink: /php-session-on-ec2
 image: http://farm8.staticflickr.com/7321/11316776485_6bc26ed304_o.jpg
 ---
 
-한달전 <a href="http://www.springvil.com">Springvil의 회원가입을 AWS EC2상에서 구현하면서든 가장큰 문제가 
+한달전 <a href="http://www.springvil.com">Springvil</a>의 회원가입을 AWS EC2상에서 구현하면서든 가장큰 문제가 
 PHP세션이 도통 작동이 안된다는 것이다. 윈도우 머신의 WAMP와 카페24의 Shared 웹호스팅에서도 잘 작동하는데 
 이상하게 AWS에서만 작동이 안되었다.
 
