@@ -76,7 +76,7 @@ PHP세션 변수가 패싱이 안된다면 가장먼저 권한을 의심해보�
 </form>
 {% endhighlight %}
 
-{% highlight php %}
+{% highlight html+php %}
 <!--file name : 2.php-->
 <?php session_start();?>
 <html>           
@@ -91,7 +91,7 @@ PHP세션 변수가 패싱이 안된다면 가장먼저 권한을 의심해보�
 </html> 
 {% endhighlight %}
 
-{% highlight php %}
+{% highlight html+php %}
 <!--file name : 3.php-->
 <?php session_start();
 ?>
