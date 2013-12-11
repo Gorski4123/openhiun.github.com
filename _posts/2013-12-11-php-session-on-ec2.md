@@ -7,15 +7,15 @@ permalink: /php-session-on-ec2
 image: http://farm8.staticflickr.com/7321/11316776485_6bc26ed304_o.jpg
 ---
 
-한달전 <a href="http://www.springvil.com">Springvil</a>의 회원가입을 AWS EC2상에서 구현하면서든 가장큰 문제가 
+한달전 <a href="http://www.springvil.com">Springvil</a>의 회원가입을 AWS EC2상에서 구현하면서든 가장 큰 문제가 
 PHP세션이 도통 작동이 안된다는 것이다. 윈도우 머신의 WAMP와 카페24의 Shared 웹호스팅에서도 잘 작동하는데 
 이상하게 AWS에서만 작동이 안되었다.
 
 결국 외국의 한 블로그에서 권한문제때문에 세션 저장을 PHP가 하지 못한다는 인사이트를 받고 AWS에 맞게 시도해봤더니 해결됬다.
 물론 나중에 사이트가 커지면 웹서버나 애플리케이션서버 자체에서 세션을 저장하지는 않지만 MVP를 만드는 우리와 같은 스타트업 들에게는 
-성능보다 작동하는 제품이 우선이기때문에 자체적인 세션저장도 해볼만 한편이다.
+성능보다 작동하는 제품이 우선이기때문에 자체적인 세션저장 역시 중요한편이다.
 
-아래 명령어로 PHP의 설정파일인 ``php.ini``를 찾고 vim으로 열어보자
+아래 명령어로 PHP의 설정파일인 ``php.ini``를 찾고 vim으로 열어보자.
 
 {% highlight bash %}
 $ find / -name php.ini
@@ -37,7 +37,7 @@ session.save_path = "/sessions"
 
 그리고 아까 입력한 폴더를 실제 생성하고 777권한을 줘서 PHP가 세션정보를 wtite할수 있게 하자.
 
-{% highlight bssh %}
+{% highlight bash %}
 $ mkdir /sessions
 $ sudo chmod 777 -R /sessions
 {% endhighlight %}
