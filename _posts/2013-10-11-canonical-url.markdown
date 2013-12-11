@@ -4,6 +4,7 @@ title:  "캐노니컬 주소"
 date:   2013-10-11 20:29:56
 categories: k
 permalink: /canonical-url
+image: http://farm4.staticflickr.com/3723/11330484324_6d9f9241bc_o.jpg
 ---
 
 캐노니컬 주소는 구글과 마이크로소프트에서 표준으로 밀고있는 SEO최적화를 위한 링크이다.
@@ -38,3 +39,5 @@ www.microsoft.com/en-us/DeFaUlT.AsPx
 아래는 공식 소개 비디오.
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/Cm9onOGTgeM" frameborder="0" allowfullscreen></iframe>
+
+*Header Picture by <a href="http://www.flickr.com/photos/atonal/367707862">Flickr</a> with <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 License</a>*
