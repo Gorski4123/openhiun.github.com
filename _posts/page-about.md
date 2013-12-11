@@ -2,7 +2,7 @@
 layout: post
 title:  "Hiun Kim"
 date:   2013-10-18 12:00:00
-categories: e
+categories: page
 permalink: /about
 ---
 
