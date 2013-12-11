@@ -68,6 +68,8 @@ PHP세션 변수가 패싱이 안된다면 가장먼저 권한을 의심해보�
 
 심플 그 자체의 HTML폼이다. 세션테스트는 HTML폼으로 'name'이라는 이름을 가진 데이터를 POST전송한뒤 세션을 생성해서 제3의 페이지로 다시 'name'을 출력할 생각이다. 즉 **1.html - 2.php - 3.php** 순으로 진행되고 만약 ``1.html``에서 입력한 값이 ``3.php``에서 출력다면 세션이 작동한다는 의미이다.
 
+html폼에서 데이터를 보낸다.
+
 {% highlight html %}
 <!--file name : 1.html-->
 <form action="result.php" method="post" enctype="multipart/form-data" id="questionnaire">
@@ -75,7 +77,9 @@ PHP세션 변수가 패싱이 안된다면 가장먼저 권한을 의심해보�
 <input type="Submit" value="Submit">
 </form>
 {% endhighlight %}
-<br />
+
+php에서 데이터를 받고 세션을 생성한뒤 세션변수에 저장한다.
+
 {% highlight html+php %}
 <!--file name : 2.php-->
 <?php session_start();?>
@@ -90,7 +94,9 @@ PHP세션 변수가 패싱이 안된다면 가장먼저 권한을 의심해보�
     </body>           
 </html> 
 {% endhighlight %}
-<br />
+
+세션변수 'name'에 저장된 값을 가져와서 출력한다.
+
 {% highlight html+php %}
 <!--file name : 3.php-->
 <?php session_start();
@@ -101,6 +107,5 @@ PHP세션 변수가 패싱이 안된다면 가장먼저 권한을 의심해보�
     </body>
 </html>
 {% endhighlight %}
-
 
 *Header Picture by <a href="http://www.flickr.com/photos/90237600@N00/2087764869">Flickr</a> with <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 License</a>*
