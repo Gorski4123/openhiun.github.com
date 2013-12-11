@@ -14,7 +14,7 @@ LAMP stack for testing. After I make some signup and signin feature, I try to bo
 
 Ths problem is permission. When you see php.ini file which contain whole configuration of your PHP with following commends,
 
-{% highlight bash %}
+{% highlight php %}
 $ find / -name php.ini
 /etc/php.ini
 $ vim /etc/php.ini
@@ -34,7 +34,7 @@ session.save_path = "/sessions"
 
 Finally create folder and change permission to 777 by following commends.
 
-{% highlight bash %}
+{% highlight php %}
 $ mkdir /sessions
 $ sudo chmod 777 -R /sessions
 {% endhighlight %}
@@ -43,7 +43,7 @@ If permission is 777 then PHP-FPM process can write data into folder. and immedi
 so **it's all about permission is matter!**
 
 Finally restart PHP-FPM for apply setting with following commends.
-{% highlight bash %}
+{% highlight php %}
 $ service php-fpm restart
 //for php-fpm on ubuntu or centos with nginx
 $ service php5-fpm restart
