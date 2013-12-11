@@ -44,7 +44,6 @@ $ sudo chmod 777 -R /sessions
 
 그리고 아래 명령어를 통해 PHP를 재시작하자.
 
-Finally restart PHP-FPM for apply setting with following commends.
 {% highlight bash %}
 $ service php-fpm restart
 //for php-fpm on ubuntu or centos with nginx
@@ -67,7 +66,41 @@ PHP세션 변수가 패싱이 안된다면 가장먼저 권한을 의심해보�
 
 항상 <a href="http://www.w3schools.com/">w3school</a>같은대서 테스트 스크립트를 받아서 세션이나 서비스의 동작를 배우곤 했다. 근데 어떤 오류가 1달동안 안고쳐지면 어떤것이 그것의 완벽한 정의인지 블로그이름 맞다나 Defining Definition( 정의를 정의하는 )을 하는 작업이 필요하다. 간단하고 Robust한 테스트코드를 작성해 보겠다.
 
+심플 그 자체의 HTML폼이다. 세션테스트는 HTML폼으로 'name'이라는 이름을 가진 데이터를 POST전송한뒤 세션을 생성해서 제3의 페이지로 다시 'name'을 출력할 생각이다. 즉 **1.html - 2.php - 3.php** 순으로 진행되고 만약 ``1.html``에서 입력한 값이 ``3.php``에서 출력다면 세션이 작동한다는 의미이다.
 
+{% highlight html %}
+<!--file name : 1.html-->
+<form action="result.php" method="post" enctype="multipart/form-data" id="questionnaire">
+<input type="text" name="name" id="name" />   
+<input type="Submit" value="Submit">
+</form>
+{% endhighlight %}
+
+{% highlight php %}
+<!--file name : 2.php-->
+<?php session_start();?>
+<html>           
+    <body>                   
+        <?php 
+        $_SESSION['name']=$_POST['name'];
+        echo  $_SESSION['name']; 
+        ?> 
+        <br><br>
+        <a href="3.php">move to 3.php</a>  
+    </body>           
+</html> 
+{% endhighlight %}
+
+{% highlight php %}
+<!--file name : 3.php-->
+<?php session_start();
+?>
+<html>
+    <body>
+        Hi, I am still <?php echo $_SESSION['name'];?>
+    </body>
+</html>
+{% endhighlight %}
 
 
 *Header Picture by <a href="http://www.flickr.com/photos/90237600@N00/2087764869">Flickr</a> with <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 License</a>*
