@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Startup Links"
+date:   2013-12-11 13:34:25
+categories: page
+permalink: /links
+---
+
+loved links on the world wide web for startup entrepreneur and for me!
+
+<a href="http://paulgraham.com/siliconvalley.html">How to be silicon valley by paul graham</a> - The post that keep 
+me going to silicon valley. @ dec 11 2013
+
+<a href="http://sungmooncho.com/2010/04/21/facebook/">조성문님이 2010년에 쓴 페이스북의 창업자 Mark에 관한글</a> - 
+항상 우리가 무엇을 위해 서있을까 라는 의문이 들때마다 큰 목표를 상기시켜주는 인사이트풀한 글. @ dec 11 2013
