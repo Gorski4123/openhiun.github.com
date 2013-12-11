@@ -75,7 +75,7 @@ PHP세션 변수가 패싱이 안된다면 가장먼저 권한을 의심해보�
 <input type="Submit" value="Submit">
 </form>
 {% endhighlight %}
-
+<br />
 {% highlight html+php %}
 <!--file name : 2.php-->
 <?php session_start();?>
@@ -90,7 +90,7 @@ PHP세션 변수가 패싱이 안된다면 가장먼저 권한을 의심해보�
     </body>           
 </html> 
 {% endhighlight %}
-
+<br />
 {% highlight html+php %}
 <!--file name : 3.php-->
 <?php session_start();
