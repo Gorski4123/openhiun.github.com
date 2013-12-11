@@ -17,7 +17,7 @@ PHP세션이 도통 작동이 안된다는 것이다. 윈도우 머신의 WAMP�
 
 아래 명령어로 PHP의 설정파일인 ``php.ini``를 찾고 vim으로 열어보자.
 
-{% highlight bash %}
+{% highlight php %}
 $ find / -name php.ini
 /etc/php.ini
 $ vim /etc/php.ini
@@ -37,14 +37,14 @@ session.save_path = "/sessions"
 
 그리고 아까 입력한 폴더를 실제 생성하고 777권한을 줘서 PHP가 세션정보를 wtite할수 있게 하자.
 
-{% highlight bash %}
+{% highlight php %}
 $ mkdir /sessions
 $ sudo chmod 777 -R /sessions
 {% endhighlight %}
 
 그리고 아래 명령어를 통해 PHP를 재시작하자.
 
-{% highlight bash %}
+{% highlight php %}
 $ service php-fpm restart
 //for php-fpm on ubuntu or centos with nginx
 $ service php5-fpm restart
