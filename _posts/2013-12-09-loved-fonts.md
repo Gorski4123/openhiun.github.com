@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "궁극의 영문폰트!!"
+title:  "내가 생각하는 궁극의 영문폰트 - Helvetica Neue"
 date:   2013-12-09 03:42:45
 categories: k
 permalink: /loved-fonts
