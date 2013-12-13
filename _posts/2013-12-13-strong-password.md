@@ -27,7 +27,7 @@ source <a href="http://webscripts.softpedia.com/scriptScreenshots/Mysql-Ajax-Tab
 **비밀본호가 저장되는 과정**
 
 **사실 사용자가 입력한 '12345678'나 'mypassword'과 같은 비밀번호는 별로 중요하지 않다.** 그리고 애당초 저장되지도 않는다. 
-거의 모든 서비스의 비밀번호는 <a href="http://en.wikipedia.org/wiki/MD5" target"blank">md5</a>나 <a href="http://en.wikipedia.org/wiki/Bcrypt" target="blank">becypt</a>와 같은 문자를 암호화 하는 알고리즘에 의해, 암호화(해싱이라고 한다.)되어 저장된다.
+거의 모든 서비스의 비밀번호는 <a href="http://en.wikipedia.org/wiki/MD5" target"blank">md5</a>나 <a href="http://en.wikipedia.org/wiki/Bcrypt" target="blank">bcrypt</a>와 같은 문자를 암호화 하는 알고리즘에 의해, 암호화(해싱이라고 한다.)되어 저장된다.
 
 예를들어 비밀번호 ``password``를 md5로 해싱하면 아래와같은 값이 나온다. 
 
