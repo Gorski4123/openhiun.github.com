@@ -83,13 +83,15 @@ md5를 포함단 거의 모른 암호화 알고리즘은 여러문자중 하나�
 **개발자에게**
 
 해싱 알고리즘으로 제발 bcrypt를 사용해 주기 바란다. md5의 가장큰 단점은 GPU를 사용한 md5해싱이 1초에 몇억번도 가능하다는 것이다. 그에 반해 becypr는 <a href="http://en.wikipedia.org/wiki/Blowfish_(cipher)" target="blank" target="blank">blowfish</a>라는 기술을 사용해서 의도적으로 패스워드 해싱하는 시간을 
-늘렸다. 이것이 한번해싱할때 1초씩만 되어도 모든 경우의수를 다 커버할려면 몇십-볓백년이 걸리기 마련이다. 글러니 새롭게
-서비스를 만들 스타트업이 있다면 becypr를 사용해서 비밀번호를 안전하게 암호화하자!
+늘렸다. 이것이 한번해싱할때 1초씩만 되어도 모든 경우의수를 다 커버할려면 몇십-볓백년이 걸리기 마련이다. **그러니 새롭게
+서비스를 만들 스타트업이 있다면 bcrypt를 사용해서 비밀번호를 안전하게 암호화하자!**
 
 **bcrpyt에 관한 좋은글**
 
 <a href="http://codahale.com/how-to-safely-store-a-password/" target="blank">codehale님의 bcrypt를 세상에 공론화 시킨 글</a>
 
 <a href="http://www.openhiun.com/2013/08/bcrypt.html" target="blank">내가 쓴 PHP를 이용한 bcrypt 암호화 예제 글</a>
+
+<a href="https://github.com/openhiun/php/blob/master/r.php" target="blank">PHP기반에서 bcrypt 비밀번호 암호화 예제 코드 @ Github</a>
 
 오류가 있으면 지적부탁한다.
