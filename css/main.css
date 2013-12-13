@@ -238,3 +238,7 @@ p code {
 .bg-relative {
   margin-bottom: 220px;
 }
+
+.post-title {
+  font-size: 20px;
+}
