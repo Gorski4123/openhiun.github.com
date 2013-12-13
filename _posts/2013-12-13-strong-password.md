@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "강력한 비밀번호 만들기에대한 고찰"
+title:  "강력한 비밀번호 만들기에 대한 고찰"
 date:   2013-12-13 08:51:55
 categories: k
 permalink: /strong-password
