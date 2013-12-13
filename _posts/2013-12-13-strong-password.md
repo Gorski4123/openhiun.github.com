@@ -9,6 +9,9 @@ image: http://farm6.staticflickr.com/5493/11346327516_76ed85abd0_o.jpg
 
 **비밀번호는 어떻게 저정될까?**
 
+비밀번호는 Digital Age의 분신과도 같은 존재이다. 최소한 내가 입력한 Critical한 비밀번호가 어떻게 인증되고 저장되는지 
+아는것은 코딩 교육이 일반화되는것처럼 필수적인 일이라고 생각한다.
+
 강력한 비밀번호를 만들기에 앞서 우리가 설정한 비밀번호는 당최 어떻게 저장되는지 알아보자. 
 대부분은 마이크로소프트 엑셀과 같은 표에 저장되는데, 
 그것이 엑셀에서와 달리 수억줄로 확장될수있고 빠른속도로 PHP와 같은 서버측애플리케이션이 공개된 함수를 사용해서 읽을수 있으면 
@@ -23,8 +26,8 @@ source <a href="http://webscripts.softpedia.com/scriptScreenshots/Mysql-Ajax-Tab
 
 **비밀본호가 저장되는 과정**
 
-**사실 사용자가 입력한 ``Password``나 ``12345678``과 같은 비밀번호는 별로 중요하지 않다.** 그리고 애당초 저장되지도 않는다. 
-거의 모든 서비스의 비밀번호는 md5나 becypr와 같은 문자를 암호화 하는 알고리즘에 의해, 암호화(해싱이라고 한다.)되어 저장된다.
+**사실 사용자가 입력한 `12345678`나 `mypassword`과 같은 비밀번호는 별로 중요하지 않다.** 그리고 애당초 저장되지도 않는다. 
+거의 모든 서비스의 비밀번호는 <a href="http://en.wikipedia.org/wiki/MD5">md5</a>나 <a href="http://en.wikipedia.org/wiki/Bcrypt" target="blank">becypt</a>와 같은 문자를 암호화 하는 알고리즘에 의해, 암호화(해싱이라고 한다.)되어 저장된다.
 
 예를들어 비밀번호 ``password``를 md5로 해싱하면 아래와같은 값이 나온다. 
 
@@ -79,7 +82,7 @@ md5를 포함단 거의 모른 암호화 알고리즘은 여러문자중 하나�
 
 **개발자에게**
 
-해싱 알고리즘으로 제발 <a href="http://en.wikipedia.org/wiki/Bcrypt" target="blank">bcrypt</a>를 사용해 주기 바란다. md5의 가장큰 단점은 GPU를 사용한 md5해싱이 1초에 몇억번도 가능하다는 것이다. 그에 반해 becypr는 <a href="http://en.wikipedia.org/wiki/Blowfish_(cipher)" target="blank" target="blank">blowfish</a>라는 기술을 사용해서 의도적으로 패스워드 해싱하는 시간을 
+해싱 알고리즘으로 제발 bcrypt를 사용해 주기 바란다. md5의 가장큰 단점은 GPU를 사용한 md5해싱이 1초에 몇억번도 가능하다는 것이다. 그에 반해 becypr는 <a href="http://en.wikipedia.org/wiki/Blowfish_(cipher)" target="blank" target="blank">blowfish</a>라는 기술을 사용해서 의도적으로 패스워드 해싱하는 시간을 
 늘렸다. 이것이 한번해싱할때 1초씩만 되어도 모든 경우의수를 다 커버할려면 몇십-볓백년이 걸리기 마련이다. 글러니 새롭게
 서비스를 만들 스타트업이 있다면 becypr를 사용해서 비밀번호를 안전하게 암호화하자!
 
