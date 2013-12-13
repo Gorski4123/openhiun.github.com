@@ -32,19 +32,19 @@ source <a href="http://webscripts.softpedia.com/scriptScreenshots/Mysql-Ajax-Tab
 예를들어 비밀번호 ``password``를 md5로 해싱하면 아래와같은 값이 나온다. 
 
 {% highlight php %}
-password => 5f4dcc3b5aa765d61d8327deb882cf99
+5f4dcc3b5aa765d61d8327deb882cf99
 {% endhighlight %} 
 
-회원정보 제대로 털어준 SK컴즈에서 권유하는 방식인 특수문자를 붙힌다면? 아래와 같다.
+회원정보 제대로 털어준 SK컴즈에서 권유하는 방식인 특수문자를 붙혀셔 ``!password``를 해싱한다면? 아래와 같다.
 
 {% highlight php %}
-!password => d9ce320e9607636e2dba50d23dc1704d
+d9ce320e9607636e2dba50d23dc1704d
 {% endhighlight %} 
 
-조금더 복잡하게 해보면,
+조금더 복잡하게 '!#pass?word^.^'를 해싱해보면 아래와 같다.
 
 {% highlight php %}
-!#pass?word^.^ => ae0ceba47c33d0f5b3f444a0073da439
+ae0ceba47c33d0f5b3f444a0073da439
 {% endhighlight %} 
 
 md5를 포함단 거의 모른 암호화 알고리즘은 여러문자중 하나만 바뀌어도 암호화된 전체 값이 바뀌기때문에 안전하다.
