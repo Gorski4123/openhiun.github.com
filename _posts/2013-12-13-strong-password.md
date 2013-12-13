@@ -35,7 +35,7 @@ source <a href="http://webscripts.softpedia.com/scriptScreenshots/Mysql-Ajax-Tab
 5f4dcc3b5aa765d61d8327deb882cf99
 {% endhighlight %} 
 
-회원정보 제대로 털어준 SK컴즈에서 권유하는 방식인 특수문자를 붙혀셔 ``!password``를 해싱한다면? 아래와 같다.
+많은 서비스에서 권유하는 방식인 특수문자를 붙혀셔 ``!password``를 해싱한다면? 아래와 같다.
 
 {% highlight php %}
 d9ce320e9607636e2dba50d23dc1704d
