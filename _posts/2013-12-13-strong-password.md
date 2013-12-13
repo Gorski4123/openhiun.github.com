@@ -41,7 +41,7 @@ source <a href="http://webscripts.softpedia.com/scriptScreenshots/Mysql-Ajax-Tab
 d9ce320e9607636e2dba50d23dc1704d
 {% endhighlight %} 
 
-조금더 복잡하게 '!#pass?word^.^'를 해싱해보면 아래와 같다.
+조금더 복잡하게 ``!#pass?word^.^``를 해싱해보면 아래와 같다.
 
 {% highlight php %}
 ae0ceba47c33d0f5b3f444a0073da439
