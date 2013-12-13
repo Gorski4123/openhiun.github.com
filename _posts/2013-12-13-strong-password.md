@@ -26,7 +26,7 @@ source <a href="http://webscripts.softpedia.com/scriptScreenshots/Mysql-Ajax-Tab
 
 **비밀본호가 저장되는 과정**
 
-**사실 사용자가 입력한 `12345678`나 `mypassword`과 같은 비밀번호는 별로 중요하지 않다.** 그리고 애당초 저장되지도 않는다. 
+**사실 사용자가 입력한 '12345678'나 'mypassword'과 같은 비밀번호는 별로 중요하지 않다.** 그리고 애당초 저장되지도 않는다. 
 거의 모든 서비스의 비밀번호는 <a href="http://en.wikipedia.org/wiki/MD5" target"blank">md5</a>나 <a href="http://en.wikipedia.org/wiki/Bcrypt" target="blank">becypt</a>와 같은 문자를 암호화 하는 알고리즘에 의해, 암호화(해싱이라고 한다.)되어 저장된다.
 
 예를들어 비밀번호 ``password``를 md5로 해싱하면 아래와같은 값이 나온다. 
@@ -47,10 +47,11 @@ password => 5f4dcc3b5aa765d61d8327deb882cf99
 !#pass?word^.^ => ae0ceba47c33d0f5b3f444a0073da439
 {% endhighlight %} 
 
-md5를 포함단 거의 모른 암호화 알고리즘은 여러문자중 하나만 바뀌어도 암호화된 전체 값이 바뀌기때문에 안전하다. 
-그리고 단방향성이기때문에 ``password`` 라는 문자를 해싱해서는 ``5f4dcc3b5aa765d61d8327deb882cf99`` 라는 문자를 얻을수 있지만 
+md5를 포함단 거의 모른 암호화 알고리즘은 여러문자중 하나만 바뀌어도 암호화된 전체 값이 바뀌기때문에 안전하다.
+
+또한 단방향성이기때문에 ``password`` 라는 문자를 해싱해서는 ``5f4dcc3b5aa765d61d8327deb882cf99`` 라는 문자를 얻을수 있지만 
 ``5f4dcc3b5aa765d61d8327deb882cf99``를 해싱하면 ``696d29e0940a4957748fe3fc9efd22a3``라는 완전히 새로운 값이 
-나온다 역으로 해싱하는것은 불가능하다. 
+나온다 역으로 해싱하는것은 거의 불가능하다. 
 
 그 이유는 각 문자가 가진 고유한 ASCII코드라는것을 이용하며 각 문자를 암호화하는것이 아닌 그 문자들의 ASCII코드의 물리적인 크기(bit)
 를 해싱하기 때문이다. 예를 들자면 우리는 1 + 2 + 3이 6이라는것은 알지만 6자체가 
