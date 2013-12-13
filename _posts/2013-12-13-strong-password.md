@@ -7,7 +7,7 @@ permalink: /strong-password
 image: http://farm8.staticflickr.com/7321/11316776485_6bc26ed304_o.jpg
 ---
 
-##비밀번호는 어떻게 저정될까?
+**비밀번호는 어떻게 저정될까?**
 
 강력한 비밀번호를 만들기에 앞서 우리가 설정한 비밀번호는 당최 어떻게 저장되는지 알아보자. 
 대부분은 마이크로소프트 엑셀과 같은 표에 저장되는데, 
@@ -15,12 +15,12 @@ image: http://farm8.staticflickr.com/7321/11316776485_6bc26ed304_o.jpg
 데이터베이스로 부른다. 구조는 엑셀과 비슷하다.
 
 <center>
-<img src="http://farm3.staticflickr.com/2868/11345626924_6f7a637540_o.png">
+<img src="http://farm3.staticflickr.com/2868/11345626924_6f7a637540_o.png" width="671">
 실제 데이터 베이스에 비밀번호가 저장된 모습
-source <a href="http://webscripts.softpedia.com/scriptScreenshots/Mysql-Ajax-Table-Editor-Screenshots-45296.html">http://webscripts.softpedia.com/scriptScreenshots/Mysql-Ajax-Table-Editor-Screenshots-45296.html</a></center>
+source <a href="http://webscripts.softpedia.com/scriptScreenshots/Mysql-Ajax-Table-Editor-Screenshots-45296.html" target="blank">http://webscripts.softpedia.com/scriptScreenshots/Mysql-Ajax-Table-Editor-Screenshots-45296.html</a></center>
 
 
-##비밀본호가 저장되는 과정
+**비밀본호가 저장되는 과정**
 
 **사실 사용자가 입력한 ``Password``나 ``12345678``과 같은 비밀번호는 별로 중요하지 않다.** 그리고 애당초 저장되지도 않는다. 
 거의 모든 서비스의 비밀번호는 ``MD5``나 ``bcrypt``와 같은 문자를 암호화 하는 알고리즘에 의해, 암호화(해싱이라고 한다.)되어 저장된다.
@@ -63,3 +63,27 @@ password => 5f4dcc3b5aa765d61d8327deb882cf99
 왜냐하면 최종의 ``6``은 그냥 ``6이기 때문이다.`` 아래값들은 모두 다합치면 결과가 6인 값들이다. 그러면 여기서 또하나의 문제가 생기는데,
 다른 비밀번호가 내것과 해싱된값이 일치할수도 있다는 것이다. 여기까지는 나도 잘 모른다 (아시는 분들은 댓글좀) 하지만 추측으로는 
 워낙 물리적인 문자열의 크기가 크기때문에 중간에 일적한 패턴의 랜덤한 요소를 넣는 방식으로 해결하지 않을까 싶다.
+
+**현실적으로 안전한 비밀전호 만들기 그리고 더 현실적인 팁**
+
+위에서 알아본 내용으로 괜시리 기억하기 어렵께 특수문자 넣는것은 헛짓이라는것을 알았다. 예전에는 사람들이 위키하게 ``md5``에서 해싱된 값들을 모아서 <a href="http://www.md5rainbow.com/" target="blank">레인보우 테이</a>블이라는것을 만드는것이 성행했고, 그곳에서 해싱된 값을 넣고 실제 문자와 대조하는것을 찾곤 하였다. **이 경우에는 특수문자를 넣지 않은 비밀번호가 문제가 될수 있으나** 요즘은 비트코인 마이닝에 흔히 쓰이는 ATI GPU의 막강한 힘을 빌려서 하기때문에 아래와 같은 방법을 추천한다.
+
+만약 ``google.com``에서 로그인 한다면 ``goopassword``이나 ``password#goo``등을 사용한다.
+``facebook``이라면? ``facepassword``나 ``password#face``등이 될수 있겠다.
+
+하지만 더욱 중요한것은 듣보잡 워드프레스, XE사이트, 그리고 개인이 만든 사이트에 가입할때는 Facebook이나 Google과 같은
+사이트와 완전히 다른 비밀번호를 사용하는것이 좋다. 작정하고 아이디 털려는 사람은 Facebook이나 Google의 데이터베이스를 노리기보다 당신이 가입한 듣보잡, HTTPS도 작동 안되는 사이트를 노릴것이다. 해생에 관한 것보다 사실 이것이 가장 현실적인 방법이다. **믿을수 있는 사이트와 듣보잡 사이트를 분리하는것.. 제일 중요하다.**
+
+**개발자에게**
+
+해싱 알고리즘으로 제발 <a href="http://en.wikipedia.org/wiki/Bcrypt" target="blank">``bcrypt``</a>를 사용해 주기 바란다. ``md5``의 가장큰 단점은 GPU를 사용한 ``md5``해싱이 1초에 몇억번도 가능하다는 것이다. 그에 반해 ``bcrypt``는 <a href="http://en.wikipedia.org/wiki/Blowfish_(cipher)" target="blank" target="blank">``blowfish``</a>라는 기술을 사용해서 의도적으로 패스워드 해싱하는 시간을 
+늘렸다. 이것이 한번해싱할때 1초씩만 되어도 모든 경우의수를 다 커버할려면 몇십-볓백년이 걸리기 마련이다. 글러니 새롭게
+서비스를 만들 스타트업이 있다면 ``bcrypt``를 사용해서 비밀번호를 안전하게 암호화하자!
+
+**bcrpyt에 관한 좋은글**
+
+<a href="http://codahale.com/how-to-safely-store-a-password/" target="blank">codehale님의 bcrypt를 세상에 공론화 시킨 글</a>
+
+<a href="http://www.openhiun.com/2013/08/bcrypt.html" target="blank">내가 쓴 PHP를 이용한 bcrypt 암호화 예제 글.
+
+오류가 있으면 지적부탁한다.
