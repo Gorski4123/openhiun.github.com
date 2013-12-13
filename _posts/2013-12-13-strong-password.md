@@ -14,8 +14,8 @@ image: http://farm6.staticflickr.com/5493/11346327516_76ed85abd0_o.jpg
 
 강력한 비밀번호를 만들기에 앞서 우리가 설정한 비밀번호는 당최 어떻게 저장되는지 알아보자. 
 대부분은 마이크로소프트 엑셀과 같은 표에 저장되는데, 
-그것이 엑셀에서와 달리 수억줄로 확장될수있고 빠른속도로 PHP와 같은 서버측애플리케이션이 공개된 함수를 사용해서 읽을수 있으면 
-데이터베이스로 부른다. 구조는 엑셀과 비슷하다.
+그것이 엑셀에서와 달리 수억줄로 확장될수있고 빠른속도로 <a href="http://php.net/" target"blank">PHP</a>와 같은 프로그래밍 언어의 함수를 사용해서 읽고 쓸수 있으면 
+데이터베이스로 부른다. 전체적인 구조는 엑셀과 비슷하다.
 
 <center>
 <img src="http://farm3.staticflickr.com/2868/11345626924_6f7a637540_o.png" width="671">
@@ -27,7 +27,7 @@ source <a href="http://webscripts.softpedia.com/scriptScreenshots/Mysql-Ajax-Tab
 **비밀본호가 저장되는 과정**
 
 **사실 사용자가 입력한 `12345678`나 `mypassword`과 같은 비밀번호는 별로 중요하지 않다.** 그리고 애당초 저장되지도 않는다. 
-거의 모든 서비스의 비밀번호는 <a href="http://en.wikipedia.org/wiki/MD5">md5</a>나 <a href="http://en.wikipedia.org/wiki/Bcrypt" target="blank">becypt</a>와 같은 문자를 암호화 하는 알고리즘에 의해, 암호화(해싱이라고 한다.)되어 저장된다.
+거의 모든 서비스의 비밀번호는 <a href="http://en.wikipedia.org/wiki/MD5" target"blank">md5</a>나 <a href="http://en.wikipedia.org/wiki/Bcrypt" target="blank">becypt</a>와 같은 문자를 암호화 하는 알고리즘에 의해, 암호화(해싱이라고 한다.)되어 저장된다.
 
 예를들어 비밀번호 ``password``를 md5로 해싱하면 아래와같은 값이 나온다. 
 
