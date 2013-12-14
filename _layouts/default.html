@@ -8,7 +8,7 @@
         {% if page.layout == "default" %}
         <meta name="description" content="{{ site.description }}" />        
         {% else %}
-        <meta name="description" content="{{ post.excerpt }}" />
+        <meta name="description" content="{{ post.content | split: '<!-- more -->' | first }}" />
         {% endif %}
 
         <!-- open graph -->
