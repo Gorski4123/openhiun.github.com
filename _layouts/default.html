@@ -5,13 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }} - Defining Defination</title>
         <meta name="title" content="{{ page.title }} - Defining Defination" />
-        <!-- 
         {% if page.home %}
         <meta name="description" content="{{ site.description }}" />        
         {% else %}
-        -->
-        <meta name="description" content="{{ content | strip_html | truncatewords: 200 | strip_newlines | escape_once }}" />
-      <!--  {% endif %}  -->
+        <meta name="description" content="{{ content | strip_html | truncatewords: 100 | strip_newlines | escape_once }}" />
+        <{% endif %}
 
         <!-- open graph -->
         <meta property="fb:admins" content="openhiun" />
