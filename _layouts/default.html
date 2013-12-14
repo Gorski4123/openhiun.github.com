@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }} - Defining Defination</title>
         <meta name="title" content="{{ page.title }} - Defining Defination" />
-        {% if page.layout != "default" %}
+        {% if page.layout == "default" %}
         <meta name="description" content="{{ site.description }}" />        
         {% else %}
         <meta name="description" content="{{ content | strip_html | truncatewords: 45 | strip_newlines | escape_once }}" />
