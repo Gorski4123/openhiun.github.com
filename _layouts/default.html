@@ -8,7 +8,7 @@
         {% if page.home %}
         <meta name="description" content="{{ site.description }}" />        
         {% else %}
-        <meta name="description" content="{{ content | strip_html | truncatewords: 100 | strip_newlines | escape_once }}" />
+        <meta name="description" content="{{ content | strip_html | truncatewords: 30 | strip_newlines | escape_once }}" />
         {% endif %}
 
         <!-- open graph -->
