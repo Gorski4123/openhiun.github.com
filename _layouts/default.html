@@ -3,17 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Defining Defination - {{ page.title }}</title>
+        <title>{{ page.title }} - Defining Defination</title>
+        <meta name="title" content="{{ page.title }} - Defining Defination" />
+        {% if page.type !== "post" %}
+        <meta name="description" content="{{ site.description }}" />        
+        {% else %}
+        <meta name="description" content="{{ post.excerpt }}" />
+        {% endif %}
+
+        <!-- open graph -->
         <meta property="fb:admins" content="openhiun" />
         <meta property="fb:app_id" content="533004283446886"/>
         <meta property="og:title" content="{{ page.title }}" />
         <meta property="og:url" content="{{ site.url}}{{ page.url }}" />
-        {% if page.description %}
-        <meta name="description" content="{{page.description}}" />
-        {% else %}
-        <meta name="description" content="{{site.description}}" />
-        {% endif %}
-
 
         <!-- Favicons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.gravatar.com/avatar/88c94e86ee17d23e06907361e5533e99.jpg?s=144">
