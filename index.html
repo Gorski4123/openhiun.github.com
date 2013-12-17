@@ -8,7 +8,7 @@ home: define_type
 <div id="home">
   <h1>Blog Posts</h1>
   <ul class="posts">
-    {% for post in site.categories contains 'e' limit: 12 %}
+    {% for post in site.categories.e limit: 12 %}
       <li>- <a href="{{ post.url }}">{{ post.title }}</a><span> &#64; {{ post.date | date_to_string }}</span></li>
     {% endfor %}
     <a href="/archives" style="text-align: right;">All posts</a>
@@ -16,7 +16,7 @@ home: define_type
   <div style="margin-top: -15px;"></div>
   <h1>Korean Blog Posts</h1>
   <ul class="posts">
-    {% for post in site.categories contains 'k' limit: 12 %}
+    {% for post in site.categories.k limit: 12 %}
       <li>- <a href="{{ post.url }}">{{ post.title }}</a><span> &#64; {{ post.date | date_to_string }}</span></li> 
     {% endfor %}
     <a href="/k" style="text-align: right;">All posts</a>
