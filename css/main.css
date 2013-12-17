@@ -245,3 +245,8 @@ p code {
   */
   font-weight: bold;
 }
+
+.read-more {
+  text-align: right;
+  font-weight: bold;
+}
