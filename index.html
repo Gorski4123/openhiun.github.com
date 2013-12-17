@@ -9,17 +9,17 @@ home: define_type
   <h1>Blog Posts</h1>
   <ul class="posts">
     {% for post in site.posts %}
-     {% if post.categories contains 'e' limit:13 %}
+     {% if post.categories contains 'e' limit: 13 %}
       <li>- <a href="{{ post.url }}">{{ post.title }}</a><span> &#64; {{ post.date | date_to_string }}</span></li>
-      <a href="/archives" style="text-align: right;">All posts</a>
      {% endif %}
     {% endfor %}
+    <a href="/archives" style="text-align: right;">All posts</a>
   </ul>
   <div style="margin-top: -15px;"></div>
   <h1>Korean Blog Posts</h1>
   <ul class="posts">
     {% for post in site.posts %}
-     {% if post.categories contains 'k' limit:13 %}
+     {% if post.categories contains 'k' limit: 13 %}
       <li>- <a href="{{ post.url }}">{{ post.title }}</a><span> &#64; {{ post.date | date_to_string }}</span></li>  
      {% endif %} 
     {% endfor %}
