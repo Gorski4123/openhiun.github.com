@@ -1,8 +1,11 @@
 ---
 layout: default
 ---
+{% if page.home %}
 <h1 class="post-title">{{ page.title }}</h1>
 <p class="meta">{{ page.date | date_to_string }}</p>
+{% else %}
+{% endif %}
 
 <div class="post">
 {{ content }}
