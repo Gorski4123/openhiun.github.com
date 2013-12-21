@@ -3,7 +3,7 @@ layout: post
 title:  "AWS에서 분산 시스템 구상하기"
 date:   2013-12-21 23:55:55
 categories: k
-permalink: /cloud-design-patterns
+permalink: /distributed-cloud-design
 image: http://farm6.staticflickr.com/5493/11346327516_76ed85abd0_o.jpg
 ---
 
