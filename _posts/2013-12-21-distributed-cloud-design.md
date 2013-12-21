@@ -7,14 +7,13 @@ permalink: /distributed-cloud-design
 ---
 
 
-얼마전부터 청소년 투표권 연령 인하를 위해 [사이트](http://1618vote.net)를 기획하면서 이벤트성 사이트에서 
+얼마전부터 청소년 투표권 연령 인하를 위한 사이트인 [1618vote.net](http://1618vote.net)을 기획하면서 이벤트성 사이트에서 
 어떤방법으로 손쉽게 스케일링(Scaling; 시스템을 분산해서 대규모 트래픽을 처리하는것)을 할수있는지 고민하던차에 
 몇가지 방법을 정리해본다.
 
 **다이렉트 호스팅**
 
-AWS의 정적 파일 호스팅 서비스인 Simple Storage Service(이하 S3)에서 폼을 포함한 HTML파일을 호스팅하고 
-그것의 응답한것을 EC2에서 PHP를 처리하고 RDS로 데이터베이스를 구성한다.
+드랍박스가 사용하는 AWS의 정적 파일 호스팅 서비스인 [Simple Storage Service](http://aws.amazon.com/s3/)(이하 S3)에서 폼을 포함한 HTML파일을 호스팅하고 그것의 응답한것을 EC2에서 PHP를 처리하고 [RDS](http://aws.amazon.com/rds/)로 데이터베이스를 구성한다.
 
 여기서 중요한것은 [s3fs](https://code.google.com/p/s3fs/)라는 것으로 EC2에서 S3의 버킷을 EC2 디렉토리에 마운트할수 있다. 
 
@@ -22,12 +21,10 @@ AWS의 정적 파일 호스팅 서비스인 Simple Storage Service(이하 S3)에
 
 우리는 한 머신에 설치되어 있는 LAMP에 익숙하다. 리눅스를 기반으로 Apache나 nginx웹서버에 PHP를 올려서 쓴다. 하지만 이벤트성 사이트에서는 철저한 분리를 통해, 같은 양의 하드웨어로 더욱 많은 성능을 낼수있다.
 
-**부하분산**
-
-**웹서버와 애플리케이션서버 부하분산**
+**웹서버와 애플리케이션서버 부하분산(로드 밸런싱)**
 
 만약 하나의 머신이 감당할 수 있는 최대의 요청을 넘어서는 수준의 트래픽을 처리하려면 어떻게 해야 될까? 
-나도 항상 궁금했는데, AWS상에서는 Elastic Load Balancing(이하 ELB)을 통해서 여러대의 EC2머신으로 분산을 시키면 된다. 
+나도 항상 궁금했는데, AWS상에서는 [Elastic Load Balancing](http://aws.amazon.com/elasticloadbalancing/)(이하 ELB)을 통해서 여러대의 EC2머신으로 분산을 시키면 된다. 
 
 ELB의 원리, 더 크게 보아서 로드 밸런싱의 원리는 간단하다. 요청 a, b, c, d가 동시에 들어온다면 그 아래있는 웹서버 
 1, 2, 3, 4로 날려준다. 그러면 전체적으로보면 꽤 만은 요청이지만 머신 한개당 처리할 요청은 그리 많지 않으므로, 궁극적으로 분산시스템을 만들 수 있다.
@@ -50,7 +47,7 @@ Sharding(이하 샤딩)이란 기법을 사용해야된다. 예를들어보면, 
 트위터를 생각해보면, 나의 계정 [@openhiun](https://twitter.com/i/discover)에는 80명의 팔로워가 있는데, 내가 글을 한번 쓰면 80명에게로 전달된다. 마찬가지원리로 [@BarackObama](https://twitter.com/BarackObama)가 글을 쓴다면 4000만명에게 전달된다. 단수한 계산으로만 해도 쓰기와 읽기가 수십에서 수천만배 차이가난다.(물론 쓰기가 더 많은 부하가 걸리지만, 
 수많은 읽기에는 비교되지 못한다.) 이경우에는 DB를 복제하는 Read Republica를 사용해서 읽기의 많은 요청의 응답하면 된다.
 
-**-Replication 그리고 Availability Zone**
+*-Replication 그리고 Availability Zone*
 
 Replication은 하드, 소프트웨어적인 공격을 웹서버나 데이터센터가 받을경우를 대비해 물리적으로 다른 장소에 DB를 저장한다는 뜻이다. 그 다른 장소는 Availability Zone이 될 수 있다.
 
