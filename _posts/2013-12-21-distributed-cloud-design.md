@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "AWS에서 분산 시스템 구상하기"
+title:  "분산 시스템 디자인하기"
 date:   2013-12-21 23:55:55
 categories: k
 permalink: /distributed-cloud-design
