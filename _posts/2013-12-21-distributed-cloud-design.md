@@ -13,16 +13,14 @@ permalink: /distributed-cloud-design
 
 **다이렉트 호스팅**
 
-AWS의 `정적` 파일 호스팅 서비스인 Simple Storage Service(이하 S3)에서 폼을 포함한 HTML파일을 호스팅하고 
+AWS의 정적 파일 호스팅 서비스인 Simple Storage Service(이하 S3)에서 폼을 포함한 HTML파일을 호스팅하고 
 그것의 응답한것을 EC2에서 PHP를 처리하고 RDS로 데이터베이스를 구성한다.
 
 여기서 중요한것은 [s3fs](https://code.google.com/p/s3fs/)라는 것으로 EC2에서 S3의 버킷을 EC2 디렉토리에 마운트할수 있다. 
 
-사실 설문조사를 할경우 순수 HTML로만 폼을 만들고 그것을 `action`을 통해서 원하는 위치의 스크립트로 쏴주기만하면 되니 
-간단한 편이다.
+사실 설문조사를 할경우 순수 HTML로만 폼을 만들고 그것을 `form action="somewhere.com/a.php"`을 통해서 원하는 위치의 스크립트로 쏴주기만하면 되니 간단한 편이다.
 
-우리는 한 머신에 설치되어 있는 LAMP에 익숙하다. 리눅스를 기반으로 Apache나 nginx웹서버에 PHP를 올려서 쓴다. 하지만 이벤트성 사이트에서는 
-철저한 분리를 통해, 같은 양의 하드웨어로 더욱 많은 성능을 낼수있다.
+우리는 한 머신에 설치되어 있는 LAMP에 익숙하다. 리눅스를 기반으로 Apache나 nginx웹서버에 PHP를 올려서 쓴다. 하지만 이벤트성 사이트에서는 철저한 분리를 통해, 같은 양의 하드웨어로 더욱 많은 성능을 낼수있다.
 
 **부하분산**
 
@@ -52,7 +50,7 @@ Sharding(이하 샤딩)이란 기법을 사용해야된다. 예를들어보면, 
 트위터를 생각해보면, 나의 계정 [@openhiun](https://twitter.com/i/discover)에는 80명의 팔로워가 있는데, 내가 글을 한번 쓰면 80명에게로 전달된다. 마찬가지원리로 [@BarackObama](https://twitter.com/BarackObama)가 글을 쓴다면 4000만명에게 전달된다. 단수한 계산으로만 해도 쓰기와 읽기가 수십에서 수천만배 차이가난다.(물론 쓰기가 더 많은 부하가 걸리지만, 
 수많은 읽기에는 비교되지 못한다.) 이경우에는 DB를 복제하는 Read Republica를 사용해서 읽기의 많은 요청의 응답하면 된다.
 
--Replication 그리고 Availability Zone
+**-Replication 그리고 Availability Zone**
 
 Replication은 하드, 소프트웨어적인 공격을 웹서버나 데이터센터가 받을경우를 대비해 물리적으로 다른 장소에 DB를 저장한다는 뜻이다. 그 다른 장소는 Availability Zone이 될 수 있다.
 
