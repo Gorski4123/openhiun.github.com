@@ -19,9 +19,9 @@ AWS로 구성된 분산형 웹 시스템 아키텍쳐.
 
 **다이렉트 호스팅**
 
-드랍박스가 사용하는 AWS의 정적 파일 호스팅 서비스인 [Simple Storage Service](http://aws.amazon.com/s3/)(이하 S3)에서 폼을 포함한 HTML파일을 호스팅하고 그것의 응답한것을 EC2에서 PHP를 처리하고 [RDS](http://aws.amazon.com/rds/)로 데이터베이스를 구성한다.
+드랍박스가 사용하는 [Amazon Web Services](http://aws.amazon.com)(이하 AWS)의 정적 파일 호스팅 서비스인 [Simple Storage Service](http://aws.amazon.com/s3/)(이하 S3)에서 폼을 포함한 HTML파일을 호스팅하고 그것의 응답한것을 EC2에서 PHP를 처리하고 독립적으로[RDS](http://aws.amazon.com/rds/)로 운영되는 데이터베이스에 저장한다.
 
-여기서 중요한것은 [s3fs](https://code.google.com/p/s3fs/)라는 것으로 EC2에서 S3의 버킷을 EC2 디렉토리에 마운트할수 있다. 
+여기서 중요한것은 [s3fs](https://code.google.com/p/s3fs/)라는 것으로 EC2에서 S3의 버킷을 EC2 디렉토리에 마운트함으로써 S3에 정적인 HTML파일을 올리는것을 자동화할 수 있다. 
 
 사실 설문조사를 할경우 순수 HTML로만 폼을 만들고 그것을 `form action="somewhere.com/a.php"`을 통해서 원하는 위치의 스크립트로 쏴주기만하면 되니 간단한 편이다.
 
@@ -51,7 +51,7 @@ Sharding(이하 샤딩)이란 기법을 사용해야된다. 예를들어보면, 
 *-트위터 Read Replica*
 
 트위터를 생각해보면, 나의 계정 [@openhiun](https://twitter.com/i/discover)에는 80명의 팔로워가 있는데, 내가 글을 한번 쓰면 80명에게로 전달된다. 마찬가지원리로 [@BarackObama](https://twitter.com/BarackObama)가 글을 쓴다면 4000만명에게 전달된다. 단수한 계산으로만 해도 쓰기와 읽기가 수십에서 수천만배 차이가난다.(물론 쓰기가 더 많은 부하가 걸리지만, 
-수많은 읽기에는 비교되지 못한다.) 이경우에는 DB를 복제하는 Read Republica를 사용해서 읽기의 많은 요청의 응답하면 된다.
+수많은 읽기에는 비교되지 못한다.) 이 경우에는 DB를 복제하는 Read Republica를 사용해서 읽기의 많은 요청의 응답하면 된다.
 
 *-Replication 그리고 Availability Zone*
 
