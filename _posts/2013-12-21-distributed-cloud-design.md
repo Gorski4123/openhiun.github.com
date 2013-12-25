@@ -51,7 +51,7 @@ Sharding(이하 샤딩)이란 기법을 사용해야된다. 예를들어보면, 
 *-트위터 Read Replica*
 
 트위터를 생각해보면, 나의 계정 [@openhiun](https://twitter.com/i/discover)에는 80명의 팔로워가 있는데, 내가 글을 한번 쓰면 80명에게로 전달된다. 마찬가지원리로 [@BarackObama](https://twitter.com/BarackObama)가 글을 쓴다면 4000만명에게 전달된다. 단수한 계산으로만 해도 쓰기와 읽기가 수십에서 수천만배 차이가난다.(물론 쓰기가 더 많은 부하가 걸리지만, 
-수많은 읽기에는 비교되지 못한다.) 이 경우에는 DB를 복제하는 Read Republica를 사용해서 읽기의 많은 요청의 응답하면 된다.
+수많은 읽기에는 비교되지 못한다.) 이 경우에는 DB를 복제하는 Read Replica를 사용해서 읽기의 많은 요청의 응답하면 된다.
 
 *-Replication 그리고 Availability Zone*
 
