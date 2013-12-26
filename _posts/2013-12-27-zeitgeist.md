@@ -8,17 +8,13 @@ image: http://farm8.staticflickr.com/7372/11567641444_87e794c8d5_o.jpg
 ---
 
 <iframe width="640" height="360" src="//www.youtube.com/embed/tupg3wzV71g" frameborder="0" allowfullscreen></iframe>
-
-
-
+<br /><br /><br />
 **Think Different**
 
 1990년대 후반 미국 Los Angeles에 있는 광고업체인 [TBWA\CHIAT\DAY](http://tbwachiatday.com/)(이름부터 신기하다 
 이름 사이의 기호는 백슬래시이지만 한국어 윈도우에서는 원화 표시로 보일것이다.)가 잡스가 돌아와서 
 다르게 생각할 필요성을 느끼는 아니 다르게 생각해야만하는 애플에게 지어준 광고 카피이다. 
-
-
-
+<br /><br /><br />
 **영화 변호인**
 
 스토리는 속물변호사가 전두환시대때 누명을쓴 아는 대학생을 변호하는 이야기이다. 그 당시 권위주의와 독재가 만연하게 
@@ -36,8 +32,7 @@ image: http://farm8.staticflickr.com/7372/11567641444_87e794c8d5_o.jpg
 한자의 사람 '인' 사람역시 서로기대어야 그 자체가 사람이 되는것 같다. [blogger.com](http://2020chrisong.blogspot.kr/2010/09/ren-building-world-expo-shanghai-china.html)</center>
 
 근데 사람 본성이 그런것 같다. 다른사람들과 같이 있으려하고 모두가 올라갈때 내려가려고 하는것..
-
-
+<br /><br /><br />
 **영화 상영전에 한 현대카드 광고**
 
 하지만 30년 전과 다른것이 있다. 그것은 사람들이 해결하려고 관심을 가진다는 것이다. 
