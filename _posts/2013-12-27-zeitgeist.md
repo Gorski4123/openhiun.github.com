@@ -3,8 +3,8 @@ layout: post
 title:  "영화 변호인과 그전에 나온 현대카드 옆길로새 광고를 보고"
 date:   2013-12-27 12:58:36
 categories: k
-pygments: true
 permalink: /zeitgeist
+image: http://farm8.staticflickr.com/7372/11567641444_87e794c8d5_o.jpg
 ---
 
 <iframe width="640" height="360" src="//www.youtube.com/embed/tupg3wzV71g" frameborder="0" allowfullscreen></iframe>
