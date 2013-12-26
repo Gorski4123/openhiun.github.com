@@ -21,11 +21,13 @@ permalink: /zeitgeist
 영화가 끝나고 지금의 ActiveX와 공인인증서 그리고 공공교육과 극도로 닮아있다는 생각이 들었다. 모닥불처럼 모두가 암묵적으로 
 동조하는것.. 사실 독재정권이 사라졌다뿐이지 현제까지 여전히 모순은 남아있다. 공공교육역시 모순에 투성이이고 산업시대성 교육이다.
 
-<img src="http://farm6.staticflickr.com/5547/11567103014_2311c6c779_o.jpg"> 
+<center><img src="http://farm6.staticflickr.com/5547/11567103014_2311c6c779_o.jpg">
+
 캠프파이어의 나무들이 서로 기대어서 서있는 모습 [wikipedia](http://en.wikipedia.org/wiki/File:Campfire_4213.jpg)
 
 <img src="http://farm4.staticflickr.com/3779/11567176364_6c700d64be_m.jpg">
-한자의 사람 '인' 사람역시 서로기대어야 그 자체가 사람이 되는것 같다. [blogger.com](http://2020chrisong.blogspot.kr/2010/09/ren-building-world-expo-shanghai-china.html)
+
+한자의 사람 '인' 사람역시 서로기대어야 그 자체가 사람이 되는것 같다. [blogger.com](http://2020chrisong.blogspot.kr/2010/09/ren-building-world-expo-shanghai-china.html)</center>
 
 근데 사람 본성이 그런것 같다. 다른사람들과 같이 있으려하고 모두가 올라갈때 내려가려고 하는것..
 
@@ -36,6 +38,7 @@ permalink: /zeitgeist
 
 만약 어느날 이런 창의적이고 남들과는 다른 시도가 일반적이 되는 날이 온다면 우리는 우리 자녀에서 어떻게 하라고 할까?
 그때 다시 유교사회로 돌아가는건 아닌지, 융합이 될지.. 그것도 궁금하다.
+
 
 <iframe width="640" height="360" src="//www.youtube.com/embed/tupg3wzV71g" frameborder="0" allowfullscreen></iframe>
 
