@@ -19,6 +19,12 @@ image: http://farm8.staticflickr.com/7372/11567641444_87e794c8d5_o.jpg
 <br /><br /><br />
 **영화 변호인**
 
+<img src="http://farm4.staticflickr.com/3700/11568370234_2a5e4d5caf_n.jpg">
+
+영화 변호인에서의 보수와 부패에 상징이된 경찰 [movie.naver.com](http://movie.naver.com/movie/bi/mi/photoView.nhn?code=101901) 정부의 
+보수성자체는 필요하나 그것이 창의성과 린(lean)함을 가로막아서는 안된다는 생각이 든다. 보수적인것이 나쁜것은 
+아니나 보수적인것 때문에 공공의 요구에 뒤덜어지는 것은 죄악이다. 그 예로 지극히 행정편의주의적인 공인인증서가 있다.
+
 스토리는 속물변호사가 전두환시대때 누명을쓴 아는 대학생을 변호하는 이야기이다. 그 당시 권위주의와 독재가 만연하게 
 퍼져있었고, 당시 국가가 생각한 **최선의 방법은 사람들에게 제대로된 사상 교육을 이아니라 사람들을 구속**하는것이었다. 
 
@@ -26,12 +32,6 @@ image: http://farm8.staticflickr.com/7372/11567641444_87e794c8d5_o.jpg
 동조하는것.. 사실 독재정권이 사라졌다뿐이지 현제까지 여전히 모순은 남아있다. 공공교육역시 모순에 투성이의 산업시대성 교육이다.
 
 <center>
-
-<img src="http://farm4.staticflickr.com/3700/11568370234_2a5e4d5caf_z.jpg">
-
-영화 변호인에서의 보수와 부패에 상징이된 경찰 [movie.naver.com](http://movie.naver.com/movie/bi/mi/photoView.nhn?code=101901) 정부의 
-보수성자체는 필요하나 그것이 창의성과 린(lean)함을 가로막아서는 안된다는 생각이 든다. 보수적인것이 나쁜것은 
-아니나 보수적인것 때문에 공공의 요구에 뒤덜어지는 것은 죄악이다. 그 예로 지극히 행정편의주의적인 공인인증서가 있다.
 
 <img src="http://farm6.staticflickr.com/5547/11567103014_2311c6c779_o.jpg">
 
