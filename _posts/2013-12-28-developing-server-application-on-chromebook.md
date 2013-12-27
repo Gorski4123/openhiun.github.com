@@ -1,15 +1,16 @@
 ---
 layout: post
 title:  "Developing Server Application on Chromebook"
-date:   2013-12-27 21:52:45
+date:   2013-12-28 21:52:45
 categories: e
 permalink: /developing-server-application-on-chromebook
+image: http://farm8.staticflickr.com/7404/11586972615_ff9e65e848_o.jpg
 ---
 
 Last summer I got Samsung series 5 chromebook and trying to find way to developing PHP and NodeJS. 
 Best way is install Linux beside on Chrome OS. And yet obviously Chrome OS is based on Linux at the beginning.
 
-##Concept
+##Considerations
 
 1.Coding
 The main reason I want to developing on Chrome OS is performance. Chrome OS has quiet amazing performance for their hardware. I think the reason is optimization to purpose and restriction by Google. So Chrome OS os best place to googling and copy and pasting code and of course writing code. 
