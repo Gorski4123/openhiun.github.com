@@ -28,9 +28,7 @@ There are 3 options.
 
 As I said Chrome OS is pretty good for non-developing purpose stuff like web browsing for their hardware. I prefer to use Chrome OS for non-develpment stuff. GUI and CLI.. I prefer CLI to run software natively. We all familar to using SSH to linux server, and we don't need to another heavy-GUI OS on Chrome OS.
 
-3.Integration
-
-Integration is no-big deal. Just file sharing between Chroms OS and CLI ubuntu. The sharepoint is `Downloads` folder.
+If you need share folder, no-big deal. `Downloads` folder is share folder between Chrome OS and Ubuntu.
 
 ##Install Ubuntu
 
