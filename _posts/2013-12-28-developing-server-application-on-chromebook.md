@@ -22,7 +22,7 @@ There are 3 options.
 
 - Install GUI Ubuntu natively.
 
-- Install GUI Ubuntu on Chrome OS with crouton.
+- Install GUI Ubuntu on Chrome OS with [crouton](https://github.com/dnschneid/crouton).
 
 - Install CLI Ubuntu on Chrome OS with crouton.
 
