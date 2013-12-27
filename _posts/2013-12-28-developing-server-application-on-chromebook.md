@@ -12,23 +12,24 @@ Best way is install Linux beside on Chrome OS. And yet obviously Chrome OS is ba
 
 ##Considerations
 
-1.Coding
-The main reason I want to developing on Chrome OS is performance. Chrome OS has quiet amazing performance for their hardware. I think the reason is optimization to purpose and restriction by Google. So Chrome OS os best place to googling and copy and pasting code and of course writing code. 
+The main reason I want to developing on Chrome OS is performance. Chrome OS has quiet amazing performance for their hardware. I think the reason is optimization to purpose and restriction by Google. So Chrome OS is best place to googling and writing a code. But not good place to run PHP or NodeJS or many other application for develope.
 
-2.OS
-Chromebook is built on top of linux. But we can't install PHP and NodeJS on Chrome OS natively. So we need to install Linux such as Ubuntu on alongside of Chrome OS.
+Chromebook is built on top of linux. But we can't install PHP and NodeJS on Chrome OS natively cause OS desen't supported. So we need to install Linux such as Ubuntu on alongwith Chrome OS with [crouton](https://github.com/dnschneid/crouton).
+
+Crouton is simply enabler to run linux alongwith [Chromium](http://www.chromium.org) based OS. It's not a Virtual Machine, everything is running natively so there is no delay on like virtual machine.
 
 There are 3 options.
 
 - Install GUI Ubuntu natively.
 
-- Install GUI Ubuntu on Chrome OS with [crouton](https://github.com/dnschneid/crouton).
+- Install GUI Ubuntu on Chrome OS with crouton.
 
 - Install CLI Ubuntu on Chrome OS with crouton.
 
 As I said Chrome OS is pretty good for non-developing purpose stuff like web browsing for their hardware. I prefer to use Chrome OS for non-develpment stuff. GUI and CLI.. I prefer CLI to run software natively. We all familar to using SSH to linux server, and we don't need to another heavy-GUI OS on Chrome OS.
 
 3.Integration
+
 Integration is no-big deal. Just file sharing between Chroms OS and CLI ubuntu. The sharepoint is `Downloads` folder.
 
 ##Install Ubuntu
