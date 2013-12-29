@@ -13,6 +13,7 @@ image: http://farm4.staticflickr.com/3741/11632133175_3e21496379_o.jpg
 img.expando{ /*sample CSS for expando images. Not required but recommended*/
 border: none;
 vertical-align: top; /*top aligns image, so mouse has less of a change of moving out of image while image is expanding*/
+z-index: 1;
 }
 
 </style>
