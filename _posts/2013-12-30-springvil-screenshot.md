@@ -6,7 +6,7 @@ permalink: /springvil-screenshot
 image: http://farm4.staticflickr.com/3741/11632133175_3e21496379_o.jpg
 ---
 
-<script src="/js/parallax.js"></script>
+<script src="/js/expando.js"></script>
 
 <style type="text/css">
 
