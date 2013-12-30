@@ -36,7 +36,7 @@ If you need share folder, no-big deal. `Downloads` folder is share folder betwee
 
 2.Ctrl+Alt+T, type shell and hit enter.
 
-3.Before installation you have to choose which OS and Version. To show available version type `~/Downloads/crouton -r ist` on the shell
+3.Before installation you have to choose which OS and Version. To show available version type `~/Downloads/crouton -r list` on the shell
 
 And if you want to install Ubuntu 13.04 type `sh -e crouton -r raring -n ubuntu -t cli-extra`. You may notice `-r`is version code and `-n`is OS name and -t is type of GUI or CLI. More info in [official Github repo](https://github.com/dnschneid/crouton#i-dont-always-use-linux-but-when-i-do-i-use-cli).
 
