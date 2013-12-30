@@ -97,8 +97,10 @@ z-index: 2;
 - 느린 웹페이지 로딩때문에 잠깐 클리앙을 확인하고 싶을때.
 - 심심해서 잠깐 클리앙을 확인하고 싶을때.
 
-많은 이용 부탁드립니다. 돈이 없어서 구글 웹 개발자 등록은 못하고 있습니다. 반응이 좋으면 할 예정입니다.
+많은 이용 부탁드립니다. 돈이 없어서 구글 웹 스토어 등록은 못하고 있습니다($5 소요). 반응이 좋으면 할 예정입니다.
 
-다운로드
+<b>다운로드</b>
 
 <a href="https://mega.co.nz/#!Yx8UmSSJ" class="button button-darkblue" style="display:block;margin-left:200px;margin-right:200px;">Download Clien for Chrome - 40KB</a>
+<br />
+<br />
