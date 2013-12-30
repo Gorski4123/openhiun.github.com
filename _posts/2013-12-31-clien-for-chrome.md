@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: post
 title:  "Clien for Chrome"
-categories: page
+categories: k
 permalink: /clien-for-chrome
 ---
 
