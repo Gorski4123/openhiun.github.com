@@ -68,6 +68,11 @@ permalink: /clien-for-chrome
   background-image: linear-gradient(to bottom, #4369b6, #3b5ca0 66%, #365391);
 }
 
+.button-darkblue a         { color: white; }
+.button-darkblue a:hover   { color: white; }
+.button-darkblue a:visited { color: white; }
+.button-darkblue a:visited:hover { color: white; }
+
 .button-darkblue:active {
   background: #3b5ca0;
   border-color: #263c68 #2d477b #2d477b;
