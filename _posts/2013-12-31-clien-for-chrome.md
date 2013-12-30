@@ -123,16 +123,12 @@ z-index: 2;
 
 <b>다운로드</b>
 
-<a href="https://mega.co.nz/#!Yx8UmSSJ!XYsEvGjy4HcPWgqSQ0r3_wkvSTg77l97VvRdDX0uL78" class="button button-darkblue" style="display:block;margin-left:200px;margin-right:200px;">Download Clien for Chrome</a>
+<a href="https://mega.co.nz/#!Yx8UmSSJ!XYsEvGjy4HcPWgqSQ0r3_wkvSTg77l97VvRdDX0uL78" class="button button-darkblue" style="display:block;margin-left:200px;margin-right:200px;" target="blank">Download Clien for Chrome</a>
 
-<b id="show">설치방법 (모르시는 분들은 없겠죠??)</b>
+<b>설치방법</b>
 
-<p>
 흠.. 심각하군요. 정 모르신다 면야..
 
-`.crx`확장자의 크롬 익스텐션 파일을 다운로드한뒤 실행시키고 아래가 같은 화면에서 'Add'를 눌러주면 끝!입니다.
+`.crx`확장자의 크롬 익스텐션 파일을 다운로드한뒤 <a href="chrome://extensions/" target="blank">chrome://extensions/</a>에 가셔서 파일을 창으로 드래그 하시면 됩니다. (그냥 누르면은 안되네요 ㅠㅠ) 실행시키고 아래가 같은 화면에서 'Add'를 눌러주면 끝!입니다.
 
 <img class="expando" src="http://farm8.staticflickr.com/7367/11656281236_b56f44c7cd_o.png" width="640">
-
-<b id="hide">설치방법 (모르시는 분들은 없겠죠??) 닫기</b>
-</p>
