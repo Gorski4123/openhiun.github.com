@@ -123,7 +123,7 @@ z-index: 2;
 
 <b>다운로드</b>
 
-<a href="https://mega.co.nz/#!Yx8UmSSJ!XYsEvGjy4HcPWgqSQ0r3_wkvSTg77l97VvRdDX0uL78" class="button button-darkblue" style="display:block;margin-left:200px;margin-right:200px;" target="blank"><p class="button-text">Download Clien for Chrome</p></a>
+<a href="https://mega.co.nz/#!Yx8UmSSJ!XYsEvGjy4HcPWgqSQ0r3_wkvSTg77l97VvRdDX0uL78" class="button button-darkblue"><p class="button-text">Download Clien for Chrome</p></a>
 
 <b>설치방법</b>
 
