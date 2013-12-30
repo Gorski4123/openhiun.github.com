@@ -104,12 +104,22 @@ z-index: 2;
 - 느린 웹페이지 로딩때문에 잠깐 클리앙을 확인하고 싶을때.
 - 심심해서 잠깐 클리앙을 확인하고 싶을때.
 
-많은 이용 부탁드립니다. 돈이 없어서 구글 웹 스토어 등록은 못하고 있습니다($5 소요). 반응이 좋으면 시도해볼 예정입니다.
+많은 이용 부탁드립니다. 
+
+돈이 없어서 구글 웹 스토어 등록은 못하고 있습니다($5 소요). 반응이 좋으면 시도해볼 예정입니다.
 
 피드백은 댓글이나 이메일( openhiun@gmail.com )로 부탁드립니다.
 
 <b>다운로드</b>
 
 <a href="https://mega.co.nz/#!Yx8UmSSJ" class="button button-darkblue" style="display:block;margin-left:200px;margin-right:200px;">Download Clien for Chrome - 40KB</a>
-<br />
-<br />
+
+<a href='javascript:void(0)' onclick=this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';><b>설치방법 (모르시는 분들은 없겠죠??)</b></a><DIV style='display:none'>
+
+흠.. 심각하군요. 정 모르신다 면야..
+
+`.crx`확장자의 크롬 익스텐션 파일을 다운로드한뒤 실행시키고 아래가 같은 화면에서 'Add'를 눌러주면 끝!입니다.
+
+<img class="expando" src="http://farm8.staticflickr.com/7367/11656281236_b56f44c7cd_o.png" width="640">
+
+<A onclick=this.parentNode.style.display='none'; href=javascript:void(0)><b>설치방법 (모르시는 분들은 없겠죠??) 닫기</b></A></DIV>
