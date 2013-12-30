@@ -112,7 +112,7 @@ z-index: 2;
 
 <b>다운로드</b>
 
-<a href="https://mega.co.nz/#!Yx8UmSSJ" class="button button-darkblue" style="display:block;margin-left:200px;margin-right:200px;">Download Clien for Chrome - 40KB</a>
+<a href="https://mega.co.nz/#!Yx8UmSSJ!XYsEvGjy4HcPWgqSQ0r3_wkvSTg77l97VvRdDX0uL78" class="button button-darkblue" style="display:block;margin-left:200px;margin-right:200px;">Download Clien for Chrome - 40KB</a>
 
 <a href='javascript:void(0)' onclick=this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';><b>설치방법 (모르시는 분들은 없겠죠??)</b></a><DIV style='display:none'>
 
