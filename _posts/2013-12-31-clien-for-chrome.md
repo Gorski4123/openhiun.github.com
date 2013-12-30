@@ -123,3 +123,12 @@ z-index: 2;
 <img class="expando" src="http://farm8.staticflickr.com/7367/11656281236_b56f44c7cd_o.png" width="640">
 
 <A onclick=this.parentNode.style.display='none'; href=javascript:void(0)><b>설치방법 (모르시는 분들은 없겠죠??) 닫기</b></A></DIV>
+
+
+
+<a href='javascript:void(0)' onclick=this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';>클릭</a><DIV style='display:none'>
+내용을 쓰시오
+
+<A onclick=this.parentNode.style.display='none'; href=javascript:void(0)>닫기</A></DIV>
+
+
