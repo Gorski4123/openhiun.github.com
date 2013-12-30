@@ -7,6 +7,17 @@ permalink: /clien-for-chrome
 
 <script src="/js/expando.js"></script>
 
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("#content").hide();
+  });
+  $("#show").click(function(){
+    $("#content").show();
+  });
+});
+</script>
+
 <style type="text/css">
  .button {
   position: relative;
@@ -68,10 +79,10 @@ permalink: /clien-for-chrome
   background-image: linear-gradient(to bottom, #4369b6, #3b5ca0 66%, #365391);
 }
 
-.button-darkblue a         { color: white; }
-.button-darkblue a:hover   { color: white; }
-.button-darkblue a:visited { color: white; }
-.button-darkblue a:visited:hover { color: white; }
+.button a         { color: white !important; }
+.button a:hover   { color: white !important; }
+.button a:visited { color: white !important; }
+.button a:visited:hover { color: white !important; }
 
 .button-darkblue:active {
   background: #3b5ca0;
@@ -114,21 +125,14 @@ z-index: 2;
 
 <a href="https://mega.co.nz/#!Yx8UmSSJ!XYsEvGjy4HcPWgqSQ0r3_wkvSTg77l97VvRdDX0uL78" class="button button-darkblue" style="display:block;margin-left:200px;margin-right:200px;">Download Clien for Chrome - 40KB</a>
 
-<a href='javascript:void(0)' onclick=this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';><b>설치방법 (모르시는 분들은 없겠죠??)</b></a><DIV style='display:none'>
+<b id="show">설치방법 (모르시는 분들은 없겠죠??)</b>
 
+<div id="content">
 흠.. 심각하군요. 정 모르신다 면야..
 
 `.crx`확장자의 크롬 익스텐션 파일을 다운로드한뒤 실행시키고 아래가 같은 화면에서 'Add'를 눌러주면 끝!입니다.
 
 <img class="expando" src="http://farm8.staticflickr.com/7367/11656281236_b56f44c7cd_o.png" width="640">
 
-<A onclick=this.parentNode.style.display='none'; href=javascript:void(0)><b>설치방법 (모르시는 분들은 없겠죠??) 닫기</b></A></DIV>
-
-
-
-<a href='javascript:void(0)' onclick=this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';>클릭</a><DIV style='display:none'>
-내용을 쓰시오
-
-<A onclick=this.parentNode.style.display='none'; href=javascript:void(0)>닫기</A></DIV>
-
-
+<b id="hide">설치방법 (모르시는 분들은 없겠죠??) 닫기</b>
+</div>
