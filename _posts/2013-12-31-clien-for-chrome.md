@@ -10,10 +10,10 @@ permalink: /clien-for-chrome
 <script>
 $(document).ready(function(){
   $("#hide").click(function(){
-    $("#content").hide();
+    $("p").hide();
   });
   $("#show").click(function(){
-    $("#content").show();
+    $("p").show();
   });
 });
 </script>
@@ -127,7 +127,7 @@ z-index: 2;
 
 <b id="show">설치방법 (모르시는 분들은 없겠죠??)</b>
 
-<div id="content">
+<p>
 흠.. 심각하군요. 정 모르신다 면야..
 
 `.crx`확장자의 크롬 익스텐션 파일을 다운로드한뒤 실행시키고 아래가 같은 화면에서 'Add'를 눌러주면 끝!입니다.
@@ -135,4 +135,4 @@ z-index: 2;
 <img class="expando" src="http://farm8.staticflickr.com/7367/11656281236_b56f44c7cd_o.png" width="640">
 
 <b id="hide">설치방법 (모르시는 분들은 없겠죠??) 닫기</b>
-</div>
+</p>
