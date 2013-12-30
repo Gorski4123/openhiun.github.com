@@ -85,6 +85,8 @@ position: relative;
 z-index: 2;
 }
 
+</style>
+
 <img class="expando" src="http://farm6.staticflickr.com/5480/11655234213_cb4d539d9d_o.png" width="640">
 
 <b>클리앙을 간단히 크롬 익스텐션으로 볼수있는 프로그램입니다.</b>
