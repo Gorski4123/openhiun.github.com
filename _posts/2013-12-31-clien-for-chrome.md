@@ -94,6 +94,8 @@ z-index: 2;
 
 <img class="expando" src="http://farm6.staticflickr.com/5480/11655234213_cb4d539d9d_o.png" width="640">
 
+<b>Clien for Chrome</b>
+
 <b>클리앙을 간단히 크롬 익스텐션으로 볼수있는 프로그램입니다.</b>
 
 아래와 같은 경우에 사용하시면 좋습니다.
