@@ -3,6 +3,7 @@ layout: post
 title:  "Clien for Chrome"
 categories: k
 permalink: /clien-for-chrome
+image: http://farm4.staticflickr.com/3714/11656957215_6d926afb6f_o.jpg
 ---
 
 <script src="/js/expando.js"></script>
