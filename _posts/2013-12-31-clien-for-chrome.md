@@ -132,6 +132,6 @@ z-index: 2;
 
 <img class="expando" src="http://farm6.staticflickr.com/5538/11657036283_160a2b3e0f_o.png" width="640">
 
-드래그 후에 아래아래가 같은 화면에서 'Add'를 눌러주면 끝!입니다.
+드래그 후에 아래와 같은 팝업에서 'Add'를 눌러주면 끝!입니다.
 
-<img class="expando" src="http://farm8.staticflickr.com/7367/11656281236_b56f44c7cd_o.png" width="640">
+<img class="expando" src="http://farm8.staticflickr.com/7329/11657138114_f5af28744a_o.png" width="640">
