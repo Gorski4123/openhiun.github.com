@@ -17,7 +17,7 @@ permalink: /computer-club
 왠지 컴퓨터 클럽에는 그러한 열정, 뭔가 혁명이 일어날것 같은 느낌이 있다. 영화 잡스에서 잡스와 워즈니악이 자신이 만든 Apple 1을 들고 스탠포드에서 열리는 홈브류 컴퓨터 클럽으로 갈는 장면에서 나온 Palo Alto의 야경이 그러한것을 말해준다. 거대한 혁명이 다가올것 같다는것. 항상 그런것을 동경해 왔다. 여명(dawn)이라는 단어가 어울릴것 같다. 
 <br /><br />
 <center><img src="http://farm3.staticflickr.com/2891/11746973505_54bd1b922b_o.png
-" width="640"> <br />다가올 PC혁명을 암시하는것 같은 Palo Alto의 야경<br /><a href="http://www.youtube.com/watch?v=nryTz9iBqEI">출처 : 영화 Jobs 트레일러</a><center>
+" width="640"> <br />다가올 PC혁명을 암시하는것 같은 Palo Alto의 야경<br /><a href="http://www.youtube.com/watch?v=nryTz9iBqEI">출처 : 영화 Jobs 트레일러</a></center>
 <br /><br />
 동아리를 하면서 많은 생각이 들었다. 어찌되었건 나는 다음 세대의 소셜 네트워크가 될것 이라 생각하는 Springvil의 아이디어를 얻을수 있었고, [한국 IT동아리 연합](http://smartksia.org)과 [전국청소년창업협회](http://ysa.or.kr)를 알았다. 둘다 내 인생을 바꿀만큼 큰 임팩트를 준 단체였다.
 
