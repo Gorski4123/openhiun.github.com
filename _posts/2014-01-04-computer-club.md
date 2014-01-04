@@ -4,7 +4,6 @@ title:  "컴퓨터 클럽의 순수함과 열정에 대한 생각"
 date:   2014-01-04 21:52:45
 categories: k
 permalink: /computer-club
-image
 ---
 
 내 생각에 가장 히스토리컬한 컴퓨터 클럽, 동아리는 1975년 실리콘 벨리의 멘로파크의 Gorden French의 차고에서 열린 열린 [홈브류 컴퓨터 클럽](http://en.wikipedia.org/wiki/Homebrew_Computer_Club)인것 같다. 홈브루라는 말이 참 다양하게 사용되고 있는데, 본래 뜻은 **집에서 만드는 맥주라는 뜻**으로 이런 커스텀한 의미가 개인들의 컴퓨터 동호회 그리고 여러 소프트웨어 (요즘엔 개인이 만든 커스텀롬?)까지 적용된것 같다.
