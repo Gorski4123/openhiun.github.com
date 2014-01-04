@@ -10,7 +10,7 @@ permalink: /computer-club
 <br /><br />
 <center><img src="http://farm3.staticflickr.com/2811/11748179996_c08b5d9cd7_c.jpg" width="640"> <br />홈브류 컴퓨터 클럽이 처음열린 Gorden French의 차고 aka Homebrew Garage<br /><a href="https://www.google.com/maps/preview#!q=601-619+18th+Ave&data=!2m5!2m4!1sjCXzEcRXFZaSL6mq1YlPkw!2e0!9m1!6s18th+Avenue!4m15!2m14!1m13!1s0x808fa3446ee2c4cf%3A0x194aaaaa7ee22bab!3m8!1m3!1d3!2d-122.190441!3d37.472312!3m2!1i1366!2i667!4f49.65!4m2!3d37.472444!4d-122.190698">출처 : 구글 맵스</a></center>
 <br /><br />
-최근 [Wired](http://wired.com)지의 유명 기자인 [Steven Levy](http://stevenlevy.com)가 1984년에 쓴 [Hackers : Heroes of the Computer Revolution](http://www.stevenlevy.com/index.php/books/hackers)라는 책을 읽고 있는데, 초기 하드웨어 해킹시대 [MIT](http://mit.edu)의 철도모형 동아리인 [Tech Model Rail Club](http://tmrc.mit.edu/)에서 나온 하드웨어의 해킹과 비관료주의적인 접근 그리고 켈리포니아 버클리 카페에서의 히피들의 시분할 터미널 접속.. 그러한 대학교에서 ㅡ그리고 커뮤니티적인 연합체가 모여서 컴퓨터의 근간을 이루지 않았나 싶다.
+최근 [Wired](http://wired.com)지의 유명 기자인 [Steven Levy](http://stevenlevy.com)가 1984년에 쓴 [Hackers : Heroes of the Computer Revolution](http://www.stevenlevy.com/index.php/books/hackers)라는 책을 읽고 있는데, 초기 하드웨어 해킹시대 [MIT](http://mit.edu)의 철도모형 동아리인 [Tech Model Rail Club](http://tmrc.mit.edu/)에서 나온 하드웨어의 해킹과 비관료주의적인 접근 그리고 켈리포니아 버클리 근처 카페에서의 히피들의 시분할 터미널 접속.. 그러한 대학교에서ㅡ그리고 커뮤니티적인 연합체가 모여서 컴퓨터의 근간을 이루지 않았나 싶다.(개인적으로 이 책에서 가장 20세기중후반 켈리포니아적인 향기가 났던것은 '2부 하드웨어 해커스 : 70년대 북부 켈리보니아'에서 샌 프란시스코 어느 지하실에 있는 XDS-940 시분할 메인 프레임이라는 단어였다 ㅋ.ㅋ)
 
 고2때 친구들과 컴퓨터 클럽인 [Visang](http://www.visang.or)을 만들면서 이러한 책과 사실을 알기전에 느꼈던 무의식적인 이러한 욕구를 해소하려고 하기도 했던것 같다. 사실 [Springvil](http://www.springvil.com)을 만든것 자체가, 아니 내가 우리동네에서 코딩하는 사람을 만나서 정말 순수한 열정을 가지고 Creative한 짓을 하고 싶어서 인것인지도 몰랐다. (아직까지 이 꿈은 이루지 못했다.)
 
