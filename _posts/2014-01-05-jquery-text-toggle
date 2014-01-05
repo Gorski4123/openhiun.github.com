@@ -15,11 +15,24 @@ permalink: /jquery-text-toggle
 **코드**
 
 {% highlight html %}
-<!--한글주석은 증오하지만 어쩔수 없이..-->
-<!--jQuery를 불러옵니다. jQuery는 간단한 코드로 심오한 자바스크립트 기능을 사용할수 있는 자바스크립트 라이브러리입니다.-->
+<script="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+{% endhighlight %}
+
+jQuery를 불러옵니다. jQuery는 간단한 코드로 심오한 자바스크립트 기능을 사용할수 있는 자바스크립트 라이브러리입니다.
+
+{% highlight css %}
+<style>
+.content {
+    display: none;
+}
+</style>
+{% endhighlight %}
+
+감출 내용은 content라는 CSS클래스에 들어갑니다. 감출내용이니까 기본적으로 CSS에서 표시하지 않도록 설정해줍니다.
+
+{% highlight html %}
 <script="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 
-<!--감출 내용은 content라는 CSS클래스에 들어갑니다. 감출내용이니까 기본적으로 CSS에서 표시하지 않도록 설정해줍니다.-->
 <style>
 .content {
     display: none;
