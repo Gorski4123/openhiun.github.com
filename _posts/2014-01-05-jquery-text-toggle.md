@@ -60,6 +60,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet ipsu
 전체적인 코드를 보면 아래와 같습니다.
 
 {% highlight html+php %}
+<div class="container">
+    <b>Toggle</b>    
+<div class="content">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+</div></div>
+
+<div class="container">
+  <b>Toggle</b> 
+<div class="content">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet ipsum eget nulla dictum porttitor. Suspendisse in orci a leo adipiscing blandit sit amet in diam. Duis a nisi in nisl semper condimentum ac ut augue. Nam aliquet orci lectus. Donec venenatis orci nisl, ut venenatis sem pellentesque sit amet.
+    <img src="https://www.google.com/images/srpr/logo11w.png" width="480"/>
+</div></div>
+
 <script="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 
 <style>
@@ -74,16 +87,4 @@ $(".container").click(function() {
 });
 </script>
 
-<div class="container">
-    <b>Toggle</b>    
-<div class="content">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
-</div></div>
-
-<div class="container">
-  <b>Toggle</b> 
-<div class="content">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet ipsum eget nulla dictum porttitor. Suspendisse in orci a leo adipiscing blandit sit amet in diam. Duis a nisi in nisl semper condimentum ac ut augue. Nam aliquet orci lectus. Donec venenatis orci nisl, ut venenatis sem pellentesque sit amet.
-    <img src="https://www.google.com/images/srpr/logo11w.png" width="480"/>
-</div></div>
 {% endhighlight %}
