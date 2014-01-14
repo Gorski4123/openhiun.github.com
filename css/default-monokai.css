@@ -1,0 +1,26 @@
+/*code css*/
+
+pre {
+  font-family: 'Monaco', 'Lucida Console', 'Source Code Pro', sans-serif;
+  font-size: 15px;
+  background-color: #272822 !important;
+  color:#ffffff;
+}
+
+code {
+  font-family: 'Monaco', 'Lucida Console', 'Source Code Pro', sans-serif;
+  font-size: 15px;
+  background-color: #272822 !important;
+  color:#ffffff;
+}
+
+
+code span {
+  font-family: 'Monaco', 'Lucida Console', 'Source Code Pro', sans-serif;
+  font-size: 15px;
+}
+
+p code {
+  font-family: 'Monaco', 'Lucida Console', 'Source Code Pro', sans-serif;
+  font-size: 15px;
+}
