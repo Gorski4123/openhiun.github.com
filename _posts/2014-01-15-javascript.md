@@ -77,13 +77,16 @@ image: http://farm8.staticflickr.com/7389/11947096744_8c429e1d40_o.jpg
 
 - for루프 - 괄호 안의 특정한 횟수만큼 루프안에 있는 코드를 반복한다. 대표적인 예로 자바스크립트의 for루프가 있다.
 
+
 {% highlight javascript %}
 for (var i=0; i<array.length; i++) {
 // do some stuff
 }
 {% endhighlight %}
 
+
 - while루프 - 특정작업이 끝날때까지 코드를 반복한다. 대표적인 예로 php에서 피드를 생성할때 MySQL에서 특정한 열만큼의 데이터를 불러와서 그 데이터가 소진될때까지 코드를 반복 실행해 반복적으로 피드등을 만들어 출력한다. 대표적인 예로 블로그의 인덱스 페이지나 페이스북의 뉴스피드가 있다.
+
 
 {% highlight php %}
 <?php
