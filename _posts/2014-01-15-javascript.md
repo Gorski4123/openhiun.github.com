@@ -127,7 +127,7 @@ document.getElementById('result').innerHTML = result.join(" ");
 });
 {% endhighlight %}
 
-- 비동기성 출력
+-비동기성 출력
 
 서비스의 작동방식은 크게 동기성과 비동기성으로 나뉜다.
 
