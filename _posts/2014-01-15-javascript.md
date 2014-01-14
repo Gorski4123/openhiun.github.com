@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "HTML에서 jQuery를 아용한 글접기"
+title:  "자바스크립트 뉴비의 NamerJS 개발기"
 date:   2014-01-15 21:52:45
 categories: k
 permalink: /javascript
