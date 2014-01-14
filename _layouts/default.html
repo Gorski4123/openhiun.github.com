@@ -25,8 +25,16 @@
                                <link rel="shortcut icon" href="/images/favicon.ico">
                                        <link href='http://www.openhiun.com{{ site.url}}{{ page.url }}' rel='canonical'/>
         <script src="/js/parallax.js"></script>
+        
+        {% if page.code-white %}
         <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" type="text/css" href="/css/default.css">
+        <link rel="stylesheet" type="text/css" href="/css/white.css">      
+        <link rel="stylesheet" type="text/css" href="/css/white-sub.css"> 
+        {% else %}
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" type="text/css" href="/css/monokai.css">      
+        <link rel="stylesheet" type="text/css" href="/css/monokai-sub.css">   
+        {% endif %}
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
