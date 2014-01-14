@@ -30,8 +30,9 @@ image: http://farm8.staticflickr.com/7389/11947096744_8c429e1d40_o.jpg
 
 허나 컴퓨터 언어로 생각하지전에 사람의 기계어 나의 본능으로 생각해봤다. 단어 조합기는 a, b, c라는 단어로 aa, ab, ac, ba, bb, bc, ca, cb, cc라는 단어를 조합하는것이기때문에 기본적으로 아래와 같은 형태가 필요하다고 생각했다. 아래와 같아야 모든 경우의수를 뽑아낼수 있다. 
 
-{% highlight python %}
-#if input is 1 2 3
+입력값이 1, 2, 3이라면
+
+{% highlight php %}
 1     1
 1     2
 1     3
@@ -52,8 +53,7 @@ image: http://farm8.staticflickr.com/7389/11947096744_8c429e1d40_o.jpg
 
 가장중요한것은 어떻게 하면 
 
-{% highlight python %}
-#if input is 1 2 3
+{% highlight php %}
 1     1
 1     2
 1     3
@@ -88,11 +88,8 @@ for (var i=0; i<array.length; i++) {
 {% highlight php %}
 <?php
 while ($feed_query_array = mysqli_fetch_array($feed_query_result)) {
-$feed_user = $feed_query_array['UserId'];
-$feed_group = $feed_query_array['GroupId'];
-$feed_text = $feed_query_array['FeedText'];
-$feed_photo = $feed_query_array['FeedPhoto'];
-$feed_date = $feed_query_array['CreationDate'];
+
+// do some stuff
 
 ?>
 {% endhighlight %}
