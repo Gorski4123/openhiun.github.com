@@ -8,6 +8,8 @@ code-white: confirmed
 image: http://farm8.staticflickr.com/7389/11947096744_8c429e1d40_o.jpg
 ---
 
+자바스크립트기반의 단어 조합기인 [namer](http://www.openhiun.com/namer)를 2일동안 짬짬히 파면서 개발한 후기를 적어본다.
+
 **0. 문제**
 
 살면서여러가지 서비스([springvil.com](http://springvil.com), [vk-m.org](http://vk-m.org), [1618vote.net](http://1618vote.net) 등등)을 개발봤지만 가장큰 문제는 **서비스의 이름**이었다. 서비스의 얼굴이자 철학의 깊음 담으면서도 가볍고 쉽게부를수 있는게 중요하기때문이다. 하지만 최근에 스타트업 네이밍에서 어려운점은 2가지가 있다.
