@@ -6,6 +6,7 @@ categories: k
 permalink: /entrepreneurial-mind
 code-white: confirmed
 ---
+<style>img {vertical-align: top}</style>
 
 많은 수의 스타트업들이 창업자 자신들이 겪은 불편을 해소하려고 시작하거나, 어떠한 계기로 미래에대한 큰 통찰을 얻으면서 이러한 것들이 있다면 인류의 삶은 더욱 향상될것 같다라는 생각으로 시작하는것 같다.
 
@@ -21,13 +22,13 @@ entrepreneur와 business man의 차이점은??
 
 Entrepreneurs
 
-<img src="http://farm3.staticflickr.com/2810/12009614555_7b886dc8f7_o.jpg" width="49%" style="margin-top: 0px;">
-<img src="http://farm4.staticflickr.com/3791/12009972064_508367fefa_o.jpg" width="49%" style="margin-top: 0px;">
+<img src="http://farm3.staticflickr.com/2810/12009614555_7b886dc8f7_o.jpg" width="49%">
+<img src="http://farm4.staticflickr.com/3791/12009972064_508367fefa_o.jpg" width="49%">
 
 Businessman
 
-<img src="http://farm3.staticflickr.com/2816/12009852055_6763b21016_o.jpg" width="49%" style="margin-top: 0px;">
-<img src="http://farm8.staticflickr.com/7448/12010209664_fdfe8d5cf5_o.jpg" width="49%" style="margin-top: 0px;">
+<img src="http://farm3.staticflickr.com/2816/12009852055_6763b21016_o.jpg" width="49%">
+<img src="http://farm8.staticflickr.com/7448/12010209664_fdfe8d5cf5_o.jpg" width="49%">
 
 어떤 차이가 이들사이에 존제할까?? 내가 생각하는 정답은 바로 돈이다. 돈은 모든 회사의 필수적인 존재지만 그것이 1순위 목적이 되어서는 안된다고 생각이 든다. 회사가 목표를 가지고 그것을 이루어 나가면 돈은 따라오는 경우가 많기때문이다. 또한 내가 돈을 벌기위해서 한다고 시작한 스타트업의 결과물보다, 순수히 세상을 더 나은곳으 바꾸고 싶다. 이렇게 생각해서 시작한 스타트업들이 정말 역사를 만들수 있는 경우가 많은것 같다.
 
